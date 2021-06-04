@@ -1,0 +1,336 @@
+Flow report for netFPGAmini
+Mon Mar 15 20:24:29 2021
+Quartus Prime Version 16.0.2 Build 222 07/20/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Flow Summary                                                                        ;
++-----------------------------------+-------------------------------------------------+
+; Flow Status                       ; Successful - Mon Mar 15 20:23:24 2021           ;
+; Quartus Prime Version             ; 16.0.2 Build 222 07/20/2016 SJ Standard Edition ;
+; Revision Name                     ; netFPGAmini                                     ;
+; Top-level Entity Name             ; netFPGAmini                                     ;
+; Family                            ; Arria II GX                                     ;
+; Device                            ; EP2AGX45DF25C4                                  ;
+; Timing Models                     ; Final                                           ;
+; Logic utilization                 ; 80 %                                            ;
+;     Combinational ALUTs           ; 18,953 / 36,100 ( 53 % )                        ;
+;     Memory ALUTs                  ; 7 / 18,050 ( < 1 % )                            ;
+;     Dedicated logic registers     ; 21,142 / 36,100 ( 59 % )                        ;
+; Total registers                   ; 21366                                           ;
+; Total pins                        ; 163 / 292 ( 56 % )                              ;
+; Total virtual pins                ; 0                                               ;
+; Total block memory bits           ; 1,166,464 / 2,939,904 ( 40 % )                  ;
+; DSP block 18-bit elements         ; 0 / 232 ( 0 % )                                 ;
+; Total GXB Receiver Channel PCS    ; 4 / 8 ( 50 % )                                  ;
+; Total GXB Receiver Channel PMA    ; 4 / 8 ( 50 % )                                  ;
+; Total GXB Transmitter Channel PCS ; 4 / 8 ( 50 % )                                  ;
+; Total GXB Transmitter Channel PMA ; 4 / 8 ( 50 % )                                  ;
+; Total PLLs                        ; 2 / 4 ( 50 % )                                  ;
+; Total DLLs                        ; 1 / 2 ( 50 % )                                  ;
++-----------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/15/2021 20:13:31 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; netFPGAmini         ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                   ;
++-------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                                         ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 83689962209849.161581041017340                                                                ; --            ; --          ; --             ;
+; ENABLE_SIGNALTAP                    ; On                                                                                            ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                            ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; netFPGAmini.dpf                                                                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; E:/fpga/altera/nm08/net_magic_08_a/netFPGAmini_ddrtest_restored/netFPGAmini.dpf               ; --            ; --          ; --             ;
+; MISC_FILE                           ; D:/programing/netmagic08/programing/netmagic08/netmagicmini-201203151438-test/netFPGAmini.dpf ; --            ; --          ; --             ;
+; MISC_FILE                           ; E:/netmagicmini-201203151438-test-withrulefifo/netFPGAmini.dpf                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; E:/NetMagic/source/netmagicmini-20120509-test_2-3_passthrough_ccz/netFPGAmini.dpf             ; --            ; --          ; --             ;
+; MISC_FILE                           ; G:/feiqiu/zq/netmagicmini-example-project1108/netFPGAmini.dpf                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; F:/netmagicmini-example-project1108_zq/netFPGAmini.dpf                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12.v                                                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_bb.v                                                                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12.bsf                                                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12.qip                                                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12.html                                                                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_example_driver.v                                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_example_top.v                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_ex_lfsr8.v                                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/testbench/ddr2_12_example_top_tb.v                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/testbench/ddr2_12_mem_model.v                                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/testbench/ddr2_12_full_mem_model.v                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_pin_assignments.tcl                                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy.v                                                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_bb.v                                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy.bsf                                                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy.qip                                                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy.html                                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_alt_mem_phy_seq_wrapper.v                                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd                                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_alt_mem_phy_dq_dqs.v                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_alt_mem_phy.v                                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_alt_mem_phy_pll.v                                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_pin_assignments.tcl                                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_ddr_pins.tcl                                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_report_timing.tcl                                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_report_timing_core.tcl                                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_ddr_timing.tcl                                                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_alt_mem_phy_pll_bb.v                                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/alt_mem_phy_defines.v                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy.ppf                                                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; UM/ddr2/ddr2_12_phy_alt_mem_phy_dq_dqs.vhd_clearbox.txt                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_pma_lvds_rx.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_pma_lvds_tx.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_quad_16x32.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_quad_8x32.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_register_map.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_register_map_small.v                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_retransmit_cntl.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rgmii_in1.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rgmii_in4.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rgmii_module.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rgmii_out1.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rgmii_out4.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_converter.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_counter_cntl.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_encapsulation.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_encapsulation_strx_gx.v                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_ff.v                                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_cntrl.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_cntrl_32.v                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_cntrl_32_shift16.v                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_length.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_fifo_rd.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_min_ff.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_stat_extract.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_rx_sync.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_sdpm_altsyncram.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_sdpm_gen.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_cntl.v                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_div.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_enable.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_scheduler.v                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_shared_mac_control.v                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_shared_register_map.v                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter32.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter8.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter_fifo32.v                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter_fifo8.v                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_1000_base_x.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_1000_base_x_strx_gx.v                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_1geth.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_autoneg.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_fifoless_1geth.v                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_gen_host.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_mdio.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_multi_mac.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_multi_mac_pcs.v                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_multi_mac_pcs_gige.v                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_pcs.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_pcs_strx_gx.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_rx.v                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_rx_converter.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_sgmii.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_sgmii_strx_gx.v                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_tx.v                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_tx_converter.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_wo_fifo.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_wo_fifo_10_100_1000.v                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_w_fifo.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_top_w_fifo_10_100_1000.v                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_converter.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_counter_cntl.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_encapsulation.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_ff.v                                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_cntrl.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_cntrl_32.v                                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_cntrl_32_shift16.v                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_length.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_read_cntl.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_min_ff.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_tx_stat_extract.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_align_sync.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_alt2gxb_arriagx.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_altgx_civgx_gige.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_altshifttaps.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_altsyncram_dpm_fifo.v                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_13.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_24.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_34.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_opt_1246.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_opt_14_44.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_opt_36_10.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_bin_cnt.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_carrier_sense.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_clk_cntl.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_clk_gen.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_colision_detect.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_crc328checker.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_crc328generator.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_crc32ctl8.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_crc32galois8.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_dc_fifo.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_dec10b8b.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_dec_func.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_dpram_16x32.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_dpram_8x32.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_enc8b10b.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_fifoless_mac_rx.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_fifoless_mac_tx.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_fifoless_retransmit_cntl.v                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_geth_pcs_wo_ratematch.v                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_gige_reset_ctrl.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_gmii_io.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_gray_cnt.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_gxb_aligned_rxsync.v                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_gxb_gige_inst.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_hashing.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_host_control.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_host_control_small.v                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_lb_read_cntl.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_lb_wrt_cntl.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_lfsr_10.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_loopback_ff.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac.v                                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_control.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_gige_woff.v                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma_ena.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma_gige.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma_strx_gx_ena.v                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_woff.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_rx.v                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_tx.v                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mac_woff.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_magic_detection.v                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mdio.v                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mdio_clk_gen.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mdio_cntl.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mdio_reg.v                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mii_rx_if.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mii_rx_if_pcs.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mii_tx_if.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_mii_tx_if_pcs.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_multi_channel_arbiter.v                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_multi_mac.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_multi_mac_pcs.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_multi_mac_pcs_pma.v                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_multi_mac_pcs_pma_gige.v                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_pcs.v                                            ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_pcs_control.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_pcs_host_control.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_pcs_pma.v                                        ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_pcs_pma_gige.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_alt2gxb_basic.v                                  ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_alt2gxb_gige.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/triple_speed_ethernet-library/altera_tse_alt4gxb_gige.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/sfp2gmii.v                                                                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/sfp2gmii_bb.v                                                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/sfp2gmii.bsf                                                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/sfp2gmii.qip                                                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; sfp/sfp2gmii.html                                                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; rli/check_ip.v                                                                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; rli/check_ip_bb.v                                                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; rli/check_ip.bsf                                                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; rli/check_ip_altcrc.v                                                                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; rli/check_ip_altcrc.ppf                                                                       ; --            ; --          ; --             ;
+; MISC_FILE                           ; rli/check_ip.qip                                                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; rli/check_ip.html                                                                             ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                                      ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                         ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                        ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                           ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                         ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; UM/ddr2/ddr2_high_performance_controller-library                                              ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; UM/ddr2/.                                                                                     ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; UM/ddr2/altmemphy-library                                                                     ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; sfp/.                                                                                         ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; sfp/triple_speed_ethernet-library                                                             ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; rli/.                                                                                         ; --            ; --          ; --             ;
+; SLD_FILE                            ; db/Hello_NetMagic_08_auto_stripped.stp                                                        ; --            ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                                                                           ; --            ; --          ; eda_blast_fpga ;
+; USE_SIGNALTAP_FILE                  ; Hello_NetMagic_08.stp                                                                         ; --            ; --          ; --             ;
++-------------------------------------+-----------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:03:47     ; 1.0                     ; 5768 MB             ; 00:04:02                           ;
+; Fitter                    ; 00:05:15     ; 1.2                     ; 7065 MB             ; 00:09:17                           ;
+; Assembler                 ; 00:00:21     ; 1.0                     ; 5170 MB             ; 00:00:21                           ;
+; TimeQuest Timing Analyzer ; 00:01:01     ; 1.2                     ; 5687 MB             ; 00:01:08                           ;
+; Total                     ; 00:10:24     ; --                      ; --                  ; 00:14:48                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; zjw              ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; zjw              ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; zjw              ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; zjw              ; Windows 8 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off netFPGAmini -c netFPGAmini
+quartus_fit --read_settings_files=off --write_settings_files=off netFPGAmini -c netFPGAmini
+quartus_asm --read_settings_files=off --write_settings_files=off netFPGAmini -c netFPGAmini
+quartus_sta netFPGAmini -c netFPGAmini
+
+
+
