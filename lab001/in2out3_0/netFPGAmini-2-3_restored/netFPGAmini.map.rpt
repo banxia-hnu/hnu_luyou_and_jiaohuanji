@@ -1,0 +1,596 @@
+Analysis & Synthesis report for netFPGAmini
+Mon Mar 15 19:11:29 2021
+Quartus Prime Version 16.0.2 Build 222 07/20/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++-----------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status       ; Failed - Mon Mar 15 19:11:29 2021               ;
+; Quartus Prime Version             ; 16.0.2 Build 222 07/20/2016 SJ Standard Edition ;
+; Revision Name                     ; netFPGAmini                                     ;
+; Top-level Entity Name             ; netFPGAmini                                     ;
+; Family                            ; Arria II GX                                     ;
+; Logic utilization                 ; N/A until Partition Merge                       ;
+;     Combinational ALUTs           ; N/A until Partition Merge                       ;
+;     Memory ALUTs                  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers     ; N/A until Partition Merge                       ;
+; Total registers                   ; N/A until Partition Merge                       ;
+; Total pins                        ; N/A until Partition Merge                       ;
+; Total virtual pins                ; N/A until Partition Merge                       ;
+; Total block memory bits           ; N/A until Partition Merge                       ;
+; DSP block 18-bit elements         ; N/A until Partition Merge                       ;
+; Total GXB Receiver Channel PCS    ; N/A until Partition Merge                       ;
+; Total GXB Receiver Channel PMA    ; N/A until Partition Merge                       ;
+; Total GXB Transmitter Channel PCS ; N/A until Partition Merge                       ;
+; Total GXB Transmitter Channel PMA ; N/A until Partition Merge                       ;
+; Total PLLs                        ; N/A until Partition Merge                       ;
+; Total DLLs                        ; N/A until Partition Merge                       ;
++-----------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; EP2AGX45DF25C4     ;                    ;
+; Top-level entity name                                                           ; netFPGAmini        ; netFPGAmini        ;
+; Family name                                                                     ; Arria II GX        ; Stratix II         ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.2 Build 222 07/20/2016 SJ Standard Edition
+    Info: Processing started: Mon Mar 15 19:11:18 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off netFPGAmini -c netFPGAmini
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Error (10170): Verilog HDL syntax error at UM.v(56) near text: ")";  expecting a direction. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM_my/UM.v Line: 56
+Error (10112): Ignored design unit "UM" at UM.v(9) due to previous errors File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM_my/UM.v Line: 9
+Info (12021): Found 0 design units, including 0 entities, in source file um_my/um.v
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/ddr2_12_phy_alt_mem_phy_dq_dqs.v
+    Info (12023): Found entity 1: ddr2_12_phy_alt_mem_phy_dq_dqs File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_dq_dqs.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/ddr2_12_alt_mem_ddrx_controller_top.v
+    Info (12023): Found entity 1: ddr2_12_alt_mem_ddrx_controller_top File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_alt_mem_ddrx_controller_top.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/ddr2_12.v
+    Info (12023): Found entity 1: ddr2_12 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_controller.v
+    Info (12023): Found entity 1: alt_mem_ddrx_controller File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_controller.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_addr_cmd.v
+    Info (12023): Found entity 1: alt_mem_ddrx_addr_cmd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_addr_cmd.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_addr_cmd_wrap.v
+    Info (12023): Found entity 1: alt_mem_ddrx_addr_cmd_wrap File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_addr_cmd_wrap.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_controller_st_top.v
+    Info (12023): Found entity 1: alt_mem_ddrx_controller_st_top File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_controller_st_top.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_ddr2_odt_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ddr2_odt_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ddr2_odt_gen.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_ddr3_odt_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ddr3_odt_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ddr3_odt_gen.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_lpddr2_addr_cmd.v
+    Info (12023): Found entity 1: alt_mem_ddrx_lpddr2_addr_cmd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_lpddr2_addr_cmd.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_odt_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_odt_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_odt_gen.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_rdwr_data_tmg.v
+    Info (12023): Found entity 1: alt_mem_ddrx_rdwr_data_tmg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_rdwr_data_tmg.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_arbiter.v
+    Info (12023): Found entity 1: alt_mem_ddrx_arbiter File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_arbiter.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_burst_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_burst_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_burst_gen.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_cmd_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_cmd_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_cmd_gen.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_csr.v
+    Info (12023): Found entity 1: alt_mem_ddrx_csr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_csr.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_buffer.v
+    Info (12023): Found entity 1: alt_mem_ddrx_buffer File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_buffer.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_buffer_manager.v
+    Info (12023): Found entity 1: alt_mem_ddrx_buffer_manager File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_buffer_manager.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_burst_tracking.v
+    Info (12023): Found entity 1: alt_mem_ddrx_burst_tracking File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_burst_tracking.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_dataid_manager.v
+    Info (12023): Found entity 1: alt_mem_ddrx_dataid_manager File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_dataid_manager.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_fifo.v
+    Info (12023): Found entity 1: alt_mem_ddrx_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_fifo.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_list.v
+    Info (12023): Found entity 1: alt_mem_ddrx_list File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_list.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_rdata_path.v
+    Info (12023): Found entity 1: alt_mem_ddrx_rdata_path File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_rdata_path.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_wdata_path.v
+    Info (12023): Found entity 1: alt_mem_ddrx_wdata_path File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_wdata_path.v Line: 5
+Info (12021): Found 0 design units, including 0 entities, in source file um/ddr2/alt_mem_ddrx_define.iv
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_ecc_decoder.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_decoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_decoder.v Line: 5
+Info (12021): Found 3 design units, including 3 entities, in source file um/ddr2/alt_mem_ddrx_ecc_decoder_32_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_decoder_32_decode File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_decoder_32_syn.v Line: 50
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_decoder_32_altecc_decoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_decoder_32_syn.v Line: 225
+    Info (12023): Found entity 3: alt_mem_ddrx_ecc_decoder_32 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_decoder_32_syn.v Line: 365
+Info (12021): Found 3 design units, including 3 entities, in source file um/ddr2/alt_mem_ddrx_ecc_decoder_64_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_decoder_64_decode File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_decoder_64_syn.v Line: 50
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_decoder_64_altecc_decoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_decoder_64_syn.v Line: 377
+    Info (12023): Found entity 3: alt_mem_ddrx_ecc_decoder_64 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_decoder_64_syn.v Line: 585
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_ecc_encoder.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_encoder.v Line: 5
+Info (12021): Found 2 design units, including 2 entities, in source file um/ddr2/alt_mem_ddrx_ecc_encoder_32_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder_32_altecc_encoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_encoder_32_syn.v Line: 46
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_encoder_32 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_encoder_32_syn.v Line: 216
+Info (12021): Found 2 design units, including 2 entities, in source file um/ddr2/alt_mem_ddrx_ecc_encoder_64_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder_64_altecc_encoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_encoder_64_syn.v Line: 46
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_encoder_64 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_encoder_64_syn.v Line: 315
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder_decoder_wrapper File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_input_if.v
+    Info (12023): Found entity 1: alt_mem_ddrx_input_if File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_input_if.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_mm_st_converter.v
+    Info (12023): Found entity 1: alt_mem_ddrx_mm_st_converter File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_mm_st_converter.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_rank_timer.v
+    Info (12023): Found entity 1: alt_mem_ddrx_rank_timer File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_rank_timer.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_sideband.v
+    Info (12023): Found entity 1: alt_mem_ddrx_sideband File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_sideband.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_tbp.v
+    Info (12023): Found entity 1: alt_mem_ddrx_tbp File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_tbp.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/alt_mem_ddrx_timing_param.v
+    Info (12023): Found entity 1: alt_mem_ddrx_timing_param File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/alt_mem_ddrx_timing_param.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/ddr2_12_phy_alt_mem_phy_seq_wrapper.v
+    Info (12023): Found entity 1: ddr2_12_phy_alt_mem_phy_seq_wrapper File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq_wrapper.v Line: 9
+Info (12021): Found 25 design units, including 8 entities, in source file um/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd
+    Info (12022): Found design unit 1: ddr2_12_phy_alt_mem_phy_constants_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 16
+    Info (12022): Found design unit 2: ddr2_12_phy_alt_mem_phy_record_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 189
+    Info (12022): Found design unit 3: ddr2_12_phy_alt_mem_phy_record_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 619
+    Info (12022): Found design unit 4: ddr2_12_phy_alt_mem_phy_addr_cmd_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 1677
+    Info (12022): Found design unit 5: ddr2_12_phy_alt_mem_phy_addr_cmd_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 1984
+    Info (12022): Found design unit 6: ddr2_12_phy_alt_mem_phy_iram_addr_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 3437
+    Info (12022): Found design unit 7: ddr2_12_phy_alt_mem_phy_iram_addr_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 3481
+    Info (12022): Found design unit 8: ddr2_12_phy_alt_mem_phy_regs_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 3643
+    Info (12022): Found design unit 9: ddr2_12_phy_alt_mem_phy_regs_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 3936
+    Info (12022): Found design unit 10: ddr2_12_phy_alt_mem_phy_mmi-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 4871
+    Info (12022): Found design unit 11: ddr2_12_phy_alt_mem_phy_admin-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 5420
+    Info (12022): Found design unit 12: ddr2_12_phy_alt_mem_phy_iram_ram-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 6801
+    Info (12022): Found design unit 13: ddr2_12_phy_alt_mem_phy_iram-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 6945
+    Info (12022): Found design unit 14: ddr2_12_phy_alt_mem_phy_dgrb-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 7841
+    Info (12022): Found design unit 15: ddr2_12_phy_alt_mem_phy_dgwb-rtl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 10974
+    Info (12022): Found design unit 16: ddr2_12_phy_alt_mem_phy_ctrl-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 11624
+    Info (12022): Found design unit 17: ddr2_12_phy_alt_mem_phy_seq-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 12890
+    Info (12023): Found entity 1: ddr2_12_phy_alt_mem_phy_mmi File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 4763
+    Info (12023): Found entity 2: ddr2_12_phy_alt_mem_phy_admin File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 5343
+    Info (12023): Found entity 3: ddr2_12_phy_alt_mem_phy_iram_ram File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 6784
+    Info (12023): Found entity 4: ddr2_12_phy_alt_mem_phy_iram File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 6888
+    Info (12023): Found entity 5: ddr2_12_phy_alt_mem_phy_dgrb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 7735
+    Info (12023): Found entity 6: ddr2_12_phy_alt_mem_phy_dgwb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 10907
+    Info (12023): Found entity 7: ddr2_12_phy_alt_mem_phy_ctrl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 11559
+    Info (12023): Found entity 8: ddr2_12_phy_alt_mem_phy_seq File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd Line: 12667
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/ddr2_12_phy.v
+    Info (12023): Found entity 1: ddr2_12_phy File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy.v Line: 33
+Warning (10890): Verilog HDL Attribute warning at ddr2_12_phy_alt_mem_phy.v(11): overriding existing value for attribute "altera_attribute" File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 11
+Info (12021): Found 13 design units, including 13 entities, in source file um/ddr2/ddr2_12_phy_alt_mem_phy.v
+    Info (12023): Found entity 1: ddr2_12_phy_alt_mem_phy File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 11
+    Info (12023): Found entity 2: ddr2_12_phy_alt_mem_phy_ac File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 1142
+    Info (12023): Found entity 3: ddr2_12_phy_alt_mem_phy_addr_cmd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 1524
+    Info (12023): Found entity 4: ddr2_12_phy_alt_mem_phy_dp_io File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 2041
+    Info (12023): Found entity 5: ddr2_12_phy_alt_mem_phy_clk_reset File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 2343
+    Info (12023): Found entity 6: ddr2_12_phy_alt_mem_phy_postamble File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 3162
+    Info (12023): Found entity 7: ddr2_12_phy_alt_mem_phy_read_dp File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 3657
+    Info (12023): Found entity 8: ddr2_12_phy_alt_mem_phy_write_dp_fr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 4124
+    Info (12023): Found entity 9: ddr2_12_phy_alt_mem_phy_rdata_valid File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 4439
+    Info (12023): Found entity 10: ddr2_12_phy_alt_mem_phy_mux File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 4710
+    Info (12023): Found entity 11: ddr2_12_phy_alt_mem_phy_mimic File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 4986
+    Info (12023): Found entity 12: ddr2_12_phy_alt_mem_phy_mimic_debug File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 5241
+    Info (12023): Found entity 13: ddr2_12_phy_alt_mem_phy_reset_pipe File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy.v Line: 5473
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/ddr2_12_phy_alt_mem_phy_pll.v
+    Info (12023): Found entity 1: ddr2_12_phy_alt_mem_phy_pll File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_phy_alt_mem_phy_pll.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2/ddr2_12_controller_phy.v
+    Info (12023): Found entity 1: ddr2_12_controller_phy File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2/ddr2_12_controller_phy.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file sfp/sfp2gmii.v
+    Info (12023): Found entity 1: sfp2gmii File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/sfp/sfp2gmii.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file um/ddr2_ctrl_input.v
+    Info (12023): Found entity 1: ddr2_ctrl_input File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/UM/ddr2_ctrl_input.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_phy_alt_mem_phy_seq_wrapper.v
+    Info (12023): Found entity 1: ddr2_phy_alt_mem_phy_seq_wrapper File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq_wrapper.v Line: 9
+Info (12021): Found 25 design units, including 8 entities, in source file ddr2/ddr2_phy_alt_mem_phy_seq.vhd
+    Info (12022): Found design unit 1: ddr2_phy_alt_mem_phy_constants_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 16
+    Info (12022): Found design unit 2: ddr2_phy_alt_mem_phy_record_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 189
+    Info (12022): Found design unit 3: ddr2_phy_alt_mem_phy_record_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 619
+    Info (12022): Found design unit 4: ddr2_phy_alt_mem_phy_addr_cmd_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 1677
+    Info (12022): Found design unit 5: ddr2_phy_alt_mem_phy_addr_cmd_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 1984
+    Info (12022): Found design unit 6: ddr2_phy_alt_mem_phy_iram_addr_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 3437
+    Info (12022): Found design unit 7: ddr2_phy_alt_mem_phy_iram_addr_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 3481
+    Info (12022): Found design unit 8: ddr2_phy_alt_mem_phy_regs_pkg File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 3643
+    Info (12022): Found design unit 9: ddr2_phy_alt_mem_phy_regs_pkg-body File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 3936
+    Info (12022): Found design unit 10: ddr2_phy_alt_mem_phy_mmi-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 4871
+    Info (12022): Found design unit 11: ddr2_phy_alt_mem_phy_admin-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 5420
+    Info (12022): Found design unit 12: ddr2_phy_alt_mem_phy_iram_ram-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 6800
+    Info (12022): Found design unit 13: ddr2_phy_alt_mem_phy_iram-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 6944
+    Info (12022): Found design unit 14: ddr2_phy_alt_mem_phy_dgrb-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 7840
+    Info (12022): Found design unit 15: ddr2_phy_alt_mem_phy_dgwb-rtl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 10973
+    Info (12022): Found design unit 16: ddr2_phy_alt_mem_phy_ctrl-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 11623
+    Info (12022): Found design unit 17: ddr2_phy_alt_mem_phy_seq-struct File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 12889
+    Info (12023): Found entity 1: ddr2_phy_alt_mem_phy_mmi File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 4763
+    Info (12023): Found entity 2: ddr2_phy_alt_mem_phy_admin File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 5343
+    Info (12023): Found entity 3: ddr2_phy_alt_mem_phy_iram_ram File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 6783
+    Info (12023): Found entity 4: ddr2_phy_alt_mem_phy_iram File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 6887
+    Info (12023): Found entity 5: ddr2_phy_alt_mem_phy_dgrb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 7734
+    Info (12023): Found entity 6: ddr2_phy_alt_mem_phy_dgwb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 10906
+    Info (12023): Found entity 7: ddr2_phy_alt_mem_phy_ctrl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 11558
+    Info (12023): Found entity 8: ddr2_phy_alt_mem_phy_seq File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_seq.vhd Line: 12666
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_phy_alt_mem_phy_pll.v
+    Info (12023): Found entity 1: ddr2_phy_alt_mem_phy_pll File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_pll.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_phy_alt_mem_phy_dq_dqs.v
+    Info (12023): Found entity 1: ddr2_phy_alt_mem_phy_dq_dqs File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy_dq_dqs.v Line: 29
+Warning (10890): Verilog HDL Attribute warning at ddr2_phy_alt_mem_phy.v(11): overriding existing value for attribute "altera_attribute" File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 11
+Info (12021): Found 13 design units, including 13 entities, in source file ddr2/ddr2_phy_alt_mem_phy.v
+    Info (12023): Found entity 1: ddr2_phy_alt_mem_phy File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 11
+    Info (12023): Found entity 2: ddr2_phy_alt_mem_phy_ac File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 1142
+    Info (12023): Found entity 3: ddr2_phy_alt_mem_phy_addr_cmd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 1524
+    Info (12023): Found entity 4: ddr2_phy_alt_mem_phy_dp_io File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 2041
+    Info (12023): Found entity 5: ddr2_phy_alt_mem_phy_clk_reset File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 2343
+    Info (12023): Found entity 6: ddr2_phy_alt_mem_phy_postamble File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 3162
+    Info (12023): Found entity 7: ddr2_phy_alt_mem_phy_read_dp File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 3657
+    Info (12023): Found entity 8: ddr2_phy_alt_mem_phy_write_dp_fr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 4124
+    Info (12023): Found entity 9: ddr2_phy_alt_mem_phy_rdata_valid File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 4439
+    Info (12023): Found entity 10: ddr2_phy_alt_mem_phy_mux File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 4710
+    Info (12023): Found entity 11: ddr2_phy_alt_mem_phy_mimic File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 4986
+    Info (12023): Found entity 12: ddr2_phy_alt_mem_phy_mimic_debug File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 5241
+    Info (12023): Found entity 13: ddr2_phy_alt_mem_phy_reset_pipe File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy_alt_mem_phy.v Line: 5473
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_phy.v
+    Info (12023): Found entity 1: ddr2_phy File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_phy.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_example_top.v
+    Info (12023): Found entity 1: ddr2_example_top File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_example_top.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_example_driver.v
+    Info (12023): Found entity 1: ddr2_example_driver File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_example_driver.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_ex_lfsr8.v
+    Info (12023): Found entity 1: ddr2_ex_lfsr8 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_ex_lfsr8.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_alt_ddrx_controller_wrapper.v
+    Info (12023): Found entity 1: ddr2_alt_ddrx_controller_wrapper File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_alt_ddrx_controller_wrapper.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/altera_avalon_half_rate_bridge.v
+    Info (12023): Found entity 1: altera_avalon_half_rate_bridge File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/altera_avalon_half_rate_bridge.v Line: 21
+Info (12021): Found 0 design units, including 0 entities, in source file ddr2/alt_mem_phy_defines.v
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_wdata_fifo.v
+    Info (12023): Found entity 1: alt_ddrx_wdata_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_wdata_fifo.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_timing_param.v
+    Info (12023): Found entity 1: alt_ddrx_timing_param File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_timing_param.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_state_machine.v
+    Info (12023): Found entity 1: alt_ddrx_state_machine File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_state_machine.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_rank_monitor.v
+    Info (12023): Found entity 1: alt_ddrx_rank_monitor File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_rank_monitor.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_odt_gen.v
+    Info (12023): Found entity 1: alt_ddrx_odt_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_odt_gen.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_input_if.v
+    Info (12023): Found entity 1: alt_ddrx_input_if File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_input_if.v Line: 22
+Warning (12136): Clear box output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_encoder_72.v is not compatible with the current compile. Used regenerated output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_encoder_72.v for elaboration
+Info (12021): Found 2 design units, including 2 entities, in source file db/alt_ddrx_encoder_72.v
+    Info (12023): Found entity 1: alt_ddrx_encoder_72_altecc_encoder_rlb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_encoder_72.v Line: 46
+    Info (12023): Found entity 2: alt_ddrx_encoder_72 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_encoder_72.v Line: 105
+Warning (12136): Clear box output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_encoder_40.v is not compatible with the current compile. Used regenerated output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_encoder_40.v for elaboration
+Info (12021): Found 2 design units, including 2 entities, in source file db/alt_ddrx_encoder_40.v
+    Info (12023): Found entity 1: alt_ddrx_encoder_40_altecc_encoder_plb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_encoder_40.v Line: 46
+    Info (12023): Found entity 2: alt_ddrx_encoder_40 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_encoder_40.v Line: 102
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_encoder.v
+    Info (12023): Found entity 1: alt_ddrx_encoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_encoder.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_ecc.v
+    Info (12023): Found entity 1: alt_ddrx_ecc File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_ecc.v Line: 22
+Warning (12136): Clear box output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_decoder_72.v is not compatible with the current compile. Used regenerated output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_decoder_72.v for elaboration
+Info (12021): Found 2 design units, including 2 entities, in source file db/alt_ddrx_decoder_72.v
+    Info (12023): Found entity 1: alt_ddrx_decoder_72_altecc_decoder_e8f File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_decoder_72.v Line: 46
+    Info (12023): Found entity 2: alt_ddrx_decoder_72 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_decoder_72.v Line: 312
+Warning (12136): Clear box output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_decoder_40.v is not compatible with the current compile. Used regenerated output file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_decoder_40.v for elaboration
+Info (12021): Found 2 design units, including 2 entities, in source file db/alt_ddrx_decoder_40.v
+    Info (12023): Found entity 1: alt_ddrx_decoder_40_altecc_decoder_c8f File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_decoder_40.v Line: 46
+    Info (12023): Found entity 2: alt_ddrx_decoder_40 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/db/alt_ddrx_decoder_40.v Line: 244
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_decoder.v
+    Info (12023): Found entity 1: alt_ddrx_decoder File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_decoder.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_ddr3_odt_gen.v
+    Info (12023): Found entity 1: alt_ddrx_ddr3_odt_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_ddr3_odt_gen.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_ddr2_odt_gen.v
+    Info (12023): Found entity 1: alt_ddrx_ddr2_odt_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_ddr2_odt_gen.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_csr.v
+    Info (12023): Found entity 1: alt_ddrx_csr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_csr.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_controller.v
+    Info (12023): Found entity 1: alt_ddrx_controller File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_controller.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_cmd_queue.v
+    Info (12023): Found entity 1: alt_ddrx_cmd_queue File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_cmd_queue.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_cmd_gen.v
+    Info (12023): Found entity 1: alt_ddrx_cmd_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_cmd_gen.v Line: 22
+Info (12021): Found 2 design units, including 2 entities, in source file ddr2/alt_ddrx_clock_and_reset.v
+    Info (12023): Found entity 1: alt_ddrx_clock_and_reset File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_clock_and_reset.v Line: 22
+    Info (12023): Found entity 2: alt_ddrx_reset_sync File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_clock_and_reset.v Line: 80
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_cache.v
+    Info (12023): Found entity 1: alt_ddrx_cache File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_cache.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_bypass.v
+    Info (12023): Found entity 1: alt_ddrx_bypass File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_bypass.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_bank_timer_wrapper.v
+    Info (12023): Found entity 1: alt_ddrx_bank_timer_wrapper File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_bank_timer_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_bank_timer_info.v
+    Info (12023): Found entity 1: alt_ddrx_bank_timer_info File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_bank_timer_info.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_bank_timer.v
+    Info (12023): Found entity 1: alt_ddrx_bank_timer File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_bank_timer.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_avalon_if.v
+    Info (12023): Found entity 1: alt_ddrx_avalon_if File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_avalon_if.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_afi_block.v
+    Info (12023): Found entity 1: alt_ddrx_afi_block File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_afi_block.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/alt_ddrx_addr_cmd.v
+    Info (12023): Found entity 1: alt_ddrx_addr_cmd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/alt_ddrx_addr_cmd.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file pll_clk.v
+    Info (12023): Found entity 1: pll_clk File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/pll_clk.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file pll_0.v
+    Info (12023): Found entity 1: pll_0 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/pll_0.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2_controller_phy.v
+    Info (12023): Found entity 1: ddr2_controller_phy File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2_controller_phy.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2/ddr2.v
+    Info (12023): Found entity 1: ddr2 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2/ddr2.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2_ctrl_module/um2ddr_fifo.v
+    Info (12023): Found entity 1: um2ddr_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2_ctrl_module/um2ddr_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2_ctrl_module/um2ddr_command_fifo.v
+    Info (12023): Found entity 1: um2ddr_command_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2_ctrl_module/um2ddr_command_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2_ctrl_module/ddr2um_valid_fifo.v
+    Info (12023): Found entity 1: ddr2um_valid_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2_ctrl_module/ddr2um_valid_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2_ctrl_module/ddr2um_fifo.v
+    Info (12023): Found entity 1: ddr2um_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2_ctrl_module/ddr2um_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2_ctrl_module/ddr2_interface2um.v
+    Info (12023): Found entity 1: ddr2_interface2um File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2_ctrl_module/ddr2_interface2um.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2_ctrl_module/ddr2_ctrl_output.v
+    Info (12023): Found entity 1: ddr2_ctrl_output File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2_ctrl_module/ddr2_ctrl_output.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ddr2_ctrl_module/ddr2_ctrl.v
+    Info (12023): Found entity 1: ddr2_ctrl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/ddr2_ctrl_module/ddr2_ctrl.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/rule_32_30_fifo.v
+    Info (12023): Found entity 1: rule_32_30_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/rule_32_30_fifo.v Line: 39
+Warning (292021): Support for IP core CRC Compiler (6AF7_00BC) in device family Arria II GX is preliminary and specifications are subject to change.
+Info (12021): Found 9 design units, including 9 entities, in source file cdp/crc_check_altcrc.v
+    Info (12023): Found entity 1: crc_check_altcrcipb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 21
+    Info (12023): Found entity 2: crc_check_altcrcfeedfwdExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 159
+    Info (12023): Found entity 3: crc_check_altcrcfeedfwd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 670
+    Info (12023): Found entity 4: crc_check_altcrcfeedbckExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 734
+    Info (12023): Found entity 5: crc_check_altcrcfeedbck File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 934
+    Info (12023): Found entity 6: crc_check_altcrcscaleExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 972
+    Info (12023): Found entity 7: crc_check_altcrcscale File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 1186
+    Info (12023): Found entity 8: crc_check_altcrceop File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 1236
+    Info (12023): Found entity 9: crc_check_altcrc File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check_altcrc.v Line: 1353
+Info (12021): Found 9 design units, including 9 entities, in source file manage_md/crc32_gen_altcrc.v
+    Info (12023): Found entity 1: crc32_gen_altcrcipb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 21
+    Info (12023): Found entity 2: crc32_gen_altcrcfeedfwdExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 111
+    Info (12023): Found entity 3: crc32_gen_altcrcfeedfwd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 312
+    Info (12023): Found entity 4: crc32_gen_altcrcfeedbckExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 376
+    Info (12023): Found entity 5: crc32_gen_altcrcfeedbck File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 568
+    Info (12023): Found entity 6: crc32_gen_altcrcscaleExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 606
+    Info (12023): Found entity 7: crc32_gen_altcrcscale File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 806
+    Info (12023): Found entity 8: crc32_gen_altcrceop File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 856
+    Info (12023): Found entity 9: crc32_gen_altcrc File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen_altcrc.v Line: 1028
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/crc_check.v
+    Info (12023): Found entity 1: crc_check File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/crc_check.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/level2_64_19.v
+    Info (12023): Found entity 1: level2_64_19 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/level2_64_19.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/rx_crc.v
+    Info (12023): Found entity 1: rx_crc File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/rx_crc.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/tx_gen.v
+    Info (12023): Found entity 1: tx_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/tx_gen.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/level2_256_139.v
+    Info (12023): Found entity 1: level2_256_139 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/level2_256_139.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/input2output_128_139.v
+    Info (12023): Found entity 1: input2output_128_139 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/input2output_128_139.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/rx_64_1.v
+    Info (12023): Found entity 1: rx_64_1 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/rx_64_1.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/input_ctrl.v
+    Info (12023): Found entity 1: input_ctrl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/input_ctrl.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/output_ctrl.v
+    Info (12023): Found entity 1: output_ctrl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/output_ctrl.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file pkt_input_ctrl/pkt_input_ctrl.v
+    Info (12023): Found entity 1: pkt_input_ctrl File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/pkt_input_ctrl/pkt_input_ctrl.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/tx_valid_fifo.v
+    Info (12023): Found entity 1: tx_valid_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/tx_valid_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/tx_fifo.v
+    Info (12023): Found entity 1: tx_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/tx_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/result_fifo.v
+    Info (12023): Found entity 1: result_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/result_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/pkt_length_fifo.v
+    Info (12023): Found entity 1: pkt_length_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/pkt_length_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/pkt_gen_fifo.v
+    Info (12023): Found entity 1: pkt_gen_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/pkt_gen_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/pkt_gen.v
+    Info (12023): Found entity 1: pkt_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/pkt_gen.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/net_magic_ctrl.v
+    Info (12023): Found entity 1: NET_MAGIC_CTRL File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/NET_MAGIC_CTRL.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/manage_tx.v
+    Info (12023): Found entity 1: manage_tx File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/manage_tx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/manage_rx.v
+    Info (12023): Found entity 1: manage_rx File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/manage_rx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/local_bus.v
+    Info (12023): Found entity 1: local_bus File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/local_bus.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/length_gen_fifo.v
+    Info (12023): Found entity 1: length_gen_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/length_gen_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/data_fifo.v
+    Info (12023): Found entity 1: data_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/data_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/crc32_gen.v
+    Info (12023): Found entity 1: crc32_gen File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/crc32_gen.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/command_parse.v
+    Info (12023): Found entity 1: command_parse File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/command_parse.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/com_valid_fifo.v
+    Info (12023): Found entity 1: com_valid_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/com_valid_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file manage_md/cdp_local_bus.v
+    Info (12023): Found entity 1: cdp_local_bus File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/manage_md/cdp_local_bus.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/tx139_gmii_1000.v
+    Info (12023): Found entity 1: tx139_gmii_1000 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/tx139_gmii_1000.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/rx_tx_1000.v
+    Info (12023): Found entity 1: rx_tx_1000 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/rx_tx_1000.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/rgmii_gmii.v
+    Info (12023): Found entity 1: rgmii_gmii File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/rgmii_gmii.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/gmii_139_1000.v
+    Info (12023): Found entity 1: gmii_139_1000 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/gmii_139_1000.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/ddio_out_1.v
+    Info (12023): Found entity 1: ddio_out_1 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/ddio_out_1.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/ddio_out.v
+    Info (12023): Found entity 1: ddio_out File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/ddio_out.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/ddio_in_4.v
+    Info (12023): Found entity 1: ddio_in_4 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/ddio_in_4.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/ddio_in_1.v
+    Info (12023): Found entity 1: ddio_in_1 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/ddio_in_1.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/check_fifo.v
+    Info (12023): Found entity 1: check_fifo File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/check_fifo.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/check_100_1000.v
+    Info (12023): Found entity 1: check_100_1000 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/check_100_1000.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/asyn_256_139.v
+    Info (12023): Found entity 1: asyn_256_139 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/asyn_256_139.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/asyn_64_1.v
+    Info (12023): Found entity 1: asyn_64_1 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/asyn_64_1.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file sfp/sfp_rx_tx_1000.v
+    Info (12023): Found entity 1: sfp_rx_tx_1000 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/sfp/sfp_rx_tx_1000.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file sfp/act_led.v
+    Info (12023): Found entity 1: act_led File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/sfp/act_led.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file netfpgamini.v
+    Info (12023): Found entity 1: netFPGAmini File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/netFPGAmini.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rli/check_ip.v
+    Info (12023): Found entity 1: check_ip File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip.v Line: 33
+Info (12021): Found 9 design units, including 9 entities, in source file rli/check_ip_altcrc.v
+    Info (12023): Found entity 1: check_ip_altcrcipb File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 21
+    Info (12023): Found entity 2: check_ip_altcrcfeedfwdExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 162
+    Info (12023): Found entity 3: check_ip_altcrcfeedfwd File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 680
+    Info (12023): Found entity 4: check_ip_altcrcfeedbckExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 747
+    Info (12023): Found entity 5: check_ip_altcrcfeedbck File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 946
+    Info (12023): Found entity 6: check_ip_altcrcscaleExpr File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 987
+    Info (12023): Found entity 7: check_ip_altcrcscale File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 1196
+    Info (12023): Found entity 8: check_ip_altcrceop File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 1249
+    Info (12023): Found entity 9: check_ip_altcrc File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/check_ip_altcrc.v Line: 1369
+Info (12021): Found 1 design units, including 1 entities, in source file cdp/rule_32_30.v
+    Info (12023): Found entity 1: rule_32_30 File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/cdp/rule_32_30.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file rli/nmac_crc_check.v
+    Info (12023): Found entity 1: nmac_crc_check File: C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/rli/nmac_crc_check.v Line: 2
+Info (144001): Generated suppressed messages file C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/netFPGAmini.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 8 warnings
+    Error: Peak virtual memory: 5183 megabytes
+    Error: Processing ended: Mon Mar 15 19:11:29 2021
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/23507/Desktop/lab001/in2out3_0/netFPGAmini-2-3_restored/netFPGAmini.map.smsg.
+
+
