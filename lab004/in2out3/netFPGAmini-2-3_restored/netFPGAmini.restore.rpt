@@ -1,0 +1,441 @@
+Restore Archived Project report for netFPGAmini
+Sat Apr 28 09:49:58 2018
+Quartus Prime Version 16.0.2 Build 222 07/20/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sat Apr 28 09:49:58 2018 ;
+; Revision Name                   ; netFPGAmini                           ;
+; Top-level Entity Name           ; netFPGAmini                           ;
+; Family                          ; Arria II GX                           ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'E:/in2out3/netFPGAmini-2-3.qar' into the 'E:/in2out3/netFPGAmini-2-3_restored/' directory
+Info: Generated report 'netFPGAmini.restore.rpt'
+Info (23030): Evaluation of Tcl script d:/altera/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 368 warnings
+    Info: Peak virtual memory: 773 megabytes
+    Info: Processing ended: Sat Apr 28 09:49:58 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
+
+
++----------------------------------------------------------------------------+
+; Files Not Restored                                                         ;
++----------------------------------------------------------------------------+
+; File Name                                                                  ;
++----------------------------------------------------------------------------+
+; qar_info.json                                                              ;
+; Hello_NetMagic_08.stp                                                      ;
+; STP/stp1.stp                                                               ;
+; UM/UM.stp                                                                  ;
+; UM/ddr2/alt_mem_ddrx_addr_cmd.v                                            ;
+; UM/ddr2/alt_mem_ddrx_addr_cmd_wrap.v                                       ;
+; UM/ddr2/alt_mem_ddrx_arbiter.v                                             ;
+; UM/ddr2/alt_mem_ddrx_buffer.v                                              ;
+; UM/ddr2/alt_mem_ddrx_buffer_manager.v                                      ;
+; UM/ddr2/alt_mem_ddrx_burst_gen.v                                           ;
+; UM/ddr2/alt_mem_ddrx_burst_tracking.v                                      ;
+; UM/ddr2/alt_mem_ddrx_cmd_gen.v                                             ;
+; UM/ddr2/alt_mem_ddrx_controller.v                                          ;
+; UM/ddr2/alt_mem_ddrx_controller_st_top.v                                   ;
+; UM/ddr2/alt_mem_ddrx_csr.v                                                 ;
+; UM/ddr2/alt_mem_ddrx_dataid_manager.v                                      ;
+; UM/ddr2/alt_mem_ddrx_ddr2_odt_gen.v                                        ;
+; UM/ddr2/alt_mem_ddrx_ddr3_odt_gen.v                                        ;
+; UM/ddr2/alt_mem_ddrx_define.iv                                             ;
+; UM/ddr2/alt_mem_ddrx_ecc_decoder.v                                         ;
+; UM/ddr2/alt_mem_ddrx_ecc_decoder_32_syn.v                                  ;
+; UM/ddr2/alt_mem_ddrx_ecc_decoder_64_syn.v                                  ;
+; UM/ddr2/alt_mem_ddrx_ecc_encoder.v                                         ;
+; UM/ddr2/alt_mem_ddrx_ecc_encoder_32_syn.v                                  ;
+; UM/ddr2/alt_mem_ddrx_ecc_encoder_64_syn.v                                  ;
+; UM/ddr2/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v                         ;
+; UM/ddr2/alt_mem_ddrx_fifo.v                                                ;
+; UM/ddr2/alt_mem_ddrx_input_if.v                                            ;
+; UM/ddr2/alt_mem_ddrx_list.v                                                ;
+; UM/ddr2/alt_mem_ddrx_lpddr2_addr_cmd.v                                     ;
+; UM/ddr2/alt_mem_ddrx_mm_st_converter.v                                     ;
+; UM/ddr2/alt_mem_ddrx_odt_gen.v                                             ;
+; UM/ddr2/alt_mem_ddrx_rank_timer.v                                          ;
+; UM/ddr2/alt_mem_ddrx_rdata_path.v                                          ;
+; UM/ddr2/alt_mem_ddrx_rdwr_data_tmg.v                                       ;
+; UM/ddr2/alt_mem_ddrx_sideband.v                                            ;
+; UM/ddr2/alt_mem_ddrx_tbp.v                                                 ;
+; UM/ddr2/alt_mem_ddrx_timing_param.v                                        ;
+; UM/ddr2/alt_mem_ddrx_wdata_path.v                                          ;
+; UM/ddr2/alt_mem_phy_defines.v                                              ;
+; UM/ddr2/altmemphy-library/auk_ddr_hp_controller.ocp                        ;
+; UM/ddr2/ddr2_12.bsf                                                        ;
+; UM/ddr2/ddr2_12.html                                                       ;
+; UM/ddr2/ddr2_12.qip                                                        ;
+; UM/ddr2/ddr2_12.v                                                          ;
+; UM/ddr2/ddr2_12_advisor.ipa                                                ;
+; UM/ddr2/ddr2_12_alt_mem_ddrx_controller_top.v                              ;
+; UM/ddr2/ddr2_12_bb.v                                                       ;
+; UM/ddr2/ddr2_12_controller_phy.v                                           ;
+; UM/ddr2/ddr2_12_ex_lfsr8.v                                                 ;
+; UM/ddr2/ddr2_12_example_driver.v                                           ;
+; UM/ddr2/ddr2_12_example_top.sdc                                            ;
+; UM/ddr2/ddr2_12_example_top.v                                              ;
+; UM/ddr2/ddr2_12_phy.bsf                                                    ;
+; UM/ddr2/ddr2_12_phy.html                                                   ;
+; UM/ddr2/ddr2_12_phy.qip                                                    ;
+; UM/ddr2/ddr2_12_phy.v                                                      ;
+; UM/ddr2/ddr2_12_phy_alt_mem_phy.v                                          ;
+; UM/ddr2/ddr2_12_phy_alt_mem_phy_dq_dqs.v                                   ;
+; UM/ddr2/ddr2_12_phy_alt_mem_phy_pll.qip                                    ;
+; UM/ddr2/ddr2_12_phy_alt_mem_phy_pll.v                                      ;
+; UM/ddr2/ddr2_12_phy_alt_mem_phy_pll_bb.v                                   ;
+; UM/ddr2/ddr2_12_phy_alt_mem_phy_seq.vhd                                    ;
+; UM/ddr2/ddr2_12_phy_alt_mem_phy_seq_wrapper.v                              ;
+; UM/ddr2/ddr2_12_phy_bb.v                                                   ;
+; UM/ddr2/ddr2_12_phy_ddr_pins.tcl                                           ;
+; UM/ddr2/ddr2_12_phy_ddr_timing.sdc                                         ;
+; UM/ddr2/ddr2_12_phy_ddr_timing.tcl                                         ;
+; UM/ddr2/ddr2_12_phy_report_timing.tcl                                      ;
+; UM/ddr2/ddr2_12_phy_report_timing_core.tcl                                 ;
+; UM/ddr2/ddr2_12_pin_assignments.tcl                                        ;
+; UM/ddr2/ddr2_high_performance_controller-library/auk_ddr_hp_controller.ocp ;
+; UM/ddr2/testbench/ddr2_12_example_top_tb.v                                 ;
+; UM/ddr2/testbench/ddr2_12_full_mem_model.v                                 ;
+; UM/ddr2/testbench/ddr2_12_mem_model.v                                      ;
+; UM/ddr2_ctrl_input.v                                                       ;
+; UM/pll_0.qip                                                               ;
+; UM_my/UM.v                                                                 ;
+; assignment_defaults.qdf                                                    ;
+; cdp/asyn_256_139.v                                                         ;
+; cdp/asyn_64_1.v                                                            ;
+; cdp/check_100_1000.v                                                       ;
+; cdp/check_fifo.v                                                           ;
+; cdp/crc_check.v                                                            ;
+; cdp/crc_check_altcrc.v                                                     ;
+; cdp/ddio_in_1.v                                                            ;
+; cdp/ddio_in_4.v                                                            ;
+; cdp/ddio_out.v                                                             ;
+; cdp/ddio_out_1.v                                                           ;
+; cdp/gmii_139_1000.v                                                        ;
+; cdp/input2output_128_139.v                                                 ;
+; cdp/input_ctrl.v                                                           ;
+; cdp/level2_256_139.v                                                       ;
+; cdp/level2_64_19.v                                                         ;
+; cdp/output_ctrl.v                                                          ;
+; cdp/rgmii_gmii.v                                                           ;
+; cdp/rule_32_30.qip                                                         ;
+; cdp/rule_32_30.v                                                           ;
+; cdp/rule_32_30_fifo.qip                                                    ;
+; cdp/rule_32_30_fifo.v                                                      ;
+; cdp/rx_64_1.v                                                              ;
+; cdp/rx_crc.v                                                               ;
+; cdp/rx_tx_1000.v                                                           ;
+; cdp/tx139_gmii_1000.v                                                      ;
+; cdp/tx_gen.v                                                               ;
+; db/Hello_NetMagic_08_auto_stripped.stp                                     ;
+; ddr2/alt_ddrx_addr_cmd.v                                                   ;
+; ddr2/alt_ddrx_afi_block.v                                                  ;
+; ddr2/alt_ddrx_avalon_if.v                                                  ;
+; ddr2/alt_ddrx_bank_timer.v                                                 ;
+; ddr2/alt_ddrx_bank_timer_info.v                                            ;
+; ddr2/alt_ddrx_bank_timer_wrapper.v                                         ;
+; ddr2/alt_ddrx_bypass.v                                                     ;
+; ddr2/alt_ddrx_cache.v                                                      ;
+; ddr2/alt_ddrx_clock_and_reset.v                                            ;
+; ddr2/alt_ddrx_cmd_gen.v                                                    ;
+; ddr2/alt_ddrx_cmd_queue.v                                                  ;
+; ddr2/alt_ddrx_controller.v                                                 ;
+; ddr2/alt_ddrx_csr.v                                                        ;
+; ddr2/alt_ddrx_ddr2_odt_gen.v                                               ;
+; ddr2/alt_ddrx_ddr3_odt_gen.v                                               ;
+; ddr2/alt_ddrx_decoder.v                                                    ;
+; ddr2/alt_ddrx_decoder_40.v                                                 ;
+; ddr2/alt_ddrx_decoder_72.v                                                 ;
+; ddr2/alt_ddrx_ecc.v                                                        ;
+; ddr2/alt_ddrx_encoder.v                                                    ;
+; ddr2/alt_ddrx_encoder_40.v                                                 ;
+; ddr2/alt_ddrx_encoder_72.v                                                 ;
+; ddr2/alt_ddrx_input_if.v                                                   ;
+; ddr2/alt_ddrx_odt_gen.v                                                    ;
+; ddr2/alt_ddrx_rank_monitor.v                                               ;
+; ddr2/alt_ddrx_state_machine.v                                              ;
+; ddr2/alt_ddrx_timing_param.v                                               ;
+; ddr2/alt_ddrx_wdata_fifo.v                                                 ;
+; ddr2/alt_mem_phy_defines.v                                                 ;
+; ddr2/altera_avalon_half_rate_bridge.v                                      ;
+; ddr2/altera_avalon_half_rate_bridge_constraints.sdc                        ;
+; ddr2/ddr2.v                                                                ;
+; ddr2/ddr2_alt_ddrx_controller_wrapper.v                                    ;
+; ddr2/ddr2_controller_phy.v                                                 ;
+; ddr2/ddr2_ex_lfsr8.v                                                       ;
+; ddr2/ddr2_example_driver.v                                                 ;
+; ddr2/ddr2_example_top.sdc                                                  ;
+; ddr2/ddr2_example_top.v                                                    ;
+; ddr2/ddr2_phy.v                                                            ;
+; ddr2/ddr2_phy_alt_mem_phy.v                                                ;
+; ddr2/ddr2_phy_alt_mem_phy_dq_dqs.v                                         ;
+; ddr2/ddr2_phy_alt_mem_phy_pll.v                                            ;
+; ddr2/ddr2_phy_alt_mem_phy_seq.vhd                                          ;
+; ddr2/ddr2_phy_alt_mem_phy_seq_wrapper.v                                    ;
+; ddr2/ddr2_phy_ddr_pins.tcl                                                 ;
+; ddr2/ddr2_phy_ddr_timing.sdc                                               ;
+; ddr2/ddr2_phy_ddr_timing.tcl                                               ;
+; ddr2/ddr2_phy_report_timing.tcl                                            ;
+; ddr2/ddr2_phy_report_timing_core.tcl                                       ;
+; ddr2/ddr2_pin_assignments.tcl                                              ;
+; ddr2_12_phy_autodetectedpins.tcl                                           ;
+; ddr2_ctrl_module/ddr2_ctrl.v                                               ;
+; ddr2_ctrl_module/ddr2_ctrl_output.v                                        ;
+; ddr2_ctrl_module/ddr2_interface2um.v                                       ;
+; ddr2_ctrl_module/ddr2um_fifo.v                                             ;
+; ddr2_ctrl_module/ddr2um_valid_fifo.v                                       ;
+; ddr2_ctrl_module/um2ddr_command_fifo.v                                     ;
+; ddr2_ctrl_module/um2ddr_fifo.v                                             ;
+; manage_md/NET_MAGIC_CTRL.v                                                 ;
+; manage_md/cdp_local_bus.v                                                  ;
+; manage_md/com_valid_fifo.v                                                 ;
+; manage_md/command_parse.v                                                  ;
+; manage_md/crc32_gen.v                                                      ;
+; manage_md/crc32_gen_altcrc.v                                               ;
+; manage_md/data_fifo.v                                                      ;
+; manage_md/length_gen_fifo.v                                                ;
+; manage_md/local_bus.v                                                      ;
+; manage_md/manage_rx.v                                                      ;
+; manage_md/manage_tx.v                                                      ;
+; manage_md/pkt_gen.v                                                        ;
+; manage_md/pkt_gen_fifo.v                                                   ;
+; manage_md/pkt_length_fifo.v                                                ;
+; manage_md/result_fifo.v                                                    ;
+; manage_md/tx_fifo.v                                                        ;
+; manage_md/tx_valid_fifo.v                                                  ;
+; netFPGAmini.jdi                                                            ;
+; netFPGAmini.out.sdc                                                        ;
+; netFPGAmini.qpf                                                            ;
+; netFPGAmini.qsf                                                            ;
+; netFPGAmini.sld                                                            ;
+; netFPGAmini.sof                                                            ;
+; netFPGAmini.v                                                              ;
+; netFPGAmini_assignment_defaults.qdf                                        ;
+; pkt_input_ctrl/pkt_input_ctrl.v                                            ;
+; pll_0.v                                                                    ;
+; pll_clk.v                                                                  ;
+; rli/asy_256_139.v                                                          ;
+; rli/asy_64_1.v                                                             ;
+; rli/check_ip.bsf                                                           ;
+; rli/check_ip.html                                                          ;
+; rli/check_ip.qip                                                           ;
+; rli/check_ip.v                                                             ;
+; rli/check_ip_altcrc.ocp                                                    ;
+; rli/check_ip_altcrc.ppf                                                    ;
+; rli/check_ip_altcrc.v                                                      ;
+; rli/check_ip_bb.v                                                          ;
+; rli/crc_gen.v                                                              ;
+; rli/crc_gen_altcrc.v                                                       ;
+; rli/fifo_256_139.v                                                         ;
+; rli/fifo_64_1.v                                                            ;
+; rli/nmac_crc_check.v                                                       ;
+; sfp/act_led.v                                                              ;
+; sfp/sfp2gmii.bsf                                                           ;
+; sfp/sfp2gmii.html                                                          ;
+; sfp/sfp2gmii.qip                                                           ;
+; sfp/sfp2gmii.v                                                             ;
+; sfp/sfp2gmii_bb.v                                                          ;
+; sfp/sfp2gmii_constraints.sdc                                               ;
+; sfp/sfp2gmii_constraints.tcl                                               ;
+; sfp/sfp2gmii_nativelink.tcl                                                ;
+; sfp/sfp_rx_tx_1000.v                                                       ;
+; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_13.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_24.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_34.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_opt_1246.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_opt_14_44.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_a_fifo_opt_36_10.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_align_sync.v                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_alt2gxb_arriagx.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_alt2gxb_basic.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_alt2gxb_gige.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_alt4gxb_gige.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_altgx_civgx_gige.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_altshifttaps.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_altsyncram_dpm_fifo.v         ;
+; sfp/triple_speed_ethernet-library/altera_tse_bin_cnt.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_carrier_sense.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_clk_cntl.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_clk_gen.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_colision_detect.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_crc328checker.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_crc328generator.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_crc32ctl8.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_crc32galois8.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_dc_fifo.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_dec10b8b.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_dec_func.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_dpram_16x32.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_dpram_8x32.v                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_enc8b10b.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_fifoless_mac_rx.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_fifoless_mac_tx.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_fifoless_retransmit_cntl.v    ;
+; sfp/triple_speed_ethernet-library/altera_tse_geth_pcs_wo_ratematch.v       ;
+; sfp/triple_speed_ethernet-library/altera_tse_gige_reset_ctrl.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_gmii_io.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_gray_cnt.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_gxb_aligned_rxsync.v          ;
+; sfp/triple_speed_ethernet-library/altera_tse_gxb_gige_inst.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_hashing.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_host_control.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_host_control_small.v          ;
+; sfp/triple_speed_ethernet-library/altera_tse_lb_read_cntl.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_lb_wrt_cntl.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_lfsr_10.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_loopback_ff.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac.v                         ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_control.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_gige_woff.v           ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma_ena.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma_gige.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_pma_strx_gx_ena.v     ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_pcs_woff.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_rx.v                      ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_tx.v                      ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_woff.ocp                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_mac_woff.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_magic_detection.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_mdio.v                        ;
+; sfp/triple_speed_ethernet-library/altera_tse_mdio_clk_gen.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_mdio_cntl.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_mdio_reg.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_mii_rx_if.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_mii_rx_if_pcs.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_mii_tx_if.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_mii_tx_if_pcs.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_multi_channel_arbiter.v       ;
+; sfp/triple_speed_ethernet-library/altera_tse_multi_mac.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_multi_mac_pcs.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_multi_mac_pcs_pma.v           ;
+; sfp/triple_speed_ethernet-library/altera_tse_multi_mac_pcs_pma_gige.v      ;
+; sfp/triple_speed_ethernet-library/altera_tse_pcs.v                         ;
+; sfp/triple_speed_ethernet-library/altera_tse_pcs_control.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_pcs_host_control.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_pcs_pma.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_pcs_pma_gige.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_pma_lvds_rx.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_pma_lvds_tx.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_quad_16x32.v                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_quad_8x32.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_register_map.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_register_map_small.v          ;
+; sfp/triple_speed_ethernet-library/altera_tse_retransmit_cntl.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_rgmii_in1.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_rgmii_in4.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_rgmii_module.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_rgmii_out1.v                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_rgmii_out4.v                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_converter.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_counter_cntl.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_encapsulation.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_encapsulation_strx_gx.v    ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_ff.v                       ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_cntrl.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_cntrl_32.v              ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_cntrl_32_shift16.v      ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_ff_length.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_fifo_rd.v                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_min_ff.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_stat_extract.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_rx_sync.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_sdpm_altsyncram.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_sdpm_gen.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_cntl.v              ;
+; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_div.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_enable.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_sgmii_clk_scheduler.v         ;
+; sfp/triple_speed_ethernet-library/altera_tse_shared_mac_control.v          ;
+; sfp/triple_speed_ethernet-library/altera_tse_shared_register_map.v         ;
+; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter32.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter8.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter_fifo32.v       ;
+; sfp/triple_speed_ethernet-library/altera_tse_timing_adapter_fifo8.v        ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_1000_base_x.ocp           ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_1000_base_x.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_1000_base_x_strx_gx.ocp   ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_1000_base_x_strx_gx.v     ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_1geth.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_autoneg.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_fifoless_1geth.v          ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_gen_host.ocp              ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_gen_host.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_mdio.v                    ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_multi_mac.v               ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_multi_mac_pcs.v           ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_multi_mac_pcs_gige.v      ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_pcs.v                     ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_pcs_strx_gx.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_rx.v                      ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_rx_converter.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_sgmii.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_sgmii_strx_gx.v           ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_tx.v                      ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_tx_converter.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_w_fifo.v                  ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_w_fifo_10_100_1000.v      ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_wo_fifo.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_top_wo_fifo_10_100_1000.v     ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_converter.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_counter_cntl.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_encapsulation.v            ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_ff.v                       ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_cntrl.v                 ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_cntrl_32.v              ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_cntrl_32_shift16.v      ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_length.v                ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_ff_read_cntl.v             ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_min_ff.v                   ;
+; sfp/triple_speed_ethernet-library/altera_tse_tx_stat_extract.v             ;
++----------------------------------------------------------------------------+
+
+

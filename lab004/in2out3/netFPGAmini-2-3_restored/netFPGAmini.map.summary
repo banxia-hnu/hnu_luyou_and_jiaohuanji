@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Mon Mar 29 19:29:24 2021
+Quartus Prime Version : 16.0.2 Build 222 07/20/2016 SJ Standard Edition
+Revision Name : netFPGAmini
+Top-level Entity Name : netFPGAmini
+Family : Arria II GX
+Logic utilization : N/A
+    Combinational ALUTs : 19,313
+    Memory ALUTs : 7
+    Dedicated logic registers : 24,162
+Total registers : 24370
+Total pins : 154
+Total virtual pins : 0
+Total block memory bits : 1,196,800
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 4
+Total GXB Receiver Channel PMA : 4
+Total GXB Transmitter Channel PCS : 4
+Total GXB Transmitter Channel PMA : 4
+Total PLLs : 2
+Total DLLs : 1

@@ -1,0 +1,25 @@
+#Core: ddr2_12_phy - Instance: ddr2_interface2um|ddr2_ctrl_hp_inst|ddr2_12_controller_phy_inst|ddr2_12_phy_inst
+#Path, Setup Margin, Hold Margin
+"Address Command (Slow 900mV 85C Model)",1.931,1.924
+"DQS vs CK (Slow 900mV 85C Model)",0.928,0.965
+"Phy (Slow 900mV 85C Model)",1.084,0.211
+"Phy Reset (Slow 900mV 85C Model)",1.451,0.554
+"Read Capture (Slow 900mV 85C Model)",0.396,0.607
+"Read Resync (All Conditions)",1.435,1.586
+"Write (Slow 900mV 85C Model)",0.869,0.572
+ 
+"Address Command (Slow 900mV 0C Model)",1.940,1.964
+"DQS vs CK (Slow 900mV 0C Model)",0.953,0.986
+"Phy (Slow 900mV 0C Model)",1.269,0.185
+"Phy Reset (Slow 900mV 0C Model)",1.660,0.537
+"Read Capture (Slow 900mV 0C Model)",0.473,0.534
+"Read Resync (All Conditions)",1.435,1.586
+"Write (Slow 900mV 0C Model)",0.879,0.591
+ 
+"Address Command (Fast 900mV 0C Model)",2.081,1.990
+"DQS vs CK (Fast 900mV 0C Model)",1.010,1.049
+"Phy (Fast 900mV 0C Model)",2.234,0.084
+"Phy Reset (Fast 900mV 0C Model)",2.972,0.291
+"Read Capture (Fast 900mV 0C Model)",0.501,0.645
+"Read Resync (All Conditions)",1.458,1.609
+"Write (Fast 900mV 0C Model)",0.950,0.669

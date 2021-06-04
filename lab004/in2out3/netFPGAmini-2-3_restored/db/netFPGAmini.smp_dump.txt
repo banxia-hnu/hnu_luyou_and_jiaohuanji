@@ -1,0 +1,1364 @@
+
+State Machine - |netFPGAmini|cdp_local_bus:cdp_local_bus|current_state
+Name current_state.judge_clear current_state.cannel_command current_state.enable_ack current_state.wait_cs current_state.judge_addr current_state.idle 
+current_state.idle 0 0 0 0 0 0 
+current_state.judge_addr 0 0 0 0 1 1 
+current_state.wait_cs 0 0 0 1 0 1 
+current_state.enable_ack 0 0 1 0 0 1 
+current_state.cannel_command 0 1 0 0 0 1 
+current_state.judge_clear 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_7|act_led:act_led|current_state
+Name current_state.idle current_state.second current_state.first 
+current_state.idle 0 0 0 
+current_state.first 1 0 1 
+current_state.second 1 1 0 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_7|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_7|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_tx_encapsulation:U_TCAPS|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_7|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_rx_encapsulation_strx_gx:U_RCAPS|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_7|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_7|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_7|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_6|act_led:act_led|current_state
+Name current_state.idle current_state.second current_state.first 
+current_state.idle 0 0 0 
+current_state.first 1 0 1 
+current_state.second 1 1 0 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_6|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_6|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_tx_encapsulation:U_TCAPS|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_6|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_rx_encapsulation_strx_gx:U_RCAPS|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_6|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_6|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_6|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_5|act_led:act_led|current_state
+Name current_state.idle current_state.second current_state.first 
+current_state.idle 0 0 0 
+current_state.first 1 0 1 
+current_state.second 1 1 0 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_5|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_5|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_tx_encapsulation:U_TCAPS|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_5|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_rx_encapsulation_strx_gx:U_RCAPS|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_5|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_5|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_5|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_4|act_led:act_led|current_state
+Name current_state.idle current_state.second current_state.first 
+current_state.idle 0 0 0 
+current_state.first 1 0 1 
+current_state.second 1 1 0 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_4|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_pcs_control:U_REG|altera_tse_pcs_host_control:U_CTRL|state
+Name state.STM_TYPE_TX_READ state.STM_TYPE_RX_READ state.STM_TYPE_WAIT_CYCLE state.STM_TYPE_END_READ state.STM_TYPE_NEXT_CYCLE state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 0 0 
+state.STM_TYPE_NEXT_CYCLE 0 0 0 0 1 1 
+state.STM_TYPE_END_READ 0 0 0 1 0 1 
+state.STM_TYPE_WAIT_CYCLE 0 0 1 0 0 1 
+state.STM_TYPE_RX_READ 0 1 0 0 0 1 
+state.STM_TYPE_TX_READ 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_4|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_tx_encapsulation:U_TCAPS|state
+Name state.STM_TYP_CF_C2D state.STM_TYP_CF_C2C state.STM_TYP_CF_C2B state.STM_TYP_CF_C2A state.STM_TYP_CF_C1D state.STM_TYP_CF_C1C state.STM_TYP_CF_C1B state.STM_TYP_CF_C1A state.STM_TYP_FRM_END3 state.STM_TYP_FRM_DATA_ERR state.STM_TYP_FRM_START_ERR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_IDLE 
+state.STM_TYP_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_END 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_START_ERR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_DATA_ERR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FRM_END3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1A 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1B 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1C 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C1D 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2B 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2C 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_CF_C2D 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_4|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_rx_encapsulation_strx_gx:U_RCAPS|state
+Name state.STM_TYP_EARLY_END_EXTEND3 state.STM_TYP_EARLY_END_EXTEND2 state.STM_TYP_EARLY_END_EXTEND1 state.STM_TYP_FRM_END_EXTEND2 state.STM_TYP_FRM_END_EXTEND1 state.STM_TYP_RX_FAULT state.STM_TYP_RX_INVAL state.STM_TYP_AN_CD state.STM_TYP_AN_CC state.STM_TYP_AN_CB state.STM_TYP_EARLY_END state.STM_TYP_FALSE_CAR state.STM_TYP_FRM_END2 state.STM_TYP_FRM_END1 state.STM_TYP_FRM state.STM_TYP_FRM_START state.STM_TYP_RX_K state.STM_TYP_IDLE_D state.STM_TYP_K_WAIT 
+state.STM_TYP_K_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.STM_TYP_IDLE_D 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.STM_TYP_RX_K 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STM_TYP_FRM_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STM_TYP_FRM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STM_TYP_FRM_END1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STM_TYP_FRM_END2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.STM_TYP_FALSE_CAR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CB 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CC 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_AN_CD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_INVAL 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_RX_FAULT 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_FRM_END_EXTEND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STM_TYP_EARLY_END_EXTEND3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_4|sfp2gmii:sfp2gmii|altera_tse_pcs_pma_gige:altera_tse_pcs_pma_gige_inst|altera_tse_top_1000_base_x_strx_gx:altera_tse_top_1000_base_x_strx_gx_inst|altera_tse_top_pcs_strx_gx:U_PCS|altera_tse_top_autoneg:U_AUTONEG|state
+Name state.STM_TYP_NO_AN_LINK state.STM_TYP_LINK_OK state.STM_TYP_IDLE_DETECT state.STM_TYP_COMPLETE_ACK state.STM_TYP_ACK_DETECT state.STM_TYP_ABILITY_DETECT state.STM_TYP_AUTONEG_RESTART state.STM_TYP_AUTONEG_ENA 
+state.STM_TYP_AUTONEG_ENA 0 0 0 0 0 0 0 0 
+state.STM_TYP_AUTONEG_RESTART 0 0 0 0 0 0 1 1 
+state.STM_TYP_ABILITY_DETECT 0 0 0 0 0 1 0 1 
+state.STM_TYP_ACK_DETECT 0 0 0 0 1 0 0 1 
+state.STM_TYP_COMPLETE_ACK 0 0 0 1 0 0 0 1 
+state.STM_TYP_IDLE_DETECT 0 0 1 0 0 0 0 1 
+state.STM_TYP_LINK_OK 0 1 0 0 0 0 0 1 
+state.STM_TYP_NO_AN_LINK 1 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_4|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|sfp_rx_tx_1000:sfp_rx_tx_4|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx3|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx3|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx2|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx2|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx1|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx1|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx0|tx139_gmii_1000:tx139_gmii|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_tx_1000:rx_tx0|gmii_139_1000:gmii_139|current_state
+Name current_state.discard current_state.byte16 current_state.byte15 current_state.byte14 current_state.byte13 current_state.byte12 current_state.byte11 current_state.byte10 current_state.byte9 current_state.byte8 current_state.byte7 current_state.byte6 current_state.byte5 current_state.byte4 current_state.byte3 current_state.byte2 current_state.byte1 current_state.preamble current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.preamble 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.byte1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.byte2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.byte3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.byte4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.byte5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.byte6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.byte7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.byte8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.byte9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.byte10 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte11 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte12 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte13 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte14 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte15 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.byte16 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.discard 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|tx_gen:tx_gen|current_state
+Name current_state.fifo_usedw1 current_state.fifo_usedw current_state.discard current_state.last4 current_state.last3 current_state.last2 current_state.last1 current_state.wait_checksum current_state.copy current_state.wait_rule current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 
+current_state.wait_rule 0 0 0 0 0 0 0 0 0 1 1 
+current_state.copy 0 0 0 0 0 0 0 0 1 0 1 
+current_state.wait_checksum 0 0 0 0 0 0 0 1 0 0 1 
+current_state.last1 0 0 0 0 0 0 1 0 0 0 1 
+current_state.last2 0 0 0 0 0 1 0 0 0 0 1 
+current_state.last3 0 0 0 0 1 0 0 0 0 0 1 
+current_state.last4 0 0 0 1 0 0 0 0 0 0 1 
+current_state.discard 0 0 1 0 0 0 0 0 0 0 1 
+current_state.fifo_usedw 0 1 0 0 0 0 0 0 0 0 1 
+current_state.fifo_usedw1 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_crc:rx_crc|current_state
+Name current_state.fifo7 current_state.fifo6 current_state.fifo5 current_state.fifo4 current_state.fifo3 current_state.fifo2 current_state.fifo1 current_state.discard current_state.wait_bad current_state.transmit_check current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 
+current_state.transmit_check 0 0 0 0 0 0 0 0 0 1 1 
+current_state.wait_bad 0 0 0 0 0 0 0 0 1 0 1 
+current_state.discard 0 0 0 0 0 0 0 1 0 0 1 
+current_state.fifo1 0 0 0 0 0 0 1 0 0 0 1 
+current_state.fifo2 0 0 0 0 0 1 0 0 0 0 1 
+current_state.fifo3 0 0 0 0 1 0 0 0 0 0 1 
+current_state.fifo4 0 0 0 1 0 0 0 0 0 0 1 
+current_state.fifo5 0 0 1 0 0 0 0 0 0 0 1 
+current_state.fifo6 0 1 0 0 0 0 0 0 0 0 1 
+current_state.fifo7 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|rx_crc:rx_crc|counter
+Name counter.111 counter.110 counter.101 counter.100 counter.011 counter.010 counter.001 counter.000 
+counter.000 0 0 0 0 0 0 0 0 
+counter.001 0 0 0 0 0 0 1 1 
+counter.010 0 0 0 0 0 1 0 1 
+counter.011 0 0 0 0 1 0 0 1 
+counter.100 0 0 0 1 0 0 0 1 
+counter.101 0 0 1 0 0 0 0 1 
+counter.110 0 1 0 0 0 0 0 1 
+counter.111 1 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|nmac_crc_check:nmac_crc_check_0|current_state
+Name current_state.discard current_state.wait_crcbad current_state.transmit current_state.idle 
+current_state.idle 0 0 0 0 
+current_state.transmit 0 0 1 1 
+current_state.wait_crcbad 0 1 0 1 
+current_state.discard 1 0 0 1 
+
+State Machine - |netFPGAmini|NET_MAGIC_CTRL:NET_MAGIC_CTRL|manage_tx:manage_tx|state
+Name state.wait_s state.drop_s state.pass_data_s state.ack_mid3_s state.ack_mid2_s state.ack_mid1_s state.ack_mid0_s state.ack_head3_s state.ack_head2_s state.ack_head1_s state.ack_head0_s state.idle_s 
+state.idle_s 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ack_head0_s 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ack_head1_s 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ack_head2_s 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ack_head3_s 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ack_mid0_s 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ack_mid1_s 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ack_mid2_s 0 0 0 0 1 0 0 0 0 0 0 1 
+state.ack_mid3_s 0 0 0 1 0 0 0 0 0 0 0 1 
+state.pass_data_s 0 0 1 0 0 0 0 0 0 0 0 1 
+state.drop_s 0 1 0 0 0 0 0 0 0 0 0 1 
+state.wait_s 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|NET_MAGIC_CTRL:NET_MAGIC_CTRL|pkt_gen:pkt_gen|gen_pkt_state
+Name gen_pkt_state.wait_crc_s gen_pkt_state.add_pad_s gen_pkt_state.wr11_s gen_pkt_state.wr10_s gen_pkt_state.wr9_s gen_pkt_state.wr8_s gen_pkt_state.wr7_s gen_pkt_state.wr6_s gen_pkt_state.wr5_s gen_pkt_state.wr4_s gen_pkt_state.wr3_s gen_pkt_state.wr2_s gen_pkt_state.wr1_s gen_pkt_state.wr0_s gen_pkt_state.idle_s 
+gen_pkt_state.idle_s 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+gen_pkt_state.wr0_s 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+gen_pkt_state.wr1_s 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+gen_pkt_state.wr2_s 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+gen_pkt_state.wr3_s 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+gen_pkt_state.wr4_s 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+gen_pkt_state.wr5_s 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+gen_pkt_state.wr6_s 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+gen_pkt_state.wr7_s 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+gen_pkt_state.wr8_s 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+gen_pkt_state.wr9_s 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+gen_pkt_state.wr10_s 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+gen_pkt_state.wr11_s 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+gen_pkt_state.add_pad_s 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+gen_pkt_state.wait_crc_s 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|NET_MAGIC_CTRL:NET_MAGIC_CTRL|pkt_gen:pkt_gen|checksum_computing_status
+Name checksum_computing_status.checksum_end_s checksum_computing_status.checksum_5_s checksum_computing_status.checksum_4_s checksum_computing_status.checksum_3_s checksum_computing_status.checksum_2_s checksum_computing_status.checksum_1_s checksum_computing_status.checksum_idle_s 
+checksum_computing_status.checksum_idle_s 0 0 0 0 0 0 0 
+checksum_computing_status.checksum_1_s 0 0 0 0 0 1 1 
+checksum_computing_status.checksum_2_s 0 0 0 0 1 0 1 
+checksum_computing_status.checksum_3_s 0 0 0 1 0 0 1 
+checksum_computing_status.checksum_4_s 0 0 1 0 0 0 1 
+checksum_computing_status.checksum_5_s 0 1 0 0 0 0 1 
+checksum_computing_status.checksum_end_s 1 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|NET_MAGIC_CTRL:NET_MAGIC_CTRL|command_parse:command_parse|pkt_to_gen_state
+Name pkt_to_gen_state.gen_idle_s pkt_to_gen_state.gen_wr_rdresult_s pkt_to_gen_state.gen_wr_head_s 
+pkt_to_gen_state.gen_idle_s 0 0 0 
+pkt_to_gen_state.gen_wr_head_s 1 0 1 
+pkt_to_gen_state.gen_wr_rdresult_s 1 1 0 
+
+State Machine - |netFPGAmini|NET_MAGIC_CTRL:NET_MAGIC_CTRL|command_parse:command_parse|com_parse_state
+Name com_parse_state.drop_s com_parse_state.write_ack_s com_parse_state.write_cs_s com_parse_state.write_data_s com_parse_state.write_wait_s com_parse_state.write_ale_s com_parse_state.write_s com_parse_state.write_addr_s com_parse_state.read_ack_s com_parse_state.read_cs_s com_parse_state.read_wait_s com_parse_state.read_ale_s com_parse_state.read_s com_parse_state.read_addr_s com_parse_state.parse_s com_parse_state.idle_s 
+com_parse_state.idle_s 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+com_parse_state.parse_s 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+com_parse_state.read_addr_s 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+com_parse_state.read_s 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+com_parse_state.read_ale_s 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+com_parse_state.read_wait_s 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+com_parse_state.read_cs_s 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+com_parse_state.read_ack_s 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+com_parse_state.write_addr_s 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+com_parse_state.write_s 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+com_parse_state.write_ale_s 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+com_parse_state.write_wait_s 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+com_parse_state.write_data_s 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+com_parse_state.write_cs_s 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+com_parse_state.write_ack_s 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+com_parse_state.drop_s 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|NET_MAGIC_CTRL:NET_MAGIC_CTRL|manage_rx:manage_rx|state
+Name state.discard_s state.wait_s state.wr_datapath_s state.command4_s state.command3_s state.command2_s state.command1_s state.command0_s state.command_dip_s state.command_type_s state.command_smac_s state.idle_s 
+state.idle_s 0 0 0 0 0 0 0 0 0 0 0 0 
+state.command_smac_s 0 0 0 0 0 0 0 0 0 0 1 1 
+state.command_type_s 0 0 0 0 0 0 0 0 0 1 0 1 
+state.command_dip_s 0 0 0 0 0 0 0 0 1 0 0 1 
+state.command0_s 0 0 0 0 0 0 0 1 0 0 0 1 
+state.command1_s 0 0 0 0 0 0 1 0 0 0 0 1 
+state.command2_s 0 0 0 0 0 1 0 0 0 0 0 1 
+state.command3_s 0 0 0 0 1 0 0 0 0 0 0 1 
+state.command4_s 0 0 0 1 0 0 0 0 0 0 0 1 
+state.wr_datapath_s 0 0 1 0 0 0 0 0 0 0 0 1 
+state.wait_s 0 1 0 0 0 0 0 0 0 0 0 1 
+state.discard_s 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_ctrl:ddr2_ctrl|ddr2_ctrl_output:ddr2_ctrl_output|current_state
+Name current_state.wr_1p current_state.rd_3s current_state.rd_2s current_state.idle 
+current_state.idle 0 0 0 0 
+current_state.rd_2s 0 0 1 1 
+current_state.rd_3s 0 1 0 1 
+current_state.wr_1p 1 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_ctrl:ddr2_ctrl|ddr2_ctrl_input:ddr2_ctrl_input|state
+Name state.command state.wait_w1 state.wait_w state.wait_s2 state.wait_s1 state.wait_s state.rd_s state.rd_start_s state.wr_end_s state.wr_mid_sd state.wr_mid_fs state.wr_start_s state.idle_s 
+state.idle_s 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.wr_start_s 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.wr_mid_fs 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.wr_mid_sd 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.wr_end_s 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.rd_start_s 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.rd_s 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.wait_s 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.wait_s1 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.wait_s2 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.wait_w 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.wait_w1 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.command 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_mimic:mmc|mimic_state
+Name mimic_state.011 mimic_state.010 mimic_state.001 mimic_state.000 mimic_state.100 
+mimic_state.000 0 0 0 0 0 
+mimic_state.001 0 0 1 1 0 
+mimic_state.010 0 1 0 1 0 
+mimic_state.011 1 0 0 1 0 
+mimic_state.100 0 0 0 1 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|\ac_mux:ctrl_broadcast_r.command
+Name \ac_mux:ctrl_broadcast_r.command.cmd_tr_due \ac_mux:ctrl_broadcast_r.command.cmd_prep_customer_mr_setup \ac_mux:ctrl_broadcast_r.command.cmd_prep_adv_wr_lat \ac_mux:ctrl_broadcast_r.command.cmd_prep_adv_rd_lat \ac_mux:ctrl_broadcast_r.command.cmd_was \ac_mux:ctrl_broadcast_r.command.cmd_poa \ac_mux:ctrl_broadcast_r.command.cmd_rdv \ac_mux:ctrl_broadcast_r.command.cmd_rrp_seek \ac_mux:ctrl_broadcast_r.command.cmd_rrp_sweep \ac_mux:ctrl_broadcast_r.command.cmd_rrp_reset \ac_mux:ctrl_broadcast_r.command.cmd_read_mtp \ac_mux:ctrl_broadcast_r.command.cmd_write_mtp \ac_mux:ctrl_broadcast_r.command.cmd_write_btp \ac_mux:ctrl_broadcast_r.command.cmd_write_ihi \ac_mux:ctrl_broadcast_r.command.cmd_prog_cal_mr \ac_mux:ctrl_broadcast_r.command.cmd_init_dram \ac_mux:ctrl_broadcast_r.command.cmd_phy_initialise \ac_mux:ctrl_broadcast_r.command.cmd_idle 
+\ac_mux:ctrl_broadcast_r.command.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+\ac_mux:ctrl_broadcast_r.command.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\ac_mux:ctrl_broadcast_r.command.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|last_state
+Name last_state.s_non_operational last_state.s_operational last_state.s_tracking last_state.s_prep_customer_mr_setup last_state.s_tracking_setup last_state.s_poa last_state.s_adv_wr_lat last_state.s_adv_rd_lat last_state.s_was last_state.s_rdv last_state.s_rrp_seek last_state.s_rrp_sweep last_state.s_rrp_reset last_state.s_read_mtp last_state.s_write_mtp last_state.s_write_btp last_state.s_cal last_state.s_write_ihi last_state.s_prog_cal_mr last_state.s_init_dram last_state.s_phy_initialise last_state.s_reset 
+last_state.s_reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+last_state.s_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+last_state.s_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+last_state.s_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+last_state.s_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+last_state.s_cal 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+last_state.s_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+last_state.s_write_mtp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+last_state.s_read_mtp 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+last_state.s_rrp_reset 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+last_state.s_rrp_sweep 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+last_state.s_rrp_seek 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_rdv 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_was 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_adv_rd_lat 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_adv_wr_lat 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_tracking_setup 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_prep_customer_mr_setup 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_tracking 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_operational 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+last_state.s_non_operational 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|state
+Name state.s_non_operational state.s_operational state.s_tracking state.s_prep_customer_mr_setup state.s_tracking_setup state.s_poa state.s_adv_wr_lat state.s_adv_rd_lat state.s_was state.s_rdv state.s_rrp_seek state.s_rrp_sweep state.s_rrp_reset state.s_read_mtp state.s_write_mtp state.s_write_btp state.s_cal state.s_write_ihi state.s_prog_cal_mr state.s_init_dram state.s_phy_initialise state.s_reset 
+state.s_reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.s_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.s_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.s_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.s_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.s_cal 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.s_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.s_write_mtp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.s_read_mtp 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.s_rrp_reset 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.s_rrp_sweep 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.s_rrp_seek 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.s_rdv 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_was 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_adv_rd_lat 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_adv_wr_lat 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_tracking_setup 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_prep_customer_mr_setup 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_tracking 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_operational 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_non_operational 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|int_ctrl_current_stage
+Name int_ctrl_current_stage.cmd_tr_due int_ctrl_current_stage.cmd_prep_customer_mr_setup int_ctrl_current_stage.cmd_prep_adv_wr_lat int_ctrl_current_stage.cmd_prep_adv_rd_lat int_ctrl_current_stage.cmd_was int_ctrl_current_stage.cmd_poa int_ctrl_current_stage.cmd_rdv int_ctrl_current_stage.cmd_rrp_seek int_ctrl_current_stage.cmd_rrp_sweep int_ctrl_current_stage.cmd_rrp_reset int_ctrl_current_stage.cmd_read_mtp int_ctrl_current_stage.cmd_write_mtp int_ctrl_current_stage.cmd_write_btp int_ctrl_current_stage.cmd_write_ihi int_ctrl_current_stage.cmd_prog_cal_mr int_ctrl_current_stage.cmd_init_dram int_ctrl_current_stage.cmd_phy_initialise int_ctrl_current_stage.cmd_idle 
+int_ctrl_current_stage.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+int_ctrl_current_stage.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+int_ctrl_current_stage.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+int_ctrl_current_stage.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+int_ctrl_current_stage.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+int_ctrl_current_stage.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+int_ctrl_current_stage.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_current_stage.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|int_ctrl_prev_stage
+Name int_ctrl_prev_stage.cmd_tr_due int_ctrl_prev_stage.cmd_prep_customer_mr_setup int_ctrl_prev_stage.cmd_prep_adv_wr_lat int_ctrl_prev_stage.cmd_prep_adv_rd_lat int_ctrl_prev_stage.cmd_was int_ctrl_prev_stage.cmd_poa int_ctrl_prev_stage.cmd_rdv int_ctrl_prev_stage.cmd_rrp_seek int_ctrl_prev_stage.cmd_rrp_sweep int_ctrl_prev_stage.cmd_rrp_reset int_ctrl_prev_stage.cmd_read_mtp int_ctrl_prev_stage.cmd_write_mtp int_ctrl_prev_stage.cmd_write_btp int_ctrl_prev_stage.cmd_write_ihi int_ctrl_prev_stage.cmd_prog_cal_mr int_ctrl_prev_stage.cmd_init_dram int_ctrl_prev_stage.cmd_phy_initialise int_ctrl_prev_stage.cmd_idle 
+int_ctrl_prev_stage.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+int_ctrl_prev_stage.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+int_ctrl_prev_stage.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+int_ctrl_prev_stage.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+int_ctrl_prev_stage.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+int_ctrl_prev_stage.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+int_ctrl_prev_stage.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|ctrl_mmi.ctrl_current_active_block
+Name ctrl_mmi.ctrl_current_active_block.iram~reg0 ctrl_mmi.ctrl_current_active_block.setup~reg0 ctrl_mmi.ctrl_current_active_block.proc~reg0 ctrl_mmi.ctrl_current_active_block.dgrb~reg0 ctrl_mmi.ctrl_current_active_block.dgwb~reg0 ctrl_mmi.ctrl_current_active_block.admin~reg0 ctrl_mmi.ctrl_current_active_block.idle~reg0 
+ctrl_mmi.ctrl_current_active_block.idle~reg0 0 0 0 0 0 0 0 
+ctrl_mmi.ctrl_current_active_block.admin~reg0 0 0 0 0 0 1 1 
+ctrl_mmi.ctrl_current_active_block.dgwb~reg0 0 0 0 0 1 0 1 
+ctrl_mmi.ctrl_current_active_block.dgrb~reg0 0 0 0 1 0 0 1 
+ctrl_mmi.ctrl_current_active_block.proc~reg0 0 0 1 0 0 0 1 
+ctrl_mmi.ctrl_current_active_block.setup~reg0 0 1 0 0 0 0 1 
+ctrl_mmi.ctrl_current_active_block.iram~reg0 1 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|ctrl_mmi.ctrl_current_stage
+Name ctrl_mmi.ctrl_current_stage.cmd_tr_due~reg0 ctrl_mmi.ctrl_current_stage.cmd_prep_customer_mr_setup~reg0 ctrl_mmi.ctrl_current_stage.cmd_prep_adv_wr_lat~reg0 ctrl_mmi.ctrl_current_stage.cmd_prep_adv_rd_lat~reg0 ctrl_mmi.ctrl_current_stage.cmd_was~reg0 ctrl_mmi.ctrl_current_stage.cmd_poa~reg0 ctrl_mmi.ctrl_current_stage.cmd_rdv~reg0 ctrl_mmi.ctrl_current_stage.cmd_rrp_seek~reg0 ctrl_mmi.ctrl_current_stage.cmd_rrp_sweep~reg0 ctrl_mmi.ctrl_current_stage.cmd_rrp_reset~reg0 ctrl_mmi.ctrl_current_stage.cmd_read_mtp~reg0 ctrl_mmi.ctrl_current_stage.cmd_write_mtp~reg0 ctrl_mmi.ctrl_current_stage.cmd_write_btp~reg0 ctrl_mmi.ctrl_current_stage.cmd_write_ihi~reg0 ctrl_mmi.ctrl_current_stage.cmd_prog_cal_mr~reg0 ctrl_mmi.ctrl_current_stage.cmd_init_dram~reg0 ctrl_mmi.ctrl_current_stage.cmd_phy_initialise~reg0 ctrl_mmi.ctrl_current_stage.cmd_idle~reg0 
+ctrl_mmi.ctrl_current_stage.cmd_idle~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctrl_mmi.ctrl_current_stage.cmd_phy_initialise~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ctrl_mmi.ctrl_current_stage.cmd_init_dram~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_prog_cal_mr~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_write_ihi~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_write_btp~reg0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_write_mtp~reg0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_read_mtp~reg0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_rrp_reset~reg0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_rrp_sweep~reg0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_rrp_seek~reg0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_rdv~reg0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_poa~reg0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_was~reg0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_prep_adv_rd_lat~reg0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_prep_adv_wr_lat~reg0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_prep_customer_mr_setup~reg0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.ctrl_current_stage.cmd_tr_due~reg0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|ctrl_mmi.master_state_r
+Name ctrl_mmi.master_state_r.s_non_operational~reg0 ctrl_mmi.master_state_r.s_operational~reg0 ctrl_mmi.master_state_r.s_tracking~reg0 ctrl_mmi.master_state_r.s_prep_customer_mr_setup~reg0 ctrl_mmi.master_state_r.s_tracking_setup~reg0 ctrl_mmi.master_state_r.s_poa~reg0 ctrl_mmi.master_state_r.s_adv_wr_lat~reg0 ctrl_mmi.master_state_r.s_adv_rd_lat~reg0 ctrl_mmi.master_state_r.s_was~reg0 ctrl_mmi.master_state_r.s_rdv~reg0 ctrl_mmi.master_state_r.s_rrp_seek~reg0 ctrl_mmi.master_state_r.s_rrp_sweep~reg0 ctrl_mmi.master_state_r.s_rrp_reset~reg0 ctrl_mmi.master_state_r.s_read_mtp~reg0 ctrl_mmi.master_state_r.s_write_mtp~reg0 ctrl_mmi.master_state_r.s_write_btp~reg0 ctrl_mmi.master_state_r.s_cal~reg0 ctrl_mmi.master_state_r.s_write_ihi~reg0 ctrl_mmi.master_state_r.s_prog_cal_mr~reg0 ctrl_mmi.master_state_r.s_init_dram~reg0 ctrl_mmi.master_state_r.s_phy_initialise~reg0 ctrl_mmi.master_state_r.s_reset~reg0 
+ctrl_mmi.master_state_r.s_reset~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctrl_mmi.master_state_r.s_phy_initialise~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ctrl_mmi.master_state_r.s_init_dram~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ctrl_mmi.master_state_r.s_prog_cal_mr~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ctrl_mmi.master_state_r.s_write_ihi~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ctrl_mmi.master_state_r.s_cal~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_write_btp~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_write_mtp~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_read_mtp~reg0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_rrp_reset~reg0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_rrp_sweep~reg0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_rrp_seek~reg0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_rdv~reg0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_was~reg0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_adv_rd_lat~reg0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_adv_wr_lat~reg0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_poa~reg0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_tracking_setup~reg0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_prep_customer_mr_setup~reg0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_tracking~reg0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_operational~reg0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_mmi.master_state_r.s_non_operational~reg0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|v_ctrl_mmi.ctrl_current_active_block
+Name v_ctrl_mmi.ctrl_current_active_block.iram v_ctrl_mmi.ctrl_current_active_block.setup v_ctrl_mmi.ctrl_current_active_block.proc v_ctrl_mmi.ctrl_current_active_block.dgrb v_ctrl_mmi.ctrl_current_active_block.dgwb v_ctrl_mmi.ctrl_current_active_block.admin v_ctrl_mmi.ctrl_current_active_block.idle 
+v_ctrl_mmi.ctrl_current_active_block.idle 0 0 0 0 0 0 0 
+v_ctrl_mmi.ctrl_current_active_block.admin 0 0 0 0 0 1 1 
+v_ctrl_mmi.ctrl_current_active_block.dgwb 0 0 0 0 1 0 1 
+v_ctrl_mmi.ctrl_current_active_block.dgrb 0 0 0 1 0 0 1 
+v_ctrl_mmi.ctrl_current_active_block.proc 0 0 1 0 0 0 1 
+v_ctrl_mmi.ctrl_current_active_block.setup 0 1 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_active_block.iram 1 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|v_ctrl_mmi.ctrl_current_stage
+Name v_ctrl_mmi.ctrl_current_stage.cmd_tr_due v_ctrl_mmi.ctrl_current_stage.cmd_prep_customer_mr_setup v_ctrl_mmi.ctrl_current_stage.cmd_prep_adv_wr_lat v_ctrl_mmi.ctrl_current_stage.cmd_prep_adv_rd_lat v_ctrl_mmi.ctrl_current_stage.cmd_was v_ctrl_mmi.ctrl_current_stage.cmd_poa v_ctrl_mmi.ctrl_current_stage.cmd_rdv v_ctrl_mmi.ctrl_current_stage.cmd_rrp_seek v_ctrl_mmi.ctrl_current_stage.cmd_rrp_sweep v_ctrl_mmi.ctrl_current_stage.cmd_rrp_reset v_ctrl_mmi.ctrl_current_stage.cmd_read_mtp v_ctrl_mmi.ctrl_current_stage.cmd_write_mtp v_ctrl_mmi.ctrl_current_stage.cmd_write_btp v_ctrl_mmi.ctrl_current_stage.cmd_write_ihi v_ctrl_mmi.ctrl_current_stage.cmd_prog_cal_mr v_ctrl_mmi.ctrl_current_stage.cmd_init_dram v_ctrl_mmi.ctrl_current_stage.cmd_phy_initialise v_ctrl_mmi.ctrl_current_stage.cmd_idle 
+v_ctrl_mmi.ctrl_current_stage.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+v_ctrl_mmi.ctrl_current_stage.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.ctrl_current_stage.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|v_ctrl_mmi.master_state_r
+Name v_ctrl_mmi.master_state_r.s_non_operational v_ctrl_mmi.master_state_r.s_operational v_ctrl_mmi.master_state_r.s_tracking v_ctrl_mmi.master_state_r.s_prep_customer_mr_setup v_ctrl_mmi.master_state_r.s_tracking_setup v_ctrl_mmi.master_state_r.s_poa v_ctrl_mmi.master_state_r.s_adv_wr_lat v_ctrl_mmi.master_state_r.s_adv_rd_lat v_ctrl_mmi.master_state_r.s_was v_ctrl_mmi.master_state_r.s_rdv v_ctrl_mmi.master_state_r.s_rrp_seek v_ctrl_mmi.master_state_r.s_rrp_sweep v_ctrl_mmi.master_state_r.s_rrp_reset v_ctrl_mmi.master_state_r.s_read_mtp v_ctrl_mmi.master_state_r.s_write_mtp v_ctrl_mmi.master_state_r.s_write_btp v_ctrl_mmi.master_state_r.s_cal v_ctrl_mmi.master_state_r.s_write_ihi v_ctrl_mmi.master_state_r.s_prog_cal_mr v_ctrl_mmi.master_state_r.s_init_dram v_ctrl_mmi.master_state_r.s_phy_initialise v_ctrl_mmi.master_state_r.s_reset 
+v_ctrl_mmi.master_state_r.s_reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+v_ctrl_mmi.master_state_r.s_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+v_ctrl_mmi.master_state_r.s_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+v_ctrl_mmi.master_state_r.s_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+v_ctrl_mmi.master_state_r.s_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_cal 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_write_mtp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_read_mtp 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_rrp_reset 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_rrp_sweep 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_rrp_seek 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_rdv 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_was 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_adv_rd_lat 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_adv_wr_lat 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_tracking_setup 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_prep_customer_mr_setup 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_tracking 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_operational 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+v_ctrl_mmi.master_state_r.s_non_operational 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_ctrl:ctrl|curr_cmd
+Name curr_cmd.cmd_tr_due curr_cmd.cmd_prep_customer_mr_setup curr_cmd.cmd_prep_adv_wr_lat curr_cmd.cmd_prep_adv_rd_lat curr_cmd.cmd_was curr_cmd.cmd_poa curr_cmd.cmd_rdv curr_cmd.cmd_rrp_seek curr_cmd.cmd_rrp_sweep curr_cmd.cmd_rrp_reset curr_cmd.cmd_read_mtp curr_cmd.cmd_write_mtp curr_cmd.cmd_write_btp curr_cmd.cmd_write_ihi curr_cmd.cmd_prog_cal_mr curr_cmd.cmd_init_dram curr_cmd.cmd_phy_initialise curr_cmd.cmd_idle 
+curr_cmd.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+curr_cmd.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+curr_cmd.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+curr_cmd.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+curr_cmd.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+curr_cmd.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+curr_cmd.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+curr_cmd.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+curr_cmd.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curr_cmd.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgwb:dgwb|\master_dgwb_state_block:sig_ctrl_dgwb.command
+Name \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_tr_due \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prep_customer_mr_setup \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prep_adv_wr_lat \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prep_adv_rd_lat \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_was \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_poa \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rdv \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rrp_seek \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rrp_sweep \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rrp_reset \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_read_mtp \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_write_mtp \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_write_btp \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_write_ihi \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prog_cal_mr \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_init_dram \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_phy_initialise \master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_idle 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+\master_dgwb_state_block:sig_ctrl_dgwb.command.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgwb:dgwb|sig_dgwb_last_state
+Name sig_dgwb_last_state.s_release_admin sig_dgwb_last_state.s_write_wlat sig_dgwb_last_state.s_write_0011_step sig_dgwb_last_state.s_write_1100_step sig_dgwb_last_state.s_write_01_pairs sig_dgwb_last_state.s_write_mtp sig_dgwb_last_state.s_write_zeros sig_dgwb_last_state.s_write_ones sig_dgwb_last_state.s_write_btp sig_dgwb_last_state.s_wait_admin sig_dgwb_last_state.s_idle 
+sig_dgwb_last_state.s_idle 0 0 0 0 0 0 0 0 0 0 0 
+sig_dgwb_last_state.s_wait_admin 0 0 0 0 0 0 0 0 0 1 1 
+sig_dgwb_last_state.s_write_btp 0 0 0 0 0 0 0 0 1 0 1 
+sig_dgwb_last_state.s_write_ones 0 0 0 0 0 0 0 1 0 0 1 
+sig_dgwb_last_state.s_write_zeros 0 0 0 0 0 0 1 0 0 0 1 
+sig_dgwb_last_state.s_write_mtp 0 0 0 0 0 1 0 0 0 0 1 
+sig_dgwb_last_state.s_write_01_pairs 0 0 0 0 1 0 0 0 0 0 1 
+sig_dgwb_last_state.s_write_1100_step 0 0 0 1 0 0 0 0 0 0 1 
+sig_dgwb_last_state.s_write_0011_step 0 0 1 0 0 0 0 0 0 0 1 
+sig_dgwb_last_state.s_write_wlat 0 1 0 0 0 0 0 0 0 0 1 
+sig_dgwb_last_state.s_release_admin 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgwb:dgwb|sig_dgwb_state
+Name sig_dgwb_state.s_release_admin sig_dgwb_state.s_write_wlat sig_dgwb_state.s_write_0011_step sig_dgwb_state.s_write_1100_step sig_dgwb_state.s_write_01_pairs sig_dgwb_state.s_write_mtp sig_dgwb_state.s_write_zeros sig_dgwb_state.s_write_ones sig_dgwb_state.s_write_btp sig_dgwb_state.s_wait_admin sig_dgwb_state.s_idle 
+sig_dgwb_state.s_idle 0 0 0 0 0 0 0 0 0 0 0 
+sig_dgwb_state.s_wait_admin 0 0 0 0 0 0 0 0 0 1 1 
+sig_dgwb_state.s_write_btp 0 0 0 0 0 0 0 0 1 0 1 
+sig_dgwb_state.s_write_ones 0 0 0 0 0 0 0 1 0 0 1 
+sig_dgwb_state.s_write_zeros 0 0 0 0 0 0 1 0 0 0 1 
+sig_dgwb_state.s_write_mtp 0 0 0 0 0 1 0 0 0 0 1 
+sig_dgwb_state.s_write_01_pairs 0 0 0 0 1 0 0 0 0 0 1 
+sig_dgwb_state.s_write_1100_step 0 0 0 1 0 0 0 0 0 0 1 
+sig_dgwb_state.s_write_0011_step 0 0 1 0 0 0 0 0 0 0 1 
+sig_dgwb_state.s_write_wlat 0 1 0 0 0 0 0 0 0 0 1 
+sig_dgwb_state.s_release_admin 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|\ac_block:sig_addr_cmd_last_state
+Name \ac_block:sig_addr_cmd_last_state.s_ac_read_wd_lat \ac_block:sig_addr_cmd_last_state.s_ac_read_poa_mtp \ac_block:sig_addr_cmd_last_state.s_ac_read_rdv \ac_block:sig_addr_cmd_last_state.s_ac_read_mtp \ac_block:sig_addr_cmd_last_state.s_ac_relax \ac_block:sig_addr_cmd_last_state.s_ac_idle 
+\ac_block:sig_addr_cmd_last_state.s_ac_idle 0 0 0 0 0 0 
+\ac_block:sig_addr_cmd_last_state.s_ac_relax 0 0 0 0 1 1 
+\ac_block:sig_addr_cmd_last_state.s_ac_read_mtp 0 0 0 1 0 1 
+\ac_block:sig_addr_cmd_last_state.s_ac_read_rdv 0 0 1 0 0 1 
+\ac_block:sig_addr_cmd_last_state.s_ac_read_poa_mtp 0 1 0 0 0 1 
+\ac_block:sig_addr_cmd_last_state.s_ac_read_wd_lat 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|\ac_block:sig_addr_cmd_state
+Name \ac_block:sig_addr_cmd_state.s_ac_read_wd_lat \ac_block:sig_addr_cmd_state.s_ac_read_poa_mtp \ac_block:sig_addr_cmd_state.s_ac_read_rdv \ac_block:sig_addr_cmd_state.s_ac_read_mtp \ac_block:sig_addr_cmd_state.s_ac_relax \ac_block:sig_addr_cmd_state.s_ac_idle 
+\ac_block:sig_addr_cmd_state.s_ac_idle 0 0 0 0 0 0 
+\ac_block:sig_addr_cmd_state.s_ac_relax 0 0 0 0 1 1 
+\ac_block:sig_addr_cmd_state.s_ac_read_mtp 0 0 0 1 0 1 
+\ac_block:sig_addr_cmd_state.s_ac_read_rdv 0 0 1 0 0 1 
+\ac_block:sig_addr_cmd_state.s_ac_read_poa_mtp 0 1 0 0 0 1 
+\ac_block:sig_addr_cmd_state.s_ac_read_wd_lat 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|\trk_block:sig_trk_last_state
+Name \trk_block:sig_trk_last_state.s_trk_complete \trk_block:sig_trk_last_state.s_trk_adjust_resync \trk_block:sig_trk_last_state.s_trk_cdvw_drift \trk_block:sig_trk_last_state.s_trk_cdvw_wait \trk_block:sig_trk_last_state.s_trk_cdvw_calc \trk_block:sig_trk_last_state.s_trk_next_phase \trk_block:sig_trk_last_state.s_trk_mimic_sample \trk_block:sig_trk_last_state.s_trk_idle \trk_block:sig_trk_last_state.s_trk_init 
+\trk_block:sig_trk_last_state.s_trk_init 0 0 0 0 0 0 0 0 0 
+\trk_block:sig_trk_last_state.s_trk_idle 0 0 0 0 0 0 0 1 1 
+\trk_block:sig_trk_last_state.s_trk_mimic_sample 0 0 0 0 0 0 1 0 1 
+\trk_block:sig_trk_last_state.s_trk_next_phase 0 0 0 0 0 1 0 0 1 
+\trk_block:sig_trk_last_state.s_trk_cdvw_calc 0 0 0 0 1 0 0 0 1 
+\trk_block:sig_trk_last_state.s_trk_cdvw_wait 0 0 0 1 0 0 0 0 1 
+\trk_block:sig_trk_last_state.s_trk_cdvw_drift 0 0 1 0 0 0 0 0 1 
+\trk_block:sig_trk_last_state.s_trk_adjust_resync 0 1 0 0 0 0 0 0 1 
+\trk_block:sig_trk_last_state.s_trk_complete 1 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|\trk_block:sig_trk_state
+Name \trk_block:sig_trk_state.s_trk_complete \trk_block:sig_trk_state.s_trk_adjust_resync \trk_block:sig_trk_state.s_trk_cdvw_drift \trk_block:sig_trk_state.s_trk_cdvw_wait \trk_block:sig_trk_state.s_trk_cdvw_calc \trk_block:sig_trk_state.s_trk_next_phase \trk_block:sig_trk_state.s_trk_mimic_sample \trk_block:sig_trk_state.s_trk_idle \trk_block:sig_trk_state.s_trk_init 
+\trk_block:sig_trk_state.s_trk_init 0 0 0 0 0 0 0 0 0 
+\trk_block:sig_trk_state.s_trk_idle 0 0 0 0 0 0 0 1 1 
+\trk_block:sig_trk_state.s_trk_mimic_sample 0 0 0 0 0 0 1 0 1 
+\trk_block:sig_trk_state.s_trk_next_phase 0 0 0 0 0 1 0 0 1 
+\trk_block:sig_trk_state.s_trk_cdvw_calc 0 0 0 0 1 0 0 0 1 
+\trk_block:sig_trk_state.s_trk_cdvw_wait 0 0 0 1 0 0 0 0 1 
+\trk_block:sig_trk_state.s_trk_cdvw_drift 0 0 1 0 0 0 0 0 1 
+\trk_block:sig_trk_state.s_trk_adjust_resync 0 1 0 0 0 0 0 0 1 
+\trk_block:sig_trk_state.s_trk_complete 1 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|\rsc_block:sig_rsc_last_state
+Name \rsc_block:sig_rsc_last_state.s_rsc_wait_iram \rsc_block:sig_rsc_last_state.s_rsc_seek_cdvw \rsc_block:sig_rsc_last_state.s_rsc_cdvw_wait \rsc_block:sig_rsc_last_state.s_rsc_cdvw_calc \rsc_block:sig_rsc_last_state.s_rsc_rewind_phase \rsc_block:sig_rsc_last_state.s_rsc_reset_cdvw \rsc_block:sig_rsc_last_state.s_rsc_test_dq \rsc_block:sig_rsc_last_state.s_rsc_flush_datapath \rsc_block:sig_rsc_last_state.s_rsc_wait_for_idle_dimm \rsc_block:sig_rsc_last_state.s_rsc_test_phase \rsc_block:sig_rsc_last_state.s_rsc_next_phase \rsc_block:sig_rsc_last_state.s_rsc_idle 
+\rsc_block:sig_rsc_last_state.s_rsc_idle 0 0 0 0 0 0 0 0 0 0 0 0 
+\rsc_block:sig_rsc_last_state.s_rsc_next_phase 0 0 0 0 0 0 0 0 0 0 1 1 
+\rsc_block:sig_rsc_last_state.s_rsc_test_phase 0 0 0 0 0 0 0 0 0 1 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_wait_for_idle_dimm 0 0 0 0 0 0 0 0 1 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_flush_datapath 0 0 0 0 0 0 0 1 0 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_test_dq 0 0 0 0 0 0 1 0 0 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_reset_cdvw 0 0 0 0 0 1 0 0 0 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_rewind_phase 0 0 0 0 1 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_cdvw_calc 0 0 0 1 0 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_cdvw_wait 0 0 1 0 0 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_seek_cdvw 0 1 0 0 0 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_last_state.s_rsc_wait_iram 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|\rsc_block:sig_rsc_state
+Name \rsc_block:sig_rsc_state.s_rsc_wait_iram \rsc_block:sig_rsc_state.s_rsc_seek_cdvw \rsc_block:sig_rsc_state.s_rsc_cdvw_wait \rsc_block:sig_rsc_state.s_rsc_cdvw_calc \rsc_block:sig_rsc_state.s_rsc_rewind_phase \rsc_block:sig_rsc_state.s_rsc_reset_cdvw \rsc_block:sig_rsc_state.s_rsc_test_dq \rsc_block:sig_rsc_state.s_rsc_flush_datapath \rsc_block:sig_rsc_state.s_rsc_wait_for_idle_dimm \rsc_block:sig_rsc_state.s_rsc_test_phase \rsc_block:sig_rsc_state.s_rsc_next_phase \rsc_block:sig_rsc_state.s_rsc_idle 
+\rsc_block:sig_rsc_state.s_rsc_idle 0 0 0 0 0 0 0 0 0 0 0 0 
+\rsc_block:sig_rsc_state.s_rsc_next_phase 0 0 0 0 0 0 0 0 0 0 1 1 
+\rsc_block:sig_rsc_state.s_rsc_test_phase 0 0 0 0 0 0 0 0 0 1 0 1 
+\rsc_block:sig_rsc_state.s_rsc_wait_for_idle_dimm 0 0 0 0 0 0 0 0 1 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_flush_datapath 0 0 0 0 0 0 0 1 0 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_test_dq 0 0 0 0 0 0 1 0 0 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_reset_cdvw 0 0 0 0 0 1 0 0 0 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_rewind_phase 0 0 0 0 1 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_cdvw_calc 0 0 0 1 0 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_cdvw_wait 0 0 1 0 0 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_seek_cdvw 0 1 0 0 0 0 0 0 0 0 0 1 
+\rsc_block:sig_rsc_state.s_rsc_wait_iram 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|sig_cdvw_state.status
+Name sig_cdvw_state.status.calculating sig_cdvw_state.status.multiple_equal_windows sig_cdvw_state.status.no_invalid_phases sig_cdvw_state.status.valid_result sig_cdvw_state.status.no_valid_phases 
+sig_cdvw_state.status.no_valid_phases 0 0 0 0 0 
+sig_cdvw_state.status.valid_result 0 0 0 1 1 
+sig_cdvw_state.status.no_invalid_phases 0 0 1 0 1 
+sig_cdvw_state.status.multiple_equal_windows 0 1 0 0 1 
+sig_cdvw_state.status.calculating 1 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|\cdvw_block:cdvw_proc:v_cdvw_state.status
+Name \cdvw_block:cdvw_proc:v_cdvw_state.status.no_valid_phases \cdvw_block:cdvw_proc:v_cdvw_state.status.multiple_equal_windows \cdvw_block:cdvw_proc:v_cdvw_state.status.no_invalid_phases \cdvw_block:cdvw_proc:v_cdvw_state.status.valid_result \cdvw_block:cdvw_proc:v_cdvw_state.status.calculating 
+\cdvw_block:cdvw_proc:v_cdvw_state.status.calculating 0 0 0 0 0 
+\cdvw_block:cdvw_proc:v_cdvw_state.status.valid_result 0 0 0 1 1 
+\cdvw_block:cdvw_proc:v_cdvw_state.status.no_invalid_phases 0 0 1 0 1 
+\cdvw_block:cdvw_proc:v_cdvw_state.status.multiple_equal_windows 0 1 0 0 1 
+\cdvw_block:cdvw_proc:v_cdvw_state.status.no_valid_phases 1 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|sig_rsc_req
+Name sig_rsc_req.s_rsc_wait_iram sig_rsc_req.s_rsc_seek_cdvw sig_rsc_req.s_rsc_cdvw_wait sig_rsc_req.s_rsc_cdvw_calc sig_rsc_req.s_rsc_rewind_phase sig_rsc_req.s_rsc_reset_cdvw sig_rsc_req.s_rsc_test_dq sig_rsc_req.s_rsc_flush_datapath sig_rsc_req.s_rsc_wait_for_idle_dimm sig_rsc_req.s_rsc_test_phase sig_rsc_req.s_rsc_next_phase sig_rsc_req.s_rsc_idle 
+sig_rsc_req.s_rsc_idle 0 0 0 0 0 0 0 0 0 0 0 0 
+sig_rsc_req.s_rsc_next_phase 0 0 0 0 0 0 0 0 0 0 1 1 
+sig_rsc_req.s_rsc_test_phase 0 0 0 0 0 0 0 0 0 1 0 1 
+sig_rsc_req.s_rsc_wait_for_idle_dimm 0 0 0 0 0 0 0 0 1 0 0 1 
+sig_rsc_req.s_rsc_flush_datapath 0 0 0 0 0 0 0 1 0 0 0 1 
+sig_rsc_req.s_rsc_test_dq 0 0 0 0 0 0 1 0 0 0 0 1 
+sig_rsc_req.s_rsc_reset_cdvw 0 0 0 0 0 1 0 0 0 0 0 1 
+sig_rsc_req.s_rsc_rewind_phase 0 0 0 0 1 0 0 0 0 0 0 1 
+sig_rsc_req.s_rsc_cdvw_calc 0 0 0 1 0 0 0 0 0 0 0 1 
+sig_rsc_req.s_rsc_cdvw_wait 0 0 1 0 0 0 0 0 0 0 0 1 
+sig_rsc_req.s_rsc_seek_cdvw 0 1 0 0 0 0 0 0 0 0 0 1 
+sig_rsc_req.s_rsc_wait_iram 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|sig_ac_req
+Name sig_ac_req.s_ac_read_wd_lat sig_ac_req.s_ac_read_poa_mtp sig_ac_req.s_ac_read_rdv sig_ac_req.s_ac_read_mtp sig_ac_req.s_ac_relax sig_ac_req.s_ac_idle 
+sig_ac_req.s_ac_idle 0 0 0 0 0 0 
+sig_ac_req.s_ac_relax 0 0 0 0 1 1 
+sig_ac_req.s_ac_read_mtp 0 0 0 1 0 1 
+sig_ac_req.s_ac_read_rdv 0 0 1 0 0 1 
+sig_ac_req.s_ac_read_poa_mtp 0 1 0 0 0 1 
+sig_ac_req.s_ac_read_wd_lat 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|sig_dgrb_last_state
+Name sig_dgrb_last_state.s_track sig_dgrb_last_state.s_poa_cal sig_dgrb_last_state.s_adv_wd_lat sig_dgrb_last_state.s_adv_rd_lat sig_dgrb_last_state.s_adv_rd_lat_setup sig_dgrb_last_state.s_rdata_valid_align sig_dgrb_last_state.s_seek_cdvw sig_dgrb_last_state.s_read_mtp sig_dgrb_last_state.s_test_phases sig_dgrb_last_state.s_reset_cdvw sig_dgrb_last_state.s_release_admin sig_dgrb_last_state.s_wait_admin sig_dgrb_last_state.s_idle 
+sig_dgrb_last_state.s_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 
+sig_dgrb_last_state.s_wait_admin 0 0 0 0 0 0 0 0 0 0 0 1 1 
+sig_dgrb_last_state.s_release_admin 0 0 0 0 0 0 0 0 0 0 1 0 1 
+sig_dgrb_last_state.s_reset_cdvw 0 0 0 0 0 0 0 0 0 1 0 0 1 
+sig_dgrb_last_state.s_test_phases 0 0 0 0 0 0 0 0 1 0 0 0 1 
+sig_dgrb_last_state.s_read_mtp 0 0 0 0 0 0 0 1 0 0 0 0 1 
+sig_dgrb_last_state.s_seek_cdvw 0 0 0 0 0 0 1 0 0 0 0 0 1 
+sig_dgrb_last_state.s_rdata_valid_align 0 0 0 0 0 1 0 0 0 0 0 0 1 
+sig_dgrb_last_state.s_adv_rd_lat_setup 0 0 0 0 1 0 0 0 0 0 0 0 1 
+sig_dgrb_last_state.s_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 1 
+sig_dgrb_last_state.s_adv_wd_lat 0 0 1 0 0 0 0 0 0 0 0 0 1 
+sig_dgrb_last_state.s_poa_cal 0 1 0 0 0 0 0 0 0 0 0 0 1 
+sig_dgrb_last_state.s_track 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|sig_dgrb_state
+Name sig_dgrb_state.s_track sig_dgrb_state.s_poa_cal sig_dgrb_state.s_adv_wd_lat sig_dgrb_state.s_adv_rd_lat sig_dgrb_state.s_adv_rd_lat_setup sig_dgrb_state.s_rdata_valid_align sig_dgrb_state.s_seek_cdvw sig_dgrb_state.s_read_mtp sig_dgrb_state.s_test_phases sig_dgrb_state.s_reset_cdvw sig_dgrb_state.s_release_admin sig_dgrb_state.s_wait_admin sig_dgrb_state.s_idle 
+sig_dgrb_state.s_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 
+sig_dgrb_state.s_wait_admin 0 0 0 0 0 0 0 0 0 0 0 1 1 
+sig_dgrb_state.s_release_admin 0 0 0 0 0 0 0 0 0 0 1 0 1 
+sig_dgrb_state.s_reset_cdvw 0 0 0 0 0 0 0 0 0 1 0 0 1 
+sig_dgrb_state.s_test_phases 0 0 0 0 0 0 0 0 1 0 0 0 1 
+sig_dgrb_state.s_read_mtp 0 0 0 0 0 0 0 1 0 0 0 0 1 
+sig_dgrb_state.s_seek_cdvw 0 0 0 0 0 0 1 0 0 0 0 0 1 
+sig_dgrb_state.s_rdata_valid_align 0 0 0 0 0 1 0 0 0 0 0 0 1 
+sig_dgrb_state.s_adv_rd_lat_setup 0 0 0 0 1 0 0 0 0 0 0 0 1 
+sig_dgrb_state.s_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 1 
+sig_dgrb_state.s_adv_wd_lat 0 0 1 0 0 0 0 0 0 0 0 0 1 
+sig_dgrb_state.s_poa_cal 0 1 0 0 0 0 0 0 0 0 0 0 1 
+sig_dgrb_state.s_track 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_dgrb:dgrb|ctrl_dgrb_r.command
+Name ctrl_dgrb_r.command.cmd_tr_due ctrl_dgrb_r.command.cmd_prep_customer_mr_setup ctrl_dgrb_r.command.cmd_prep_adv_wr_lat ctrl_dgrb_r.command.cmd_prep_adv_rd_lat ctrl_dgrb_r.command.cmd_was ctrl_dgrb_r.command.cmd_poa ctrl_dgrb_r.command.cmd_rdv ctrl_dgrb_r.command.cmd_rrp_seek ctrl_dgrb_r.command.cmd_rrp_sweep ctrl_dgrb_r.command.cmd_rrp_reset ctrl_dgrb_r.command.cmd_read_mtp ctrl_dgrb_r.command.cmd_write_mtp ctrl_dgrb_r.command.cmd_write_btp ctrl_dgrb_r.command.cmd_write_ihi ctrl_dgrb_r.command.cmd_prog_cal_mr ctrl_dgrb_r.command.cmd_init_dram ctrl_dgrb_r.command.cmd_phy_initialise ctrl_dgrb_r.command.cmd_idle 
+ctrl_dgrb_r.command.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctrl_dgrb_r.command.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ctrl_dgrb_r.command.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ctrl_dgrb_r.command.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ctrl_dgrb_r.command.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ctrl_dgrb_r.command.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_dgrb_r.command.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_admin:admin|nop_toggle_signal
+Name nop_toggle_signal.rst_n nop_toggle_signal.odt nop_toggle_signal.cs_n nop_toggle_signal.cke nop_toggle_signal.we_n nop_toggle_signal.ras_n nop_toggle_signal.cas_n nop_toggle_signal.ba nop_toggle_signal.addr 
+nop_toggle_signal.addr 0 0 0 0 0 0 0 0 0 
+nop_toggle_signal.ba 0 0 0 0 0 0 0 1 1 
+nop_toggle_signal.cas_n 0 0 0 0 0 0 1 0 1 
+nop_toggle_signal.ras_n 0 0 0 0 0 1 0 0 1 
+nop_toggle_signal.we_n 0 0 0 0 1 0 0 0 1 
+nop_toggle_signal.cke 0 0 0 1 0 0 0 0 1 
+nop_toggle_signal.cs_n 0 0 1 0 0 0 0 0 1 
+nop_toggle_signal.odt 0 1 0 0 0 0 0 0 1 
+nop_toggle_signal.rst_n 1 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_admin:admin|ac_state
+Name ac_state.s_14 ac_state.s_13 ac_state.s_12 ac_state.s_11 ac_state.s_10 ac_state.s_9 ac_state.s_8 ac_state.s_7 ac_state.s_6 ac_state.s_5 ac_state.s_4 ac_state.s_3 ac_state.s_2 ac_state.s_1 ac_state.s_0 
+ac_state.s_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ac_state.s_1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ac_state.s_2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ac_state.s_3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ac_state.s_4 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ac_state.s_5 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ac_state.s_6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ac_state.s_7 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ac_state.s_8 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ac_state.s_9 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ac_state.s_10 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ac_state.s_11 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ac_state.s_12 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ac_state.s_13 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ac_state.s_14 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_admin:admin|state
+Name state.s_non_operational state.s_refresh_done state.s_refresh state.s_dummy_wait state.s_prog_user_mrs state.s_access_precharge state.s_access state.s_access_act state.s_zq_cal_short state.s_topup_refresh_done state.s_topup_refresh state.s_idle state.s_program_cal_mrs state.s_run_init_seq state.s_reset 
+state.s_reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.s_run_init_seq 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.s_program_cal_mrs 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.s_idle 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.s_topup_refresh 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.s_topup_refresh_done 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.s_zq_cal_short 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.s_access_act 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.s_access 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.s_access_precharge 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.s_prog_user_mrs 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.s_dummy_wait 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.s_refresh 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_refresh_done 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_non_operational 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|ddr2_interface2um:ddr2_interface2um|ddr2_12:ddr2_ctrl_hp_inst|ddr2_12_controller_phy:ddr2_12_controller_phy_inst|ddr2_12_phy:ddr2_12_phy_inst|ddr2_12_phy_alt_mem_phy:ddr2_12_phy_alt_mem_phy_inst|ddr2_12_phy_alt_mem_phy_seq_wrapper:seq_wrapper|ddr2_12_phy_alt_mem_phy_seq:seq_inst|ddr2_12_phy_alt_mem_phy_admin:admin|ctrl_rec.command
+Name ctrl_rec.command.cmd_tr_due ctrl_rec.command.cmd_prep_customer_mr_setup ctrl_rec.command.cmd_prep_adv_wr_lat ctrl_rec.command.cmd_prep_adv_rd_lat ctrl_rec.command.cmd_was ctrl_rec.command.cmd_poa ctrl_rec.command.cmd_rdv ctrl_rec.command.cmd_rrp_seek ctrl_rec.command.cmd_rrp_sweep ctrl_rec.command.cmd_rrp_reset ctrl_rec.command.cmd_read_mtp ctrl_rec.command.cmd_write_mtp ctrl_rec.command.cmd_write_btp ctrl_rec.command.cmd_write_ihi ctrl_rec.command.cmd_prog_cal_mr ctrl_rec.command.cmd_init_dram ctrl_rec.command.cmd_phy_initialise ctrl_rec.command.cmd_idle 
+ctrl_rec.command.cmd_idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctrl_rec.command.cmd_phy_initialise 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ctrl_rec.command.cmd_init_dram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ctrl_rec.command.cmd_prog_cal_mr 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ctrl_rec.command.cmd_write_ihi 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ctrl_rec.command.cmd_write_btp 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ctrl_rec.command.cmd_write_mtp 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ctrl_rec.command.cmd_read_mtp 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_rrp_reset 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_rrp_sweep 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_rrp_seek 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_rdv 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_poa 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_was 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_prep_adv_rd_lat 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_prep_adv_wr_lat 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_prep_customer_mr_setup 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_rec.command.cmd_tr_due 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |netFPGAmini|output_ctrl:output_ctrl|current_state
+Name current_state.discard current_state.copy current_state.wait_rule current_state.idle current_state.cut 
+current_state.idle 0 0 0 0 0 
+current_state.wait_rule 0 0 1 1 0 
+current_state.copy 0 1 0 1 0 
+current_state.discard 1 0 0 1 0 
+current_state.cut 0 0 0 1 1 
+
+State Machine - |netFPGAmini|input_ctrl:input_ctrl|current_state
+Name current_state.over_4byte current_state.discard current_state.transmit current_state.idle 
+current_state.idle 0 0 0 0 
+current_state.transmit 0 0 1 1 
+current_state.discard 0 1 0 1 
+current_state.over_4byte 1 0 0 1 
+
+State Machine - |netFPGAmini|UM:UM|um2ddr_state
+Name um2ddr_state.um2ddr_data_read um2ddr_state.um2ddr_valid_read um2ddr_state.um2ddr_valid_wait um2ddr_state.um2ddr_write um2ddr_state.um2ddr_order um2ddr_state.um2ddr_idle 
+um2ddr_state.um2ddr_idle 0 0 0 0 0 0 
+um2ddr_state.um2ddr_order 0 0 0 0 1 1 
+um2ddr_state.um2ddr_write 0 0 0 1 0 1 
+um2ddr_state.um2ddr_valid_wait 0 0 1 0 0 1 
+um2ddr_state.um2ddr_valid_read 0 1 0 0 0 1 
+um2ddr_state.um2ddr_data_read 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|UM:UM|localbus_state
+Name localbus_state.localbus_read localbus_state.localbus_write localbus_state.localbus_address localbus_state.localbus_idle localbus_state.localbus_ack 
+localbus_state.localbus_idle 0 0 0 0 0 
+localbus_state.localbus_address 0 0 1 1 0 
+localbus_state.localbus_write 0 1 0 1 0 
+localbus_state.localbus_read 1 0 0 1 0 
+localbus_state.localbus_ack 0 0 0 1 1 
+
+State Machine - |netFPGAmini|UM:UM|um2cdp_state
+Name um2cdp_state.pass_through_payload um2cdp_state.pass_through_header4 um2cdp_state.pass_through_header3 um2cdp_state.pass_through_header2 um2cdp_state.pass_through_header1 um2cdp_state.pass_through_idle 
+um2cdp_state.pass_through_idle 0 0 0 0 0 0 
+um2cdp_state.pass_through_header1 0 0 0 0 1 1 
+um2cdp_state.pass_through_header2 0 0 0 1 0 1 
+um2cdp_state.pass_through_header3 0 0 1 0 0 1 
+um2cdp_state.pass_through_header4 0 1 0 0 0 1 
+um2cdp_state.pass_through_payload 1 0 0 0 0 1 
+
+State Machine - |netFPGAmini|UM:UM|cdp2um_state
+Name cdp2um_state.01 
+cdp2um_state.00 0 
+cdp2um_state.01 1 

@@ -1,0 +1,1003 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 222 10/21/2009 SJ Full Version
+# Date created = 20:21:43  May 03, 2011
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		netFPGAmini_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Arria II GX"
+set_global_assignment -name DEVICE EP2AGX45DF25C4
+set_global_assignment -name TOP_LEVEL_ENTITY netFPGAmini
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:21:43  MAY 03, 2011"
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.2
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 572
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 4
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+
+###############################  IO_STANDARD  ###############################
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[2]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[3]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[4]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[5]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[6]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[7]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[8]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[9]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[10]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[11]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[12]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[13]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[14]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_addr[15]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_bank_addr[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_bank_addr[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_bank_addr[2]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_cas_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_cke
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_cs_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dm[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dm[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[2]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[3]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[4]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[5]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[6]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[7]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[8]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[9]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[10]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[11]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[12]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[13]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[14]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_dq[15]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to ddr2_dqs_n[0]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to ddr2_dqs_n[1]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to ddr2_dqs[0]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to ddr2_dqs[1]
+
+
+
+
+
+
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_odt
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_ras_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS II" -to ddr2_we_n
+
+
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp0_rxd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp0_txd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp1_rxd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp1_txd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp2_rxd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp2_txd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp3_rxd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp3_txd
+#set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp_clk
+
+
+
+###############################  IO_STANDARD  ###############################
+
+set_location_assignment PIN_A19 -to rgm0_rx_data[3]
+set_location_assignment PIN_B16 -to rgm0_rx_data[2]
+set_location_assignment PIN_B18 -to rgm0_rx_data[1]
+set_location_assignment PIN_A20 -to rgm0_rx_data[0]
+set_location_assignment PIN_B15 -to rgm0_tx_data[3]
+set_location_assignment PIN_A11 -to rgm0_tx_data[2]
+set_location_assignment PIN_B12 -to rgm0_tx_data[1]
+set_location_assignment PIN_A14 -to rgm0_tx_data[0]
+set_location_assignment PIN_A12 -to rgm0_tx_clk
+set_location_assignment PIN_A13 -to rgm0_tx_ctl
+set_location_assignment PIN_A16 -to rgm0_rx_clk
+set_location_assignment PIN_A17 -to rgm0_rx_ctl
+set_location_assignment PIN_C10 -to rgm1_rx_data[3]
+set_location_assignment PIN_B10 -to rgm1_rx_data[2]
+set_location_assignment PIN_A9 -to rgm1_rx_data[1]
+set_location_assignment PIN_A7 -to rgm1_rx_data[0]
+set_location_assignment PIN_A6 -to rgm1_tx_data[3]
+set_location_assignment PIN_A5 -to rgm1_tx_data[2]
+set_location_assignment PIN_A4 -to rgm1_tx_data[1]
+set_location_assignment PIN_A2 -to rgm1_tx_data[0]
+set_location_assignment PIN_B7 -to rgm1_rx_clk
+set_location_assignment PIN_A10 -to rgm1_rx_ctl
+set_location_assignment PIN_C4 -to rgm1_tx_clk
+set_location_assignment PIN_B4 -to rgm1_tx_ctl
+set_location_assignment PIN_AD12 -to rgm2_rx_data[3]
+set_location_assignment PIN_AC13 -to rgm2_rx_data[2]
+set_location_assignment PIN_AD10 -to rgm2_rx_data[1]
+set_location_assignment PIN_AC12 -to rgm2_rx_data[0]
+set_location_assignment PIN_AC9 -to rgm2_tx_data[3]
+set_location_assignment PIN_AB10 -to rgm2_tx_data[2]
+set_location_assignment PIN_AC6 -to rgm2_tx_data[1]
+set_location_assignment PIN_AD6 -to rgm2_tx_data[0]
+set_location_assignment PIN_AA11 -to rgm2_rx_clk
+set_location_assignment PIN_AB13 -to rgm2_rx_ctl
+set_location_assignment PIN_AA7 -to rgm2_tx_clk
+set_location_assignment PIN_AA10 -to rgm2_tx_ctl
+set_location_assignment PIN_AB16 -to rgm3_rx_data[3]
+set_location_assignment PIN_AD19 -to rgm3_rx_data[2]
+set_location_assignment PIN_AD18 -to rgm3_rx_data[1]
+set_location_assignment PIN_AA16 -to rgm3_rx_data[0]
+set_location_assignment PIN_AB19 -to rgm3_tx_data[3]
+set_location_assignment PIN_AD21 -to rgm3_tx_data[2]
+set_location_assignment PIN_AB18 -to rgm3_tx_data[1]
+set_location_assignment PIN_AC18 -to rgm3_tx_data[0]
+set_location_assignment PIN_AA14 -to rgm3_rx_clk
+set_location_assignment PIN_AD16 -to rgm3_rx_ctl
+set_location_assignment PIN_AB17 -to rgm3_tx_clk
+set_location_assignment PIN_AC21 -to rgm3_tx_ctl
+set_location_assignment PIN_AB1 -to ddr2_dq[15]
+set_location_assignment PIN_T2 -to ddr2_dq[14]
+set_location_assignment PIN_R1 -to ddr2_dq[13]
+set_location_assignment PIN_N6 -to ddr2_dq[12]
+set_location_assignment PIN_P7 -to ddr2_dq[11]
+set_location_assignment PIN_R3 -to ddr2_dq[10]
+set_location_assignment PIN_R7 -to ddr2_dq[9]
+set_location_assignment PIN_T1 -to ddr2_dq[8]
+set_location_assignment PIN_AA1 -to ddr2_dm[1]
+set_location_assignment PIN_U1 -to ddr2_dqs[1]
+set_location_assignment PIN_V1 -to ddr2_dqs_n[1]
+set_location_assignment PIN_AD2 -to ddr2_dq[7]
+set_location_assignment PIN_AC1 -to ddr2_dq[6]
+set_location_assignment PIN_U3 -to ddr2_dq[5]
+set_location_assignment PIN_R5 -to ddr2_dq[4]
+set_location_assignment PIN_T4 -to ddr2_dq[3]
+set_location_assignment PIN_T5 -to ddr2_dq[2]
+set_location_assignment PIN_Y3 -to ddr2_dq[1]
+set_location_assignment PIN_AB2 -to ddr2_dq[0]
+set_location_assignment PIN_AD3 -to ddr2_dm[0]
+set_location_assignment PIN_W2 -to ddr2_dqs_n[0]
+set_location_assignment PIN_V3 -to ddr2_dqs[0]
+set_location_assignment PIN_J1 -to ddr2_addr[0]
+set_location_assignment PIN_J5 -to ddr2_addr[1]
+set_location_assignment PIN_K2 -to ddr2_addr[2]
+set_location_assignment PIN_J3 -to ddr2_addr[3]
+set_location_assignment PIN_G1 -to ddr2_addr[4]
+set_location_assignment PIN_H6 -to ddr2_addr[5]
+set_location_assignment PIN_H1 -to ddr2_addr[6]
+set_location_assignment PIN_H3 -to ddr2_addr[7]
+set_location_assignment PIN_E1 -to ddr2_addr[8]
+set_location_assignment PIN_G3 -to ddr2_addr[9]
+set_location_assignment PIN_J6 -to ddr2_addr[10]
+set_location_assignment PIN_F1 -to ddr2_addr[11]
+set_location_assignment PIN_F3 -to ddr2_addr[12]
+set_location_assignment PIN_K4 -to ddr2_bank_addr[1]
+set_location_assignment PIN_L7 -to ddr2_bank_addr[0]
+set_location_assignment PIN_M1 -to ddr2_cas_n
+set_location_assignment PIN_M7 -to ddr2_cke
+set_location_assignment PIN_L3 -to ddr2_cs_n
+set_location_assignment PIN_P1 -to ddr2_odt
+set_location_assignment PIN_N1 -to ddr2_ras_n
+set_location_assignment PIN_M3 -to ddr2_we_n
+
+#set_location_assignment PIN_AA23 -to sfp0_rxd
+#set_location_assignment PIN_AA24 -to "sfp0_rxd(n)"
+#set_location_assignment PIN_Y21 -to sfp0_txd
+#set_location_assignment PIN_Y22 -to "sfp0_txd(n)"
+#set_location_assignment PIN_W23 -to sfp1_rxd
+#set_location_assignment PIN_W24 -to "sfp1_rxd(n)"
+#set_location_assignment PIN_V21 -to sfp1_txd
+#set_location_assignment PIN_V22 -to "sfp1_txd(n)"
+#set_location_assignment PIN_R23 -to sfp2_rxd
+#set_location_assignment PIN_R24 -to "sfp2_rxd(n)"
+#set_location_assignment PIN_P21 -to sfp2_txd
+#set_location_assignment PIN_P22 -to "sfp2_txd(n)"
+#set_location_assignment PIN_N23 -to sfp3_rxd
+#set_location_assignment PIN_N24 -to "sfp3_rxd(n)"
+#set_location_assignment PIN_M21 -to sfp3_txd
+#set_location_assignment PIN_M22 -to "sfp3_txd(n)"
+#set_location_assignment PIN_U23 -to sfp_clk
+#set_location_assignment PIN_U24 -to "sfp_clk(n)"
+
+
+set_location_assignment PIN_K1 -to ddr2_ck
+set_location_assignment PIN_L1 -to ddr2_ck_n
+
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to ddr2_ck
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to ddr2_ck_n
+set_instance_assignment -name XSTL_INPUT_ALLOW_SE_BUFFER ON -to ddr2_ck
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to ddr2_ck
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to ddr2_ck_n
+
+
+
+set_location_assignment PIN_D11 -to fpga_resetn
+set_location_assignment PIN_G16 -to l_link_sfp0
+set_location_assignment PIN_G8 -to l_link_sfp1
+set_location_assignment PIN_AA9 -to l_link_sfp2
+set_location_assignment PIN_Y16 -to l_link_sfp3
+set_location_assignment PIN_C9 -to l_user_led
+set_location_assignment PIN_H16 -to r_act_sfp0
+set_location_assignment PIN_F8 -to r_act_sfp1
+set_location_assignment PIN_W12 -to r_act_sfp2
+set_location_assignment PIN_W16 -to r_act_sfp3
+set_location_assignment PIN_U9 -to vsc8224_rstn
+set_location_assignment PIN_AA13 -to vsc8224_clkout_125m
+set_location_assignment PIN_AD13 -to sysclk_100m
+set_location_assignment PIN_C11 -to sysclk_125m
+set_location_assignment PIN_AD8 -to vsc_smi_mdc
+set_location_assignment PIN_AD9 -to vsc_smi_mdio
+set_location_assignment PIN_D15 -to sfp_dis0
+set_location_assignment PIN_E10 -to sfp_dis1
+set_location_assignment PIN_W10 -to sfp_dis2
+set_location_assignment PIN_V16 -to sfp_dis3
+set_location_assignment PIN_E15 -to sfp_fault0
+set_location_assignment PIN_F10 -to sfp_fault1
+set_location_assignment PIN_V9 -to sfp_fault2
+set_location_assignment PIN_V15 -to sfp_fault3
+set_location_assignment PIN_E12 -to sfp_los0
+set_location_assignment PIN_D6 -to sfp_los1
+set_location_assignment PIN_Y12 -to sfp_los2
+set_location_assignment PIN_Y15 -to sfp_los3
+set_location_assignment PIN_F13 -to sfp_present0
+set_location_assignment PIN_D8 -to sfp_present1
+set_location_assignment PIN_W9 -to sfp_present2
+set_location_assignment PIN_W15 -to sfp_present3
+set_location_assignment PIN_E13 -to sfp_scl0
+set_location_assignment PIN_D9 -to sfp_scl1
+set_location_assignment PIN_Y9 -to sfp_scl2
+set_location_assignment PIN_W14 -to sfp_scl3
+set_location_assignment PIN_D14 -to sfp_sda0
+set_location_assignment PIN_E9 -to sfp_sda1
+set_location_assignment PIN_W11 -to sfp_sda2
+set_location_assignment PIN_W13 -to sfp_sda3
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp0_rxd
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp0_txd
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp1_rxd
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp1_txd
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp2_rxd
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp2_txd
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp3_rxd
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to sfp3_txd
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL LVPECL" -to sfp_clk0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL LVPECL" -to sfp_clk1
+set_location_assignment PIN_AA23 -to sfp0_rxd
+set_location_assignment PIN_AA24 -to "sfp0_rxd(n)"
+set_location_assignment PIN_Y21 -to sfp0_txd
+set_location_assignment PIN_Y22 -to "sfp0_txd(n)"
+set_location_assignment PIN_R23 -to sfp1_rxd
+set_location_assignment PIN_R24 -to "sfp1_rxd(n)"
+set_location_assignment PIN_P21 -to sfp1_txd
+set_location_assignment PIN_P22 -to "sfp1_txd(n)"
+set_location_assignment PIN_L23 -to sfp2_rxd
+set_location_assignment PIN_L24 -to "sfp2_rxd(n)"
+set_location_assignment PIN_K21 -to sfp2_txd
+set_location_assignment PIN_K22 -to "sfp2_txd(n)"
+set_location_assignment PIN_E23 -to sfp3_rxd
+set_location_assignment PIN_E24 -to "sfp3_rxd(n)"
+set_location_assignment PIN_D21 -to sfp3_txd
+set_location_assignment PIN_D22 -to "sfp3_txd(n)"
+set_location_assignment PIN_U23 -to sfp_clk0
+set_location_assignment PIN_U24 -to "sfp_clk0(n)"
+set_location_assignment PIN_D1 -to ddr2_addr[13]
+set_location_assignment PIN_D3 -to ddr2_addr[14]
+set_location_assignment PIN_D2 -to ddr2_addr[15]
+set_location_assignment PIN_G6 -to ddr2_bank_addr[2]
+set_location_assignment PIN_D12 -to l_debug[0]
+set_location_assignment PIN_D13 -to l_debug[1]
+set_location_assignment PIN_G9 -to l_debug[2]
+set_location_assignment PIN_H9 -to l_debug[3]
+set_location_assignment PIN_C15 -to l_debug[4]
+set_location_assignment PIN_C13 -to l_debug[5]
+set_location_assignment PIN_G13 -to l_debug[6]
+set_location_assignment PIN_G14 -to l_debug[7]
+set_location_assignment PIN_G23 -to sfp_clk1
+set_location_assignment PIN_G24 -to "sfp_clk1(n)"
+set_global_assignment -name USE_SIGNALTAP_FILE Hello_NetMagic_08.stp
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name MISC_FILE netFPGAmini.dpf
+set_global_assignment -name MISC_FILE "E:/fpga/altera/nm08/net_magic_08_a/netFPGAmini_ddrtest_restored/netFPGAmini.dpf"
+set_global_assignment -name MISC_FILE "D:/programing/netmagic08/programing/netmagic08/netmagicmini-201203151438-test/netFPGAmini.dpf"
+set_global_assignment -name MISC_FILE "E:/netmagicmini-201203151438-test-withrulefifo/netFPGAmini.dpf"
+set_global_assignment -name MISC_FILE "E:/NetMagic/source/netmagicmini-20120509-test_2-3_passthrough_ccz/netFPGAmini.dpf"
+set_global_assignment -name MISC_FILE "G:/feiqiu/zq/netmagicmini-example-project1108/netFPGAmini.dpf"
+set_global_assignment -name MISC_FILE "F:/netmagicmini-example-project1108_zq/netFPGAmini.dpf"
+set_global_assignment -name VERILOG_FILE UM_my/UM.v
+set_global_assignment -name QIP_FILE UM/pll_0.qip
+set_global_assignment -name VERILOG_FILE UM/ddr2/ddr2_12_phy_alt_mem_phy_dq_dqs.v
+set_global_assignment -name VERILOG_FILE UM/ddr2/ddr2_12_alt_mem_ddrx_controller_top.v
+set_global_assignment -name QIP_FILE UM/ddr2/ddr2_12.qip
+set_global_assignment -name VERILOG_FILE UM/ddr2/ddr2_12_phy_alt_mem_phy.v
+set_global_assignment -name VERILOG_FILE UM/ddr2/ddr2_12_phy.v
+set_global_assignment -name VERILOG_FILE UM/ddr2/ddr2_12_controller_phy.v
+set_global_assignment -name VERILOG_FILE UM/ddr2/ddr2_12.v
+set_global_assignment -name QIP_FILE sfp/sfp2gmii.qip
+set_global_assignment -name VERILOG_FILE UM/ddr2_ctrl_input.v
+set_global_assignment -name SDC_FILE ddr2/ddr2_phy_ddr_timing.sdc
+set_global_assignment -name SDC_FILE ddr2/ddr2_example_top.sdc
+set_global_assignment -name SDC_FILE ddr2/altera_avalon_half_rate_bridge_constraints.sdc
+set_global_assignment -name SIGNALTAP_FILE port_test.stp
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_phy_alt_mem_phy_seq_wrapper.v
+set_global_assignment -name VHDL_FILE ddr2/ddr2_phy_alt_mem_phy_seq.vhd
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_phy_alt_mem_phy_pll.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_phy_alt_mem_phy_dq_dqs.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_phy_alt_mem_phy.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_phy.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_example_top.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_example_driver.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_ex_lfsr8.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_alt_ddrx_controller_wrapper.v
+set_global_assignment -name VERILOG_FILE ddr2/altera_avalon_half_rate_bridge.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_mem_phy_defines.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_wdata_fifo.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_timing_param.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_state_machine.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_rank_monitor.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_odt_gen.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_input_if.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_encoder_72.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_encoder_40.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_encoder.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_ecc.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_decoder_72.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_decoder_40.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_decoder.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_ddr3_odt_gen.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_ddr2_odt_gen.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_csr.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_controller.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_cmd_queue.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_cmd_gen.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_clock_and_reset.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_cache.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_bypass.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_bank_timer_wrapper.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_bank_timer_info.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_bank_timer.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_avalon_if.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_afi_block.v
+set_global_assignment -name VERILOG_FILE ddr2/alt_ddrx_addr_cmd.v
+set_global_assignment -name VERILOG_FILE pll_clk.v
+set_global_assignment -name VERILOG_FILE pll_0.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2_controller_phy.v
+set_global_assignment -name VERILOG_FILE ddr2/ddr2.v
+set_global_assignment -name VERILOG_FILE ddr2_ctrl_module/um2ddr_fifo.v
+set_global_assignment -name VERILOG_FILE ddr2_ctrl_module/um2ddr_command_fifo.v
+set_global_assignment -name VERILOG_FILE ddr2_ctrl_module/ddr2um_valid_fifo.v
+set_global_assignment -name VERILOG_FILE ddr2_ctrl_module/ddr2um_fifo.v
+set_global_assignment -name VERILOG_FILE ddr2_ctrl_module/ddr2_interface2um.v
+set_global_assignment -name VERILOG_FILE ddr2_ctrl_module/ddr2_ctrl_output.v
+set_global_assignment -name VERILOG_FILE ddr2_ctrl_module/ddr2_ctrl.v
+set_global_assignment -name VERILOG_FILE cdp/rule_32_30_fifo.v
+set_global_assignment -name VERILOG_FILE cdp/crc_check_altcrc.v
+set_global_assignment -name VERILOG_FILE manage_md/crc32_gen_altcrc.v
+set_global_assignment -name VERILOG_FILE cdp/crc_check.v
+set_global_assignment -name VERILOG_FILE cdp/level2_64_19.v
+set_global_assignment -name VERILOG_FILE cdp/rx_crc.v
+set_global_assignment -name VERILOG_FILE cdp/tx_gen.v
+set_global_assignment -name VERILOG_FILE cdp/level2_256_139.v
+set_global_assignment -name VERILOG_FILE cdp/input2output_128_139.v
+set_global_assignment -name VERILOG_FILE cdp/rx_64_1.v
+set_global_assignment -name VERILOG_FILE cdp/input_ctrl.v
+set_global_assignment -name VERILOG_FILE cdp/output_ctrl.v
+set_global_assignment -name VERILOG_FILE pkt_input_ctrl/pkt_input_ctrl.v
+set_global_assignment -name VERILOG_FILE manage_md/tx_valid_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/tx_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/result_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/pkt_length_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/pkt_gen_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/pkt_gen.v
+set_global_assignment -name VERILOG_FILE manage_md/NET_MAGIC_CTRL.v
+set_global_assignment -name VERILOG_FILE manage_md/manage_tx.v
+set_global_assignment -name VERILOG_FILE manage_md/manage_rx.v
+set_global_assignment -name VERILOG_FILE manage_md/local_bus.v
+set_global_assignment -name VERILOG_FILE manage_md/length_gen_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/data_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/crc32_gen.v
+set_global_assignment -name VERILOG_FILE manage_md/command_parse.v
+set_global_assignment -name VERILOG_FILE manage_md/com_valid_fifo.v
+set_global_assignment -name VERILOG_FILE manage_md/cdp_local_bus.v
+set_global_assignment -name VERILOG_FILE cdp/tx139_gmii_1000.v
+set_global_assignment -name VERILOG_FILE cdp/rx_tx_1000.v
+set_global_assignment -name VERILOG_FILE cdp/rgmii_gmii.v
+set_global_assignment -name VERILOG_FILE cdp/gmii_139_1000.v
+set_global_assignment -name VERILOG_FILE cdp/ddio_out_1.v
+set_global_assignment -name VERILOG_FILE cdp/ddio_out.v
+set_global_assignment -name VERILOG_FILE cdp/ddio_in_4.v
+set_global_assignment -name VERILOG_FILE cdp/ddio_in_1.v
+set_global_assignment -name VERILOG_FILE cdp/check_fifo.v
+set_global_assignment -name VERILOG_FILE cdp/check_100_1000.v
+set_global_assignment -name VERILOG_FILE cdp/asyn_256_139.v
+set_global_assignment -name VERILOG_FILE cdp/asyn_64_1.v
+set_global_assignment -name VERILOG_FILE sfp/sfp_rx_tx_1000.v
+set_global_assignment -name VERILOG_FILE sfp/sfp2gmii.v
+set_global_assignment -name VERILOG_FILE sfp/act_led.v
+set_global_assignment -name SDC_FILE sfp/sfp2gmii_constraints.sdc
+set_global_assignment -name SDC_FILE netFPGAmini.out.sdc
+set_global_assignment -name VERILOG_FILE netFPGAmini.v
+set_global_assignment -name QIP_FILE rli/check_ip.qip
+set_global_assignment -name QIP_FILE cdp/rule_32_30.qip
+set_global_assignment -name QIP_FILE cdp/rule_32_30_fifo.qip
+set_global_assignment -name VERILOG_FILE rli/nmac_crc_check.v
+set_global_assignment -name SIGNALTAP_FILE UM/UM.stp
+set_global_assignment -name SIGNALTAP_FILE stp2.stp
+set_global_assignment -name SIGNALTAP_FILE STP/stp1.stp
+set_global_assignment -name SIGNALTAP_FILE Hello_NetMagic_08.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334530" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=128" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_2
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "UM:UM|clk" -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=1" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=2" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_MGR_ENTITY=sld_reserved_netFPGAmini_auto_signaltap_2_flow_mgr_c90c" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=0" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=0" -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "UM:UM|bw_num[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "UM:UM|bw_num[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "UM:UM|bw_num[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "UM:UM|bw_num[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "UM:UM|bw_num[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "UM:UM|bw_num[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "UM:UM|bw_num[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "UM:UM|bw_num[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "UM:UM|bw_num[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "UM:UM|bw_num[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "UM:UM|bw_num[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "UM:UM|bw_num[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "UM:UM|bw_num[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "UM:UM|bw_num[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "UM:UM|bw_num[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "UM:UM|bw_num[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "UM:UM|bw_num[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "UM:UM|bw_num[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "UM:UM|bw_num[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "UM:UM|bw_num[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "UM:UM|bw_num[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "UM:UM|bw_num[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "UM:UM|bw_num[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "UM:UM|bw_num[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "UM:UM|bw_num[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "UM:UM|bw_num[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "UM:UM|bw_num[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "UM:UM|bw_num[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "UM:UM|bw_num[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "UM:UM|bw_num[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "UM:UM|bw_num[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "UM:UM|bw_num[9]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "UM:UM|cdp2um_data[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "UM:UM|cdp2um_data[100]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "UM:UM|cdp2um_data[101]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "UM:UM|cdp2um_data[102]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "UM:UM|cdp2um_data[103]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "UM:UM|cdp2um_data[104]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "UM:UM|cdp2um_data[105]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "UM:UM|cdp2um_data[106]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "UM:UM|cdp2um_data[107]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "UM:UM|cdp2um_data[108]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "UM:UM|cdp2um_data[109]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "UM:UM|cdp2um_data[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "UM:UM|cdp2um_data[110]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "UM:UM|cdp2um_data[111]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "UM:UM|cdp2um_data[112]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "UM:UM|cdp2um_data[113]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "UM:UM|cdp2um_data[114]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "UM:UM|cdp2um_data[115]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "UM:UM|cdp2um_data[116]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "UM:UM|cdp2um_data[117]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "UM:UM|cdp2um_data[118]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "UM:UM|cdp2um_data[119]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "UM:UM|cdp2um_data[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "UM:UM|cdp2um_data[120]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "UM:UM|cdp2um_data[121]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "UM:UM|cdp2um_data[122]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "UM:UM|cdp2um_data[123]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "UM:UM|cdp2um_data[124]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "UM:UM|cdp2um_data[125]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "UM:UM|cdp2um_data[126]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "UM:UM|cdp2um_data[127]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "UM:UM|cdp2um_data[128]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "UM:UM|cdp2um_data[129]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "UM:UM|cdp2um_data[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "UM:UM|cdp2um_data[130]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "UM:UM|cdp2um_data[131]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "UM:UM|cdp2um_data[132]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "UM:UM|cdp2um_data[133]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "UM:UM|cdp2um_data[134]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "UM:UM|cdp2um_data[135]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "UM:UM|cdp2um_data[136]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "UM:UM|cdp2um_data[137]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "UM:UM|cdp2um_data[138]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "UM:UM|cdp2um_data[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "UM:UM|cdp2um_data[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "UM:UM|cdp2um_data[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "UM:UM|cdp2um_data[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "UM:UM|cdp2um_data[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "UM:UM|cdp2um_data[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "UM:UM|cdp2um_data[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "UM:UM|cdp2um_data[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "UM:UM|cdp2um_data[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "UM:UM|cdp2um_data[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "UM:UM|cdp2um_data[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "UM:UM|cdp2um_data[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "UM:UM|cdp2um_data[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "UM:UM|cdp2um_data[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "UM:UM|cdp2um_data[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "UM:UM|cdp2um_data[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "UM:UM|cdp2um_data[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "UM:UM|cdp2um_data[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[93] -to "UM:UM|cdp2um_data[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[94] -to "UM:UM|cdp2um_data[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[95] -to "UM:UM|cdp2um_data[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[96] -to "UM:UM|cdp2um_data[32]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[97] -to "UM:UM|cdp2um_data[33]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[98] -to "UM:UM|cdp2um_data[34]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[99] -to "UM:UM|cdp2um_data[35]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[100] -to "UM:UM|cdp2um_data[36]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[101] -to "UM:UM|cdp2um_data[37]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[102] -to "UM:UM|cdp2um_data[38]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[103] -to "UM:UM|cdp2um_data[39]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[104] -to "UM:UM|cdp2um_data[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[105] -to "UM:UM|cdp2um_data[40]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[106] -to "UM:UM|cdp2um_data[41]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[107] -to "UM:UM|cdp2um_data[42]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[108] -to "UM:UM|cdp2um_data[43]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[109] -to "UM:UM|cdp2um_data[44]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[110] -to "UM:UM|cdp2um_data[45]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[111] -to "UM:UM|cdp2um_data[46]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[112] -to "UM:UM|cdp2um_data[47]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[113] -to "UM:UM|cdp2um_data[48]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[114] -to "UM:UM|cdp2um_data[49]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[115] -to "UM:UM|cdp2um_data[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[116] -to "UM:UM|cdp2um_data[50]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[117] -to "UM:UM|cdp2um_data[51]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[118] -to "UM:UM|cdp2um_data[52]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[119] -to "UM:UM|cdp2um_data[53]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[120] -to "UM:UM|cdp2um_data[54]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[121] -to "UM:UM|cdp2um_data[55]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[122] -to "UM:UM|cdp2um_data[56]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[123] -to "UM:UM|cdp2um_data[57]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[124] -to "UM:UM|cdp2um_data[58]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[125] -to "UM:UM|cdp2um_data[59]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[126] -to "UM:UM|cdp2um_data[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[127] -to "UM:UM|cdp2um_data[60]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[128] -to "UM:UM|cdp2um_data[61]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[129] -to "UM:UM|cdp2um_data[62]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[130] -to "UM:UM|cdp2um_data[63]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[131] -to "UM:UM|cdp2um_data[64]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[132] -to "UM:UM|cdp2um_data[65]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[133] -to "UM:UM|cdp2um_data[66]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[134] -to "UM:UM|cdp2um_data[67]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[135] -to "UM:UM|cdp2um_data[68]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[136] -to "UM:UM|cdp2um_data[69]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[137] -to "UM:UM|cdp2um_data[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[138] -to "UM:UM|cdp2um_data[70]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[139] -to "UM:UM|cdp2um_data[71]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[140] -to "UM:UM|cdp2um_data[72]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[141] -to "UM:UM|cdp2um_data[73]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[142] -to "UM:UM|cdp2um_data[74]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[143] -to "UM:UM|cdp2um_data[75]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[144] -to "UM:UM|cdp2um_data[76]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[145] -to "UM:UM|cdp2um_data[77]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[146] -to "UM:UM|cdp2um_data[78]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[147] -to "UM:UM|cdp2um_data[79]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[148] -to "UM:UM|cdp2um_data[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[149] -to "UM:UM|cdp2um_data[80]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[150] -to "UM:UM|cdp2um_data[81]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[151] -to "UM:UM|cdp2um_data[82]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[152] -to "UM:UM|cdp2um_data[83]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[153] -to "UM:UM|cdp2um_data[84]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[154] -to "UM:UM|cdp2um_data[85]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[155] -to "UM:UM|cdp2um_data[86]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[156] -to "UM:UM|cdp2um_data[87]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[157] -to "UM:UM|cdp2um_data[88]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[158] -to "UM:UM|cdp2um_data[89]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[159] -to "UM:UM|cdp2um_data[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[160] -to "UM:UM|cdp2um_data[90]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[161] -to "UM:UM|cdp2um_data[91]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[162] -to "UM:UM|cdp2um_data[92]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[163] -to "UM:UM|cdp2um_data[93]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[164] -to "UM:UM|cdp2um_data[94]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[165] -to "UM:UM|cdp2um_data[95]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[166] -to "UM:UM|cdp2um_data[96]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[167] -to "UM:UM|cdp2um_data[97]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[168] -to "UM:UM|cdp2um_data[98]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[169] -to "UM:UM|cdp2um_data[99]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[170] -to "UM:UM|cdp2um_data[9]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[171] -to "UM:UM|cdp2um_data_valid" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[172] -to "UM:UM|cdp2um_tx_enable" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[173] -to "UM:UM|zh_num[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[174] -to "UM:UM|zh_num[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[175] -to "UM:UM|zh_num[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[176] -to "UM:UM|zh_num[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[177] -to "UM:UM|zh_num[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[178] -to "UM:UM|zh_num[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[179] -to "UM:UM|zh_num[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[180] -to "UM:UM|zh_num[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[181] -to "UM:UM|zh_num[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[182] -to "UM:UM|zh_num[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[183] -to "UM:UM|zh_num[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[184] -to "UM:UM|zh_num[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[185] -to "UM:UM|zh_num[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[186] -to "UM:UM|zh_num[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[187] -to "UM:UM|zh_num[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[188] -to "UM:UM|zh_num[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[189] -to "UM:UM|zh_num[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[190] -to "UM:UM|zh_num[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[191] -to "UM:UM|zh_num[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[192] -to "UM:UM|zh_num[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[193] -to "UM:UM|zh_num[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[194] -to "UM:UM|zh_num[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[195] -to "UM:UM|zh_num[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[196] -to "UM:UM|zh_num[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[197] -to "UM:UM|zh_num[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[198] -to "UM:UM|zh_num[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[199] -to "UM:UM|zh_num[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[200] -to "UM:UM|zh_num[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[201] -to "UM:UM|zh_num[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[202] -to "UM:UM|zh_num[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[203] -to "UM:UM|zh_num[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[204] -to "UM:UM|zh_num[9]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[205] -to "UM:UM|zj_num[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[206] -to "UM:UM|zj_num[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[207] -to "UM:UM|zj_num[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[208] -to "UM:UM|zj_num[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[209] -to "UM:UM|zj_num[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[210] -to "UM:UM|zj_num[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[211] -to "UM:UM|zj_num[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[212] -to "UM:UM|zj_num[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[213] -to "UM:UM|zj_num[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[214] -to "UM:UM|zj_num[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[215] -to "UM:UM|zj_num[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[216] -to "UM:UM|zj_num[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[217] -to "UM:UM|zj_num[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[218] -to "UM:UM|zj_num[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[219] -to "UM:UM|zj_num[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[220] -to "UM:UM|zj_num[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[221] -to "UM:UM|zj_num[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[222] -to "UM:UM|zj_num[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[223] -to "UM:UM|zj_num[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[224] -to "UM:UM|zj_num[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[225] -to "UM:UM|zj_num[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[226] -to "UM:UM|zj_num[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[227] -to "UM:UM|zj_num[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[228] -to "UM:UM|zj_num[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[229] -to "UM:UM|zj_num[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[230] -to "UM:UM|zj_num[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[231] -to "UM:UM|zj_num[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[232] -to "UM:UM|zj_num[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[233] -to "UM:UM|zj_num[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[234] -to "UM:UM|zj_num[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[235] -to "UM:UM|zj_num[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[236] -to "UM:UM|zj_num[9]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "UM:UM|bw_num[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "UM:UM|bw_num[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "UM:UM|bw_num[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "UM:UM|bw_num[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "UM:UM|bw_num[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "UM:UM|bw_num[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "UM:UM|bw_num[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "UM:UM|bw_num[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "UM:UM|bw_num[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "UM:UM|bw_num[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "UM:UM|bw_num[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "UM:UM|bw_num[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "UM:UM|bw_num[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "UM:UM|bw_num[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "UM:UM|bw_num[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "UM:UM|bw_num[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "UM:UM|bw_num[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "UM:UM|bw_num[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "UM:UM|bw_num[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "UM:UM|bw_num[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "UM:UM|bw_num[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "UM:UM|bw_num[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "UM:UM|bw_num[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "UM:UM|bw_num[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "UM:UM|bw_num[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "UM:UM|bw_num[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "UM:UM|bw_num[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "UM:UM|bw_num[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "UM:UM|bw_num[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "UM:UM|bw_num[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "UM:UM|bw_num[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "UM:UM|bw_num[9]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "UM:UM|cdp2um_data[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "UM:UM|cdp2um_data[100]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "UM:UM|cdp2um_data[101]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "UM:UM|cdp2um_data[102]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "UM:UM|cdp2um_data[103]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "UM:UM|cdp2um_data[104]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "UM:UM|cdp2um_data[105]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "UM:UM|cdp2um_data[106]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "UM:UM|cdp2um_data[107]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "UM:UM|cdp2um_data[108]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "UM:UM|cdp2um_data[109]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "UM:UM|cdp2um_data[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "UM:UM|cdp2um_data[110]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "UM:UM|cdp2um_data[111]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "UM:UM|cdp2um_data[112]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "UM:UM|cdp2um_data[113]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "UM:UM|cdp2um_data[114]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "UM:UM|cdp2um_data[115]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "UM:UM|cdp2um_data[116]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "UM:UM|cdp2um_data[117]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "UM:UM|cdp2um_data[118]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "UM:UM|cdp2um_data[119]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "UM:UM|cdp2um_data[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "UM:UM|cdp2um_data[120]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "UM:UM|cdp2um_data[121]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "UM:UM|cdp2um_data[122]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "UM:UM|cdp2um_data[123]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "UM:UM|cdp2um_data[124]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "UM:UM|cdp2um_data[125]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "UM:UM|cdp2um_data[126]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "UM:UM|cdp2um_data[127]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "UM:UM|cdp2um_data[128]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "UM:UM|cdp2um_data[129]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "UM:UM|cdp2um_data[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "UM:UM|cdp2um_data[130]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "UM:UM|cdp2um_data[131]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "UM:UM|cdp2um_data[132]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "UM:UM|cdp2um_data[133]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "UM:UM|cdp2um_data[134]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "UM:UM|cdp2um_data[135]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "UM:UM|cdp2um_data[136]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "UM:UM|cdp2um_data[137]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "UM:UM|cdp2um_data[138]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "UM:UM|cdp2um_data[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "UM:UM|cdp2um_data[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "UM:UM|cdp2um_data[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "UM:UM|cdp2um_data[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "UM:UM|cdp2um_data[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "UM:UM|cdp2um_data[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "UM:UM|cdp2um_data[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "UM:UM|cdp2um_data[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "UM:UM|cdp2um_data[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "UM:UM|cdp2um_data[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "UM:UM|cdp2um_data[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "UM:UM|cdp2um_data[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "UM:UM|cdp2um_data[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "UM:UM|cdp2um_data[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "UM:UM|cdp2um_data[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "UM:UM|cdp2um_data[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "UM:UM|cdp2um_data[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "UM:UM|cdp2um_data[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "UM:UM|cdp2um_data[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "UM:UM|cdp2um_data[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "UM:UM|cdp2um_data[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[96] -to "UM:UM|cdp2um_data[32]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[97] -to "UM:UM|cdp2um_data[33]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[98] -to "UM:UM|cdp2um_data[34]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[99] -to "UM:UM|cdp2um_data[35]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[100] -to "UM:UM|cdp2um_data[36]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[101] -to "UM:UM|cdp2um_data[37]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[102] -to "UM:UM|cdp2um_data[38]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[103] -to "UM:UM|cdp2um_data[39]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[104] -to "UM:UM|cdp2um_data[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[105] -to "UM:UM|cdp2um_data[40]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[106] -to "UM:UM|cdp2um_data[41]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[107] -to "UM:UM|cdp2um_data[42]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[108] -to "UM:UM|cdp2um_data[43]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[109] -to "UM:UM|cdp2um_data[44]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[110] -to "UM:UM|cdp2um_data[45]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[111] -to "UM:UM|cdp2um_data[46]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[112] -to "UM:UM|cdp2um_data[47]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[113] -to "UM:UM|cdp2um_data[48]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[114] -to "UM:UM|cdp2um_data[49]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[115] -to "UM:UM|cdp2um_data[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[116] -to "UM:UM|cdp2um_data[50]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[117] -to "UM:UM|cdp2um_data[51]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[118] -to "UM:UM|cdp2um_data[52]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[119] -to "UM:UM|cdp2um_data[53]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[120] -to "UM:UM|cdp2um_data[54]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[121] -to "UM:UM|cdp2um_data[55]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[122] -to "UM:UM|cdp2um_data[56]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[123] -to "UM:UM|cdp2um_data[57]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[124] -to "UM:UM|cdp2um_data[58]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[125] -to "UM:UM|cdp2um_data[59]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[126] -to "UM:UM|cdp2um_data[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[127] -to "UM:UM|cdp2um_data[60]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[128] -to "UM:UM|cdp2um_data[61]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[129] -to "UM:UM|cdp2um_data[62]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[130] -to "UM:UM|cdp2um_data[63]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[131] -to "UM:UM|cdp2um_data[64]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[132] -to "UM:UM|cdp2um_data[65]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[133] -to "UM:UM|cdp2um_data[66]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[134] -to "UM:UM|cdp2um_data[67]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[135] -to "UM:UM|cdp2um_data[68]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[136] -to "UM:UM|cdp2um_data[69]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[137] -to "UM:UM|cdp2um_data[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[138] -to "UM:UM|cdp2um_data[70]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[139] -to "UM:UM|cdp2um_data[71]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[140] -to "UM:UM|cdp2um_data[72]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[141] -to "UM:UM|cdp2um_data[73]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[142] -to "UM:UM|cdp2um_data[74]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[143] -to "UM:UM|cdp2um_data[75]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[144] -to "UM:UM|cdp2um_data[76]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[145] -to "UM:UM|cdp2um_data[77]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[146] -to "UM:UM|cdp2um_data[78]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[147] -to "UM:UM|cdp2um_data[79]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[148] -to "UM:UM|cdp2um_data[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[149] -to "UM:UM|cdp2um_data[80]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[150] -to "UM:UM|cdp2um_data[81]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[151] -to "UM:UM|cdp2um_data[82]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[152] -to "UM:UM|cdp2um_data[83]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[153] -to "UM:UM|cdp2um_data[84]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[154] -to "UM:UM|cdp2um_data[85]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[155] -to "UM:UM|cdp2um_data[86]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[156] -to "UM:UM|cdp2um_data[87]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[157] -to "UM:UM|cdp2um_data[88]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[158] -to "UM:UM|cdp2um_data[89]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[159] -to "UM:UM|cdp2um_data[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[160] -to "UM:UM|cdp2um_data[90]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[161] -to "UM:UM|cdp2um_data[91]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[162] -to "UM:UM|cdp2um_data[92]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[163] -to "UM:UM|cdp2um_data[93]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[164] -to "UM:UM|cdp2um_data[94]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[165] -to "UM:UM|cdp2um_data[95]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[166] -to "UM:UM|cdp2um_data[96]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[167] -to "UM:UM|cdp2um_data[97]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[168] -to "UM:UM|cdp2um_data[98]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[169] -to "UM:UM|cdp2um_data[99]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[170] -to "UM:UM|cdp2um_data[9]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[171] -to "UM:UM|cdp2um_data_valid" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[172] -to "UM:UM|cdp2um_tx_enable" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[173] -to "UM:UM|zh_num[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[174] -to "UM:UM|zh_num[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[175] -to "UM:UM|zh_num[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[176] -to "UM:UM|zh_num[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[177] -to "UM:UM|zh_num[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[178] -to "UM:UM|zh_num[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[179] -to "UM:UM|zh_num[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[180] -to "UM:UM|zh_num[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[181] -to "UM:UM|zh_num[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[182] -to "UM:UM|zh_num[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[183] -to "UM:UM|zh_num[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[184] -to "UM:UM|zh_num[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[185] -to "UM:UM|zh_num[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[186] -to "UM:UM|zh_num[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[187] -to "UM:UM|zh_num[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[188] -to "UM:UM|zh_num[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[189] -to "UM:UM|zh_num[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[190] -to "UM:UM|zh_num[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[191] -to "UM:UM|zh_num[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[192] -to "UM:UM|zh_num[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[193] -to "UM:UM|zh_num[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[194] -to "UM:UM|zh_num[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[195] -to "UM:UM|zh_num[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[196] -to "UM:UM|zh_num[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[197] -to "UM:UM|zh_num[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[198] -to "UM:UM|zh_num[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[199] -to "UM:UM|zh_num[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[200] -to "UM:UM|zh_num[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[201] -to "UM:UM|zh_num[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[202] -to "UM:UM|zh_num[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[203] -to "UM:UM|zh_num[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[204] -to "UM:UM|zh_num[9]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[205] -to "UM:UM|zj_num[0]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[206] -to "UM:UM|zj_num[10]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[207] -to "UM:UM|zj_num[11]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[208] -to "UM:UM|zj_num[12]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[209] -to "UM:UM|zj_num[13]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[210] -to "UM:UM|zj_num[14]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[211] -to "UM:UM|zj_num[15]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[212] -to "UM:UM|zj_num[16]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[213] -to "UM:UM|zj_num[17]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[214] -to "UM:UM|zj_num[18]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[215] -to "UM:UM|zj_num[19]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[216] -to "UM:UM|zj_num[1]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[217] -to "UM:UM|zj_num[20]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[218] -to "UM:UM|zj_num[21]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[219] -to "UM:UM|zj_num[22]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[220] -to "UM:UM|zj_num[23]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[221] -to "UM:UM|zj_num[24]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[222] -to "UM:UM|zj_num[25]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[223] -to "UM:UM|zj_num[26]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[224] -to "UM:UM|zj_num[27]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[225] -to "UM:UM|zj_num[28]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[226] -to "UM:UM|zj_num[29]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[227] -to "UM:UM|zj_num[2]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[228] -to "UM:UM|zj_num[30]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[229] -to "UM:UM|zj_num[31]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[230] -to "UM:UM|zj_num[3]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[231] -to "UM:UM|zj_num[4]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[232] -to "UM:UM|zj_num[5]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[233] -to "UM:UM|zj_num[6]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[234] -to "UM:UM|zj_num[7]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[235] -to "UM:UM|zj_num[8]" -section_id auto_signaltap_2
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[236] -to "UM:UM|zj_num[9]" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=237" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=237" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=237" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_2
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=722" -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_2|gnd -section_id auto_signaltap_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_2|vcc -section_id auto_signaltap_2
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE db/Hello_NetMagic_08_auto_stripped.stp

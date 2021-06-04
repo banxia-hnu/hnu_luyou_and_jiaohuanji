@@ -1,0 +1,22 @@
+Fitter Status : Successful - Mon Mar 29 19:37:11 2021
+Quartus Prime Version : 16.0.2 Build 222 07/20/2016 SJ Standard Edition
+Revision Name : netFPGAmini
+Top-level Entity Name : netFPGAmini
+Family : Arria II GX
+Device : EP2AGX45DF25C4
+Timing Models : Final
+Logic utilization : 85 %
+    Combinational ALUTs : 19,319 / 36,100 ( 54 % )
+    Memory ALUTs : 7 / 18,050 ( < 1 % )
+    Dedicated logic registers : 23,953 / 36,100 ( 66 % )
+Total registers : 24177
+Total pins : 163 / 292 ( 56 % )
+Total virtual pins : 0
+Total block memory bits : 1,196,800 / 2,939,904 ( 41 % )
+DSP block 18-bit elements : 0 / 232 ( 0 % )
+Total GXB Receiver Channel PCS : 4 / 8 ( 50 % )
+Total GXB Receiver Channel PMA : 4 / 8 ( 50 % )
+Total GXB Transmitter Channel PCS : 4 / 8 ( 50 % )
+Total GXB Transmitter Channel PMA : 4 / 8 ( 50 % )
+Total PLLs : 2 / 4 ( 50 % )
+Total DLLs : 1 / 2 ( 50 % )

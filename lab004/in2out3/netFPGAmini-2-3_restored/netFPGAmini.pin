@@ -1,0 +1,651 @@
+ -- Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, the Altera Quartus Prime License Agreement,
+ -- the Altera MegaCore Function License Agreement, or other 
+ -- applicable license agreement, including, without limitation, 
+ -- that your use is for the sole purpose of programming logic 
+ -- devices manufactured by Altera and sold by Altera or its 
+ -- authorized distributors.  Please refer to the applicable 
+ -- agreement for further details.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCPGM        : Dedicated power pin for configuration, which MUST be connected to 1.8V, 2.5V or 3.0V depending on the requirements of the configuration device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (0.9V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 3C:       2.5V
+ --                  Bank 3A:       2.5V
+ --                  Bank 4A:       2.5V
+ --                  Bank 5A:       1.8V
+ --                  Bank 6A:       1.8V
+ --                  Bank 7A:       2.5V
+ --                  Bank 8A:       2.5V
+ --                  Bank 8C:  2.5V
+ -- RREF          : External reference resistor for the quad, MUST be connected to
+ --                 GND via a 2k Ohm resistor.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
+ --                  either individually through a 10k Ohm resistor to GND or tie all pins
+ --                  together and connect through a single 10k Ohm resistor to GND.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- GXB_GND*      : Unused GXB Receiver or dedicated reference clock pin. This pin
+ --                 must be connected to GXB_GND through a 10k Ohm resistor.
+ -- GXB_NC        : Unused GXB Transmitter or dedicated clock output pin. This pin
+ --                 must not be connected.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 16.0.2 Build 222 07/20/2016 SJ Standard Edition
+CHIP  "netFPGAmini"  ASSIGNED TO AN: EP2AGX45DF25C4
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+rgm1_tx_data[0]              : A2        : output : 2.5 V             :         : 7A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 7A        :                
+rgm1_tx_data[1]              : A4        : output : 2.5 V             :         : 7A        : Y              
+rgm1_tx_data[2]              : A5        : output : 2.5 V             :         : 7A        : Y              
+rgm1_tx_data[3]              : A6        : output : 2.5 V             :         : 7A        : Y              
+rgm1_rx_data[0]              : A7        : input  : 2.5 V             :         : 7A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 7A        :                
+rgm1_rx_data[1]              : A9        : input  : 2.5 V             :         : 7A        : Y              
+rgm1_rx_ctl                  : A10       : input  : 2.5 V             :         : 7A        : Y              
+rgm0_tx_data[2]              : A11       : output : 2.5 V             :         : 8A        : Y              
+rgm0_tx_clk                  : A12       : output : 2.5 V             :         : 8A        : Y              
+rgm0_tx_ctl                  : A13       : output : 2.5 V             :         : 8A        : Y              
+rgm0_tx_data[0]              : A14       : output : 2.5 V             :         : 8A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 8A        :                
+rgm0_rx_clk                  : A16       : input  : 2.5 V             :         : 8A        : Y              
+rgm0_rx_ctl                  : A17       : input  : 2.5 V             :         : 8A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 8A        :                
+rgm0_rx_data[3]              : A19       : input  : 2.5 V             :         : 8A        : Y              
+rgm0_rx_data[0]              : A20       : input  : 2.5 V             :         : 8A        : Y              
+GND                          : A21       : gnd    :                   :         :           :                
+GND                          : A22       : gnd    :                   :         :           :                
+GND                          : A23       : gnd    :                   :         :           :                
+ddr2_dm[1]                   : AA1       : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+VCCIO5A                      : AA2       : power  :                   : 1.8V    : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 4A        :                
+rgm2_tx_clk                  : AA7       : output : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :         : 4A        :                
+l_link_sfp2                  : AA9       : output : 2.5 V             :         : 4A        : Y              
+rgm2_tx_ctl                  : AA10      : output : 2.5 V             :         : 4A        : Y              
+rgm2_rx_clk                  : AA11      : input  : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 4A        :                
+vsc8224_clkout_125m          : AA13      : input  : 2.5 V             :         : 3A        : Y              
+rgm3_rx_clk                  : AA14      : input  : 2.5 V             :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 3A        :                
+rgm3_rx_data[0]              : AA16      : input  : 2.5 V             :         : 3A        : Y              
+VCCIO3A                      : AA17      : power  :                   : 2.5V    : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 3A        :                
+~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : AA19      : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 3A        :                
+GND                          : AA21      : gnd    :                   :         :           :                
+GND                          : AA22      : gnd    :                   :         :           :                
+sfp0_rxd                     : AA23      : input  : 1.5-V PCML        :         : QL0       : Y              
+sfp0_rxd(n)                  : AA24      : input  : 1.5-V PCML        :         : QL0       : Y              
+ddr2_dq[15]                  : AB1       : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+ddr2_dq[0]                   : AB2       : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB5       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 4A        :                
+rgm2_tx_data[2]              : AB10      : output : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 4A        :                
+rgm2_rx_ctl                  : AB13      : input  : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB14      :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 3A        :                
+rgm3_rx_data[3]              : AB16      : input  : 2.5 V             :         : 3A        : Y              
+rgm3_tx_clk                  : AB17      : output : 2.5 V             :         : 3A        : Y              
+rgm3_tx_data[1]              : AB18      : output : 2.5 V             :         : 3A        : Y              
+rgm3_tx_data[3]              : AB19      : output : 2.5 V             :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 3A        :                
+GND                          : AB22      : gnd    :                   :         :           :                
+GND                          : AB23      : gnd    :                   :         :           :                
+GND                          : AB24      : gnd    :                   :         :           :                
+ddr2_dq[6]                   : AC1       : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+GND                          : AC2       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC3       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC4       :        :                   :         : 5A        :                
+GND                          : AC5       : gnd    :                   :         :           :                
+rgm2_tx_data[1]              : AC6       : output : 2.5 V             :         : 4A        : Y              
+VCCIO4A                      : AC7       : power  :                   : 2.5V    : 4A        :                
+GND                          : AC8       : gnd    :                   :         :           :                
+rgm2_tx_data[3]              : AC9       : output : 2.5 V             :         : 4A        : Y              
+VCCIO4A                      : AC10      : power  :                   : 2.5V    : 4A        :                
+GND                          : AC11      : gnd    :                   :         :           :                
+rgm2_rx_data[0]              : AC12      : input  : 2.5 V             :         : 4A        : Y              
+rgm2_rx_data[2]              : AC13      : input  : 2.5 V             :         : 4A        : Y              
+GND                          : AC14      : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC15      :        :                   :         : 3A        :                
+VCCIO3A                      : AC16      : power  :                   : 2.5V    : 3A        :                
+GND                          : AC17      : gnd    :                   :         :           :                
+rgm3_tx_data[0]              : AC18      : output : 2.5 V             :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC19      :        :                   :         : 3A        :                
+GND                          : AC20      : gnd    :                   :         :           :                
+rgm3_tx_ctl                  : AC21      : output : 2.5 V             :         : 3A        : Y              
+NC                           : AC22      :        :                   :         :           :                
+GND                          : AC23      : gnd    :                   :         :           :                
+RREF                         : AC24      :        :                   :         :           :                
+ddr2_dq[7]                   : AD2       : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+ddr2_dm[0]                   : AD3       : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD4       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD5       :        :                   :         : 5A        :                
+rgm2_tx_data[0]              : AD6       : output : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD7       :        :                   :         : 4A        :                
+vsc_smi_mdc                  : AD8       : output : 2.5 V             :         : 4A        : Y              
+vsc_smi_mdio                 : AD9       : bidir  : 2.5 V             :         : 4A        : Y              
+rgm2_rx_data[1]              : AD10      : input  : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 4A        :                
+rgm2_rx_data[3]              : AD12      : input  : 2.5 V             :         : 4A        : Y              
+sysclk_100m                  : AD13      : input  : 2.5 V             :         : 4A        : Y              
+GND+                         : AD14      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD15      :        :                   :         : 3A        :                
+rgm3_rx_ctl                  : AD16      : input  : 2.5 V             :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 3A        :                
+rgm3_rx_data[1]              : AD18      : input  : 2.5 V             :         : 3A        : Y              
+rgm3_rx_data[2]              : AD19      : input  : 2.5 V             :         : 3A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD20      :        :                   :         : 3A        :                
+rgm3_tx_data[2]              : AD21      : output : 2.5 V             :         : 3A        : Y              
+NC                           : AD22      :        :                   :         :           :                
+GND                          : AD23      : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 6A        :                
+GND                          : B2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 7A        :                
+rgm1_tx_ctl                  : B4        : output : 2.5 V             :         : 7A        : Y              
+GND                          : B5        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 7A        :                
+rgm1_rx_clk                  : B7        : input  : 2.5 V             :         : 7A        : Y              
+GND                          : B8        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 7A        :                
+rgm1_rx_data[2]              : B10       : input  : 2.5 V             :         : 7A        : Y              
+GND                          : B11       : gnd    :                   :         :           :                
+rgm0_tx_data[1]              : B12       : output : 2.5 V             :         : 8A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 8A        :                
+GND                          : B14       : gnd    :                   :         :           :                
+rgm0_tx_data[3]              : B15       : output : 2.5 V             :         : 8A        : Y              
+rgm0_rx_data[2]              : B16       : input  : 2.5 V             :         : 8A        : Y              
+GND                          : B17       : gnd    :                   :         :           :                
+rgm0_rx_data[1]              : B18       : input  : 2.5 V             :         : 8A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 8A        :                
+GND                          : B20       : gnd    :                   :         :           :                
+GXB_NC                       : B21       :        :                   :         : QL1       :                
+GXB_NC                       : B22       :        :                   :         : QL1       :                
+GND                          : B23       : gnd    :                   :         :           :                
+GND                          : B24       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C1        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 6A        :                
+rgm1_tx_clk                  : C4        : output : 2.5 V             :         : 7A        : Y              
+VCCIO7A                      : C5        : power  :                   : 2.5V    : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 7A        :                
+VCCIO7A                      : C8        : power  :                   : 2.5V    : 7A        :                
+l_user_led                   : C9        : output : 2.5 V             :         : 7A        : Y              
+rgm1_rx_data[3]              : C10       : input  : 2.5 V             :         : 7A        : Y              
+sysclk_125m                  : C11       : input  : 2.5 V             :         : 8A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 8A        :                
+l_debug[5]                   : C13       : output : 2.5 V             :         : 8A        : Y              
+VCCIO8A                      : C14       : power  :                   : 2.5V    : 8A        :                
+l_debug[4]                   : C15       : output : 2.5 V             :         : 8A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 8A        :                
+VCCIO8A                      : C17       : power  :                   : 2.5V    : 8A        :                
+NC                           : C18       :        :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 8A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 8A        :                
+GND                          : C21       : gnd    :                   :         :           :                
+GND                          : C22       : gnd    :                   :         :           :                
+GXB_GND*                     : C23       :        :                   :         : QL1       :                
+GXB_GND*                     : C24       :        :                   :         : QL1       :                
+ddr2_addr[13]                : D1        : output : SSTL-18 Class II  :         : 6A        : Y              
+ddr2_addr[15]                : D2        : output : SSTL-18 Class II  :         : 6A        : Y              
+ddr2_addr[14]                : D3        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :         : 6A        :                
+DNU                          : D5        :        :                   :         :           :                
+sfp_los1                     : D6        : input  : 2.5 V             :         : 7A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 7A        :                
+sfp_present1                 : D8        : input  : 2.5 V             :         : 7A        : Y              
+sfp_scl1                     : D9        : output : 2.5 V             :         : 7A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 7A        :                
+fpga_resetn                  : D11       : input  : 2.5 V             :         : 8A        : Y              
+l_debug[0]                   : D12       : output : 2.5 V             :         : 8A        : Y              
+l_debug[1]                   : D13       : output : 2.5 V             :         : 8A        : Y              
+sfp_sda0                     : D14       : bidir  : 2.5 V             :         : 8A        : Y              
+sfp_dis0                     : D15       : output : 2.5 V             :         : 8A        : Y              
+VCCIO8A                      : D16       : power  :                   : 2.5V    : 8A        :                
+NC                           : D17       :        :                   :         :           :                
+altera_reserved_tck          : D18       : input  : 2.5 V             :         : 8C        : N              
+GND                          : D19       : gnd    :                   :         :           :                
+GND                          : D20       : gnd    :                   :         :           :                
+sfp3_txd                     : D21       : output : 1.5-V PCML        :         : QL1       : Y              
+sfp3_txd(n)                  : D22       : output : 1.5-V PCML        :         : QL1       : Y              
+GND                          : D23       : gnd    :                   :         :           :                
+GND                          : D24       : gnd    :                   :         :           :                
+ddr2_addr[8]                 : E1        : output : SSTL-18 Class II  :         : 6A        : Y              
+GND                          : E2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 6A        :                
+GND                          : E5        : gnd    :                   :         :           :                
+VCCA_PLL_2                   : E6        : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 7A        :                
+GND                          : E8        : gnd    :                   :         :           :                
+sfp_sda1                     : E9        : bidir  : 2.5 V             :         : 7A        : Y              
+sfp_dis1                     : E10       : output : 2.5 V             :         : 7A        : Y              
+GND                          : E11       : gnd    :                   :         :           :                
+sfp_los0                     : E12       : input  : 2.5 V             :         : 8A        : Y              
+sfp_scl0                     : E13       : output : 2.5 V             :         : 8A        : Y              
+GND                          : E14       : gnd    :                   :         :           :                
+sfp_fault0                   : E15       : input  : 2.5 V             :         : 8A        : Y              
+NC                           : E16       :        :                   :         :           :                
+GND                          : E17       : gnd    :                   :         :           :                
+VCCD_PLL_1                   : E18       : power  :                   : 0.9V    :           :                
+VCCIO8C                      : E19       : power  :                   : 2.5V    : 8C        :                
+GND                          : E20       : gnd    :                   :         :           :                
+GND                          : E21       : gnd    :                   :         :           :                
+GND                          : E22       : gnd    :                   :         :           :                
+sfp3_rxd                     : E23       : input  : 1.5-V PCML        :         : QL1       : Y              
+sfp3_rxd(n)                  : E24       : input  : 1.5-V PCML        :         : QL1       : Y              
+ddr2_addr[11]                : F1        : output : SSTL-18 Class II  :         : 6A        : Y              
+VCCIO6A                      : F2        : power  :                   : 1.8V    : 6A        :                
+ddr2_addr[12]                : F3        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 6A        :                
+VCCD_PLL_2                   : F5        : power  :                   : 0.9V    :           :                
+GND                          : F6        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 6A        :                
+r_act_sfp1                   : F8        : output : 2.5 V             :         : 7A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 7A        :                
+sfp_fault1                   : F10       : input  : 2.5 V             :         : 7A        : Y              
+GND+                         : F11       :        :                   :         : 7A        :                
+GND+                         : F12       :        :                   :         : 7A        :                
+sfp_present0                 : F13       : input  : 2.5 V             :         : 8A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 8A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 8A        :                
+NC                           : F16       :        :                   :         :           :                
+VCCA_PLL_1                   : F17       : power  :                   : 2.5V    :           :                
+GND                          : F18       : gnd    :                   :         :           :                
+VCCBAT                       : F19       : power  :                   : 2.5V    :           :                
+DCLK                         : F20       : bidir  :                   :         : 8C        :                
+GXB_GND*                     : F21       :        :                   :         : QL1       :                
+GXB_GND*                     : F22       :        :                   :         : QL1       :                
+GND                          : F23       : gnd    :                   :         :           :                
+GND                          : F24       : gnd    :                   :         :           :                
+ddr2_addr[4]                 : G1        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 6A        :                
+ddr2_addr[9]                 : G3        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 6A        :                
+ddr2_bank_addr[2]            : G6        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 6A        :                
+l_link_sfp1                  : G8        : output : 2.5 V             :         : 7A        : Y              
+l_debug[2]                   : G9        : output : 2.5 V             :         : 7A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 7A        :                
+VCCCB                        : G12       : power  :                   : 1.5V    :           :                
+l_debug[6]                   : G13       : output : 2.5 V             :         : 8A        : Y              
+l_debug[7]                   : G14       : output : 2.5 V             :         : 8A        : Y              
+VREFB8AN0                    : G15       : power  :                   :         : 8A        :                
+l_link_sfp0                  : G16       : output : 2.5 V             :         : 8A        : Y              
+altera_reserved_tms          : G17       : input  : 2.5 V             :         : 8C        : N              
+DNU                          : G18       :        :                   :         :           :                
+altera_reserved_tdi          : G19       : input  : 2.5 V             :         : 8C        : N              
+altera_reserved_tdo          : G20       : output : 2.5 V             :         : 8C        : N              
+GND                          : G21       : gnd    :                   :         :           :                
+GND                          : G22       : gnd    :                   :         :           :                
+GXB_GND*                     : G23       :        :                   :         : QL1       :                
+GXB_GND*                     : G24       :        :                   :         : QL1       :                
+ddr2_addr[6]                 : H1        : output : SSTL-18 Class II  :         : 6A        : Y              
+GND                          : H2        : gnd    :                   :         :           :                
+ddr2_addr[7]                 : H3        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 6A        :                
+GND                          : H5        : gnd    :                   :         :           :                
+ddr2_addr[5]                 : H6        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 6A        :                
+GND                          : H8        : gnd    :                   :         :           :                
+l_debug[3]                   : H9        : output : 2.5 V             :         : 7A        : Y              
+VCCPD7A                      : H10       : power  :                   : 2.5V    : 7A        :                
+GND                          : H11       : gnd    :                   :         :           :                
+VREFB7AN0                    : H12       : power  :                   :         : 7A        :                
+VCCPD8A                      : H13       : power  :                   : 2.5V    : 8A        :                
+GND                          : H14       : gnd    :                   :         :           :                
+VCC                          : H15       : power  :                   : 0.9V    :           :                
+r_act_sfp0                   : H16       : output : 2.5 V             :         : 8A        : Y              
+GND                          : H17       : gnd    :                   :         :           :                
+VCCPD8C                      : H18       : power  :                   : 2.5V    : 8C        :                
+nCSO                         : H19       :        :                   :         : 8C        :                
+GND                          : H20       : gnd    :                   :         :           :                
+GXB_NC                       : H21       :        :                   :         : QL1       :                
+GXB_NC                       : H22       :        :                   :         : QL1       :                
+GND                          : H23       : gnd    :                   :         :           :                
+GND                          : H24       : gnd    :                   :         :           :                
+ddr2_addr[0]                 : J1        : output : SSTL-18 Class II  :         : 6A        : Y              
+VCCIO6A                      : J2        : power  :                   : 1.8V    : 6A        :                
+ddr2_addr[3]                 : J3        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 6A        :                
+ddr2_addr[1]                 : J5        : output : SSTL-18 Class II  :         : 6A        : Y              
+ddr2_addr[10]                : J6        : output : SSTL-18 Class II  :         : 6A        : Y              
+VREFB6AN0                    : J7        : power  :                   : 0.9V    : 6A        :                
+VCC                          : J8        : power  :                   : 0.9V    :           :                
+GND                          : J9        : gnd    :                   :         :           :                
+VCC                          : J10       : power  :                   : 0.9V    :           :                
+GND                          : J11       : gnd    :                   :         :           :                
+VCC                          : J12       : power  :                   : 0.9V    :           :                
+GND                          : J13       : gnd    :                   :         :           :                
+VCC                          : J14       : power  :                   : 0.9V    :           :                
+GND                          : J15       : gnd    :                   :         :           :                
+VCC                          : J16       : power  :                   : 0.9V    :           :                
+GND                          : J17       : gnd    :                   :         :           :                
+VCC                          : J18       : power  :                   : 0.9V    :           :                
+DATA0                        : J19       : input  :                   :         : 8C        :                
+ASDO                         : J20       :        :                   :         : 8C        :                
+GND                          : J21       : gnd    :                   :         :           :                
+GND                          : J22       : gnd    :                   :         :           :                
+GXB_GND*                     : J23       :        :                   :         : QL1       :                
+GXB_GND*                     : J24       :        :                   :         : QL1       :                
+ddr2_ck                      : K1        : bidir  : Differential 1.8-V SSTL Class I :         : 6A        : Y              
+ddr2_addr[2]                 : K2        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K3        :        :                   :         : 6A        :                
+ddr2_bank_addr[1]            : K4        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 6A        :                
+VCCPD6A                      : K6        : power  :                   : 2.5V    : 6A        :                
+VCCPD6A                      : K7        : power  :                   : 2.5V    : 6A        :                
+GND                          : K8        : gnd    :                   :         :           :                
+VCC                          : K9        : power  :                   : 0.9V    :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+VCC                          : K11       : power  :                   : 0.9V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCC                          : K13       : power  :                   : 0.9V    :           :                
+GND                          : K14       : gnd    :                   :         :           :                
+VCC                          : K15       : power  :                   : 0.9V    :           :                
+GND                          : K16       : gnd    :                   :         :           :                
+VCC                          : K17       : power  :                   : 0.9V    :           :                
+VCCH_GXB                     : K18       : power  :                   : 1.5V    :           :                
+VCCL_GXB                     : K19       : power  :                   : 1.1V    :           :                
+GND                          : K20       : gnd    :                   :         :           :                
+sfp2_txd                     : K21       : output : 1.5-V PCML        :         : QL1       : Y              
+sfp2_txd(n)                  : K22       : output : 1.5-V PCML        :         : QL1       : Y              
+GND                          : K23       : gnd    :                   :         :           :                
+GND                          : K24       : gnd    :                   :         :           :                
+ddr2_ck_n                    : L1        : bidir  : Differential 1.8-V SSTL Class I :         : 6A        : Y              
+GND                          : L2        : gnd    :                   :         :           :                
+ddr2_cs_n                    : L3        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 6A        :                
+GND                          : L5        : gnd    :                   :         :           :                
+NC                           : L6        :        :                   :         :           :                
+ddr2_bank_addr[0]            : L7        : output : SSTL-18 Class II  :         : 6A        : Y              
+VCC                          : L8        : power  :                   : 0.9V    :           :                
+GND                          : L9        : gnd    :                   :         :           :                
+VCC                          : L10       : power  :                   : 0.9V    :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+VCC                          : L12       : power  :                   : 0.9V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCC                          : L14       : power  :                   : 0.9V    :           :                
+GND                          : L15       : gnd    :                   :         :           :                
+VCC                          : L16       : power  :                   : 0.9V    :           :                
+GND                          : L17       : gnd    :                   :         :           :                
+VCCA                         : L18       : power  :                   : 2.5V    :           :                
+GND                          : L19       : gnd    :                   :         :           :                
+VCCL_GXB                     : L20       : power  :                   : 1.1V    :           :                
+GND                          : L21       : gnd    :                   :         :           :                
+GND                          : L22       : gnd    :                   :         :           :                
+sfp2_rxd                     : L23       : input  : 1.5-V PCML        :         : QL1       : Y              
+sfp2_rxd(n)                  : L24       : input  : 1.5-V PCML        :         : QL1       : Y              
+ddr2_cas_n                   : M1        : output : SSTL-18 Class II  :         : 6A        : Y              
+VCCIO6A                      : M2        : power  :                   : 1.8V    : 6A        :                
+ddr2_we_n                    : M3        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :         : 6A        :                
+NC                           : M5        :        :                   :         :           :                
+VCCCB                        : M6        : power  :                   : 1.5V    :           :                
+ddr2_cke                     : M7        : output : SSTL-18 Class II  :         : 6A        : Y              
+GND                          : M8        : gnd    :                   :         :           :                
+VCC                          : M9        : power  :                   : 0.9V    :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+VCC                          : M11       : power  :                   : 0.9V    :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+VCC                          : M13       : power  :                   : 0.9V    :           :                
+GND                          : M14       : gnd    :                   :         :           :                
+VCC                          : M15       : power  :                   : 0.9V    :           :                
+GND                          : M16       : gnd    :                   :         :           :                
+NC                           : M17       :        :                   :         :           :                
+GND                          : M18       : gnd    :                   :         :           :                
+VCCL_GXB                     : M19       : power  :                   : 1.1V    :           :                
+GND                          : M20       : gnd    :                   :         :           :                
+GXB_NC                       : M21       :        :                   :         : QL0       :                
+GXB_NC                       : M22       :        :                   :         : QL0       :                
+GND                          : M23       : gnd    :                   :         :           :                
+GND                          : M24       : gnd    :                   :         :           :                
+ddr2_ras_n                   : N1        : output : SSTL-18 Class II  :         : 6A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 6A        :                
+GND+                         : N3        :        :                   :         : 6A        :                
+GND+                         : N4        :        :                   :         : 6A        :                
+NC                           : N5        :        :                   :         :           :                
+ddr2_dq[12]                  : N6        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N7        :        :                   :         : 5A        :                
+VCC                          : N8        : power  :                   : 0.9V    :           :                
+GND                          : N9        : gnd    :                   :         :           :                
+VCC                          : N10       : power  :                   : 0.9V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+DNU                          : N12       :        :                   :         :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCC                          : N14       : power  :                   : 0.9V    :           :                
+GND                          : N15       : gnd    :                   :         :           :                
+VCC                          : N16       : power  :                   : 0.9V    :           :                
+GND                          : N17       : gnd    :                   :         :           :                
+VCC                          : N18       : power  :                   : 0.9V    :           :                
+GND                          : N19       : gnd    :                   :         :           :                
+VCCL_GXB                     : N20       : power  :                   : 1.1V    :           :                
+GND                          : N21       : gnd    :                   :         :           :                
+GND                          : N22       : gnd    :                   :         :           :                
+GXB_GND*                     : N23       :        :                   :         : QL0       :                
+GXB_GND*                     : N24       :        :                   :         : QL0       :                
+ddr2_odt                     : P1        : output : SSTL-18 Class II  :         : 6A        : Y              
+GND                          : P2        : gnd    :                   :         :           :                
+GND+                         : P3        :        :                   :         : 5A        :                
+GND+                         : P4        :        :                   :         : 5A        :                
+GND                          : P5        : gnd    :                   :         :           :                
+NC                           : P6        :        :                   :         :           :                
+ddr2_dq[11]                  : P7        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+GND                          : P8        : gnd    :                   :         :           :                
+VCC                          : P9        : power  :                   : 0.9V    :           :                
+GND                          : P10       : gnd    :                   :         :           :                
+VCC                          : P11       : power  :                   : 0.9V    :           :                
+GND                          : P12       : gnd    :                   :         :           :                
+VCC                          : P13       : power  :                   : 0.9V    :           :                
+GND                          : P14       : gnd    :                   :         :           :                
+VCC                          : P15       : power  :                   : 0.9V    :           :                
+GND                          : P16       : gnd    :                   :         :           :                
+VCC                          : P17       : power  :                   : 0.9V    :           :                
+VCCA                         : P18       : power  :                   : 2.5V    :           :                
+VCCL_GXB                     : P19       : power  :                   : 1.1V    :           :                
+GND                          : P20       : gnd    :                   :         :           :                
+sfp1_txd                     : P21       : output : 1.5-V PCML        :         : QL0       : Y              
+sfp1_txd(n)                  : P22       : output : 1.5-V PCML        :         : QL0       : Y              
+GND                          : P23       : gnd    :                   :         :           :                
+GND                          : P24       : gnd    :                   :         :           :                
+ddr2_dq[13]                  : R1        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+VCCIO5A                      : R2        : power  :                   : 1.8V    : 5A        :                
+ddr2_dq[10]                  : R3        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 5A        :                
+ddr2_dq[4]                   : R5        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 5A        :                
+ddr2_dq[9]                   : R7        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+VCC                          : R8        : power  :                   : 0.9V    :           :                
+GND                          : R9        : gnd    :                   :         :           :                
+VCC                          : R10       : power  :                   : 0.9V    :           :                
+GND                          : R11       : gnd    :                   :         :           :                
+VCC                          : R12       : power  :                   : 0.9V    :           :                
+GND                          : R13       : gnd    :                   :         :           :                
+VCC                          : R14       : power  :                   : 0.9V    :           :                
+GND                          : R15       : gnd    :                   :         :           :                
+VCC                          : R16       : power  :                   : 0.9V    :           :                
+GND                          : R17       : gnd    :                   :         :           :                
+VCCH_GXB                     : R18       : power  :                   : 1.5V    :           :                
+GND                          : R19       : gnd    :                   :         :           :                
+VCCL_GXB                     : R20       : power  :                   : 1.1V    :           :                
+GND                          : R21       : gnd    :                   :         :           :                
+GND                          : R22       : gnd    :                   :         :           :                
+sfp1_rxd                     : R23       : input  : 1.5-V PCML        :         : QL0       : Y              
+sfp1_rxd(n)                  : R24       : input  : 1.5-V PCML        :         : QL0       : Y              
+ddr2_dq[8]                   : T1        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+ddr2_dq[14]                  : T2        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 5A        :                
+ddr2_dq[3]                   : T4        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+ddr2_dq[2]                   : T5        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 5A        :                
+VCCPD5A                      : T7        : power  :                   : 2.5V    : 5A        :                
+VCCPD5A                      : T8        : power  :                   : 2.5V    : 5A        :                
+VCC                          : T9        : power  :                   : 0.9V    :           :                
+GND                          : T10       : gnd    :                   :         :           :                
+VCC                          : T11       : power  :                   : 0.9V    :           :                
+GND                          : T12       : gnd    :                   :         :           :                
+VCC                          : T13       : power  :                   : 0.9V    :           :                
+GND                          : T14       : gnd    :                   :         :           :                
+VCC                          : T15       : power  :                   : 0.9V    :           :                
+VREFB3AN0                    : T16       : power  :                   :         : 3A        :                
+VCC                          : T17       : power  :                   : 0.9V    :           :                
+GND                          : T18       : gnd    :                   :         :           :                
+MSEL1                        : T19       :        :                   :         : 3C        :                
+MSEL3                        : T20       :        :                   :         : 3C        :                
+GXB_GND*                     : T21       :        :                   :         : QL0       :                
+GXB_GND*                     : T22       :        :                   :         : QL0       :                
+GND                          : T23       : gnd    :                   :         :           :                
+GND                          : T24       : gnd    :                   :         :           :                
+ddr2_dqs[1]                  : U1        : bidir  : Differential 1.8-V SSTL Class I :         : 5A        : Y              
+GND                          : U2        : gnd    :                   :         :           :                
+ddr2_dq[5]                   : U3        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 5A        :                
+GND                          : U5        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 5A        :                
+VREFB5AN0                    : U7        : power  :                   : 0.9V    : 5A        :                
+GND                          : U8        : gnd    :                   :         :           :                
+vsc8224_rstn                 : U9        : output : 2.5 V             :         : 4A        : Y              
+VCCPD4A                      : U10       : power  :                   : 2.5V    : 4A        :                
+GND                          : U11       : gnd    :                   :         :           :                
+VCC                          : U12       : power  :                   : 0.9V    :           :                
+VCCCB                        : U13       : power  :                   : 1.5V    :           :                
+GND                          : U14       : gnd    :                   :         :           :                
+VCCPD3A                      : U15       : power  :                   : 2.5V    : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 3A        :                
+GND                          : U17       : gnd    :                   :         :           :                
+nSTATUS                      : U18       :        :                   :         : 3C        :                
+nIO_PULLUP                   : U19       :        :                   :         : 3C        :                
+GND                          : U20       : gnd    :                   :         :           :                
+GND                          : U21       : gnd    :                   :         :           :                
+GND                          : U22       : gnd    :                   :         :           :                
+sfp_clk0                     : U23       : input  : Differential LVPECL :         : QL0       : Y              
+sfp_clk0(n)                  : U24       : input  : Differential LVPECL :         : QL0       : Y              
+ddr2_dqs_n[1]                : V1        : bidir  : Differential 1.8-V SSTL Class I :         : 5A        : Y              
+VCCIO5A                      : V2        : power  :                   : 1.8V    : 5A        :                
+ddr2_dqs[0]                  : V3        : bidir  : Differential 1.8-V SSTL Class I :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 5A        :                
+NC                           : V8        :        :                   :         :           :                
+sfp_fault2                   : V9        : input  : 2.5 V             :         : 4A        : Y              
+VREFB4AN0                    : V10       : power  :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V11       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 3A        :                
+sfp_fault3                   : V15       : input  : 2.5 V             :         : 3A        : Y              
+sfp_dis3                     : V16       : output : 2.5 V             :         : 3A        : Y              
+VCCPD3C                      : V17       : power  :                   : 2.5V    : 3C        :                
+nCE                          : V18       :        :                   :         : 3C        :                
+VCCIO3C                      : V19       : power  :                   : 2.5V    : 3C        :                
+nCONFIG                      : V20       :        :                   :         : 3C        :                
+GXB_NC                       : V21       :        :                   :         : QL0       :                
+GXB_NC                       : V22       :        :                   :         : QL0       :                
+GND                          : V23       : gnd    :                   :         :           :                
+GND                          : V24       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 5A        :                
+ddr2_dqs_n[0]                : W2        : bidir  : Differential 1.8-V SSTL Class I :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 5A        :                
+VCCD_PLL_3                   : W5        : power  :                   : 0.9V    :           :                
+GND                          : W6        : gnd    :                   :         :           :                
+NC                           : W7        :        :                   :         :           :                
+NC                           : W8        :        :                   :         :           :                
+sfp_present2                 : W9        : input  : 2.5 V             :         : 4A        : Y              
+sfp_dis2                     : W10       : output : 2.5 V             :         : 4A        : Y              
+sfp_sda2                     : W11       : bidir  : 2.5 V             :         : 4A        : Y              
+r_act_sfp2                   : W12       : output : 2.5 V             :         : 4A        : Y              
+sfp_sda3                     : W13       : bidir  : 2.5 V             :         : 3A        : Y              
+sfp_scl3                     : W14       : output : 2.5 V             :         : 3A        : Y              
+sfp_present3                 : W15       : input  : 2.5 V             :         : 3A        : Y              
+r_act_sfp3                   : W16       : output : 2.5 V             :         : 3A        : Y              
+VCCA_PLL_4                   : W17       : power  :                   : 2.5V    :           :                
+GND                          : W18       : gnd    :                   :         :           :                
+CONF_DONE                    : W19       :        :                   :         : 3C        :                
+MSEL2                        : W20       :        :                   :         : 3C        :                
+GND                          : W21       : gnd    :                   :         :           :                
+GND                          : W22       : gnd    :                   :         :           :                
+GXB_GND*                     : W23       :        :                   :         : QL0       :                
+GXB_GND*                     : W24       :        :                   :         : QL0       :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y1        :        :                   :         : 5A        :                
+GND                          : Y2        : gnd    :                   :         :           :                
+ddr2_dq[1]                   : Y3        : bidir  : SSTL-18 Class II  :         : 5A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 5A        :                
+GND                          : Y5        : gnd    :                   :         :           :                
+VCCA_PLL_3                   : Y6        : power  :                   : 2.5V    :           :                
+NC                           : Y7        :        :                   :         :           :                
+GND                          : Y8        : gnd    :                   :         :           :                
+sfp_scl2                     : Y9        : output : 2.5 V             :         : 4A        : Y              
+VCCIO4A                      : Y10       : power  :                   : 2.5V    : 4A        :                
+GND                          : Y11       : gnd    :                   :         :           :                
+sfp_los2                     : Y12       : input  : 2.5 V             :         : 4A        : Y              
+GND+                         : Y13       :        :                   :         : 3A        :                
+GND                          : Y14       : gnd    :                   :         :           :                
+sfp_los3                     : Y15       : input  : 2.5 V             :         : 3A        : Y              
+l_link_sfp3                  : Y16       : output : 2.5 V             :         : 3A        : Y              
+GND                          : Y17       : gnd    :                   :         :           :                
+VCCD_PLL_4                   : Y18       : power  :                   : 0.9V    :           :                
+MSEL0                        : Y19       :        :                   :         : 3C        :                
+GND                          : Y20       : gnd    :                   :         :           :                
+sfp0_txd                     : Y21       : output : 1.5-V PCML        :         : QL0       : Y              
+sfp0_txd(n)                  : Y22       : output : 1.5-V PCML        :         : QL0       : Y              
+GND                          : Y23       : gnd    :                   :         :           :                
+GND                          : Y24       : gnd    :                   :         :           :                

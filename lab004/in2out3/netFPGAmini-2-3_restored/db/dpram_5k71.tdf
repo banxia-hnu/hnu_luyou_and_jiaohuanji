@@ -1,0 +1,154 @@
+--altdpram ACF_BLOCK_RAM_AND_MLAB_EQUIVALENT_PAUSED_READ_CAPABILITIES="CARE" DEVICE_FAMILY="Arria II GX" INDATA_ACLR="OFF" INTENDED_DEVICE_FAMILY="Arria II GX" lpm_hint="RAM_BLOCK_TYPE=MLAB" OUTDATA_REG="UNREGISTERED" RAM_BLOCK_TYPE="MLAB" RDADDRESS_REG="UNREGISTERED" USE_EAB="ON" WIDTH=7 WIDTHAD=4 WRADDRESS_REG="INCLOCK" data inclock outclock q rdaddress wraddress wren CYCLONEII_M4K_COMPATIBILITY="ON" LOW_POWER_MODE="AUTO"
+--VERSION_BEGIN 16.0 cbx_altdpram 2016:07:21:01:48:15:SJ cbx_altera_syncram 2016:07:21:01:48:16:SJ cbx_altera_syncram_nd_impl 2016:07:21:01:48:16:SJ cbx_altsyncram 2016:07:21:01:48:16:SJ cbx_cycloneii 2016:07:21:01:48:16:SJ cbx_lpm_add_sub 2016:07:21:01:48:16:SJ cbx_lpm_compare 2016:07:21:01:48:16:SJ cbx_lpm_decode 2016:07:21:01:48:16:SJ cbx_lpm_mux 2016:07:21:01:48:16:SJ cbx_mgl 2016:07:21:01:49:21:SJ cbx_nadder 2016:07:21:01:48:16:SJ cbx_stratix 2016:07:21:01:48:16:SJ cbx_stratixii 2016:07:21:01:48:16:SJ cbx_stratixiii 2016:07:21:01:48:16:SJ cbx_stratixv 2016:07:21:01:48:16:SJ cbx_util_mgl 2016:07:21:01:48:16:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, the Altera Quartus Prime License Agreement,
+--  the Altera MegaCore Function License Agreement, or other 
+--  applicable license agreement, including, without limitation, 
+--  that your use is for the sole purpose of programming logic 
+--  devices manufactured by Altera and sold by Altera or its 
+--  authorized distributors.  Please refer to the applicable 
+--  agreement for further details.
+
+
+FUNCTION arriaii_mlab_cell (clk0, ena0, portaaddr[address_width-1..0], portabyteenamasks[byte_enable_mask_width-1..0], portadatain[data_width-1..0], portbaddr[address_width-1..0])
+WITH ( address_width = 1, byte_enable_mask_width = 2, data_width = 1, first_address, first_bit_number, init_file, last_address, logical_ram_depth, logical_ram_name, logical_ram_width, mem_init0, mixed_port_feed_through_mode)
+RETURNS ( portbdataout[data_width-1..0]);
+
+--synthesis_resources = MLAB 1 reg 11 
+OPTIONS ALTERA_INTERNAL_OPTION = "ADV_NETLIST_OPT_ALLOWED=""NEVER_ALLOW"";{-to datain_reg} PRESERVE_REGISTER=ON;{-to datain_reg} ALLOW_SYNCH_CTRL_USAGE=OFF;{-to datain_reg} DONT_MERGE_REGISTER=ON;{-to wraddr_reg} PRESERVE_REGISTER=ON;{-to wraddr_reg} DONT_MERGE_REGISTER=ON";
+
+SUBDESIGN dpram_5k71
+( 
+	data[6..0]	:	input;
+	inclock	:	input;
+	outclock	:	input;
+	q[6..0]	:	output;
+	rdaddress[3..0]	:	input;
+	wraddress[3..0]	:	input;
+	wren	:	input;
+) 
+VARIABLE 
+	datain_reg[6..0] : dffe;
+	wraddr_reg[3..0] : dffe;
+	lutrama0 : arriaii_mlab_cell
+		WITH (
+			address_width = 4,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 0,
+			last_address = 15,
+			logical_ram_depth = 16,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 7,
+			mixed_port_feed_through_mode = "dont_care"
+		);
+	lutrama1 : arriaii_mlab_cell
+		WITH (
+			address_width = 4,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 1,
+			last_address = 15,
+			logical_ram_depth = 16,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 7,
+			mixed_port_feed_through_mode = "dont_care"
+		);
+	lutrama2 : arriaii_mlab_cell
+		WITH (
+			address_width = 4,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 2,
+			last_address = 15,
+			logical_ram_depth = 16,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 7,
+			mixed_port_feed_through_mode = "dont_care"
+		);
+	lutrama3 : arriaii_mlab_cell
+		WITH (
+			address_width = 4,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 3,
+			last_address = 15,
+			logical_ram_depth = 16,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 7,
+			mixed_port_feed_through_mode = "dont_care"
+		);
+	lutrama4 : arriaii_mlab_cell
+		WITH (
+			address_width = 4,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 4,
+			last_address = 15,
+			logical_ram_depth = 16,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 7,
+			mixed_port_feed_through_mode = "dont_care"
+		);
+	lutrama5 : arriaii_mlab_cell
+		WITH (
+			address_width = 4,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 5,
+			last_address = 15,
+			logical_ram_depth = 16,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 7,
+			mixed_port_feed_through_mode = "dont_care"
+		);
+	lutrama6 : arriaii_mlab_cell
+		WITH (
+			address_width = 4,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 6,
+			last_address = 15,
+			logical_ram_depth = 16,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 7,
+			mixed_port_feed_through_mode = "dont_care"
+		);
+	datain_wire[6..0]	: WIRE;
+	dataout_wire[6..0]	: WIRE;
+	rdaddr_wire[3..0]	: WIRE;
+	wr_en	: WIRE;
+	wraddr_wire[3..0]	: WIRE;
+
+BEGIN 
+	datain_reg[].clk = inclock;
+	datain_reg[].d = data[];
+	wraddr_reg[].clk = inclock;
+	wraddr_reg[].d = wraddress[];
+	lutrama[6..0].clk0 = inclock;
+	lutrama[6..0].ena0 = wr_en;
+	lutrama[6..0].portaaddr[3..0] = wraddr_wire[3..0];
+	lutrama[0].portadatain[0..0] = datain_wire[0..0];
+	lutrama[1].portadatain[0..0] = datain_wire[1..1];
+	lutrama[2].portadatain[0..0] = datain_wire[2..2];
+	lutrama[3].portadatain[0..0] = datain_wire[3..3];
+	lutrama[4].portadatain[0..0] = datain_wire[4..4];
+	lutrama[5].portadatain[0..0] = datain_wire[5..5];
+	lutrama[6].portadatain[0..0] = datain_wire[6..6];
+	lutrama[6..0].portbaddr[3..0] = rdaddr_wire[3..0];
+	datain_wire[] = datain_reg[].q;
+	dataout_wire[] = lutrama[6..0].portbdataout[];
+	q[] = dataout_wire[];
+	rdaddr_wire[] = rdaddress[];
+	wr_en = wren;
+	wraddr_wire[] = wraddr_reg[].q;
+END;
+--VALID FILE
