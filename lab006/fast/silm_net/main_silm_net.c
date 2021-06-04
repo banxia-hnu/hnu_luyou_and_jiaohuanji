@@ -1,0 +1,117 @@
+/***************************************************************************
+ *            main_l2switch.c
+ *
+ *  2017/04/08 10:39:17 星期六
+ *  Copyright  2017  XZP
+ *  <x2233095@126.com>
+ ****************************************************************************/
+/*
+ * main_l2switch.c
+ *
+ * Copyright (C) 2017 - XZP
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+#include "../include/fast.h"
+#include <time.h>
+
+int temp = 0; //全局变量，用于规律性丢包,可重复使用
+
+struct fast_packet *temp_pkt;//声明一个全局的报文buffer，用于临时存储报文
+int temp_pkt_len = 0;
+
+int callback(struct fast_packet *pkt,int pkt_len)
+{
+	printf("recv fast_packet\n");//添加打印，表示ua已经收到报文
+	//随机延时代码段，模仿广域网中的抖动
+	int skip_time = 0;
+	srand((int)time(NULL));//设置随机种子，取当前系统时间
+	skip_time = rand()%1000000;//延时范围为0-1000000us
+	//rand num to get skip_time
+	usleep(skip_time);
+	//抖动代码段结束
+
+	//规律性丢包代码段，模仿广域网中的丢包现象，可与随机数结合
+	temp++;
+	if(temp == 20)
+	{
+		temp = 0;
+		return 0;//即终止报文的处理，直接处理下一个报文，当前报文丢弃。
+	}
+	//丢包代码结束
+	
+	//乱序功能代码块，模仿广域网中的乱序现象，每过10个报文，乱序发送一个报文
+	if(temp == 10)
+	{
+		memcpy(temp_pkt,pkt,pkt_len);
+		temp_pkt_len = pkt_len;
+		return 0;
+	}//后接70行
+	//本例子中报文经过2、3端口相互转发
+	if(pkt->um.inout == 2)
+	{
+		pkt->um.inout = 3;
+	}else if(pkt->um.inout == 3)
+	{
+		pkt->um.inout = 2;
+	}
+	printf("send packet\n");//
+	fast_ua_send(pkt,pkt_len);
+	//上接59行	
+	if(temp == 11)//当第11个报文发走
+	{
+		printf("send a unqueued packet\n");
+		if(temp_pkt->um.inout == 2)
+		{
+			temp_pkt->um.inout = 3;
+		}else if(temp_pkt->um.inout == 3)
+		{
+			temp_pkt->um.inout = 2;
+		}
+		fast_ua_send(temp_pkt,pkt_len);//发送之前缓存的报文
+		memset(temp_pkt,0,sizeof(struct fast_packet));//清空buffer
+		temp_pkt_len = 0;
+	}
+}
+
+void ua_init(void)
+{
+	int ret = 0;
+	/*向系统注册，自己进程处理报文模块ID为1的所有报文*/
+	if((ret=fast_ua_init(130,callback)))//UA模块实例化(输入参数1:接收模块ID号,输入参数2:接收报文的回调处理函数)
+	{
+		perror("fast_ua_init!\n");
+		exit (ret);//如果初始化失败,则需要打印失败信息,并将程序结束退出!
+	}
+}
+
+int main(int argc,char* argv[])
+{
+	/*初始化平台硬件*/
+	fast_init_hw(0,0);	
+	temp_pkt = (struct fast_packet*)malloc(sizeof(struct fast_packet));
+	memset(temp_pkt,0,sizeof(struct fast_packet));//buffer初始化	
+	/*UA模块初始化	*/
+	ua_init();
+	
+	/*配置硬件规则，将硬件所有报文送到模块ID为1的进程处理*/
+	fast_reg_wr(FAST_ACTION_REG_ADDR|FAST_DEFAULT_RULE_ADDR,ACTION_SET_MID<<28|130);
+
+	/*启动线程接收分派给UA进程的报文*/
+	fast_ua_recv();
+	
+	/*主进程进入循环休眠中,数据处理主要在回调函数*/
+	while(1){sleep(9999);}
+	return 0;
+}

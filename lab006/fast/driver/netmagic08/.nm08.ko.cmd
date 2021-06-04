@@ -1,0 +1,1 @@
+cmd_/home/magiclab/fast-l2switch-08/fast/driver/netmagic08/nm08.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/magiclab/fast-l2switch-08/fast/driver/netmagic08/nm08.ko /home/magiclab/fast-l2switch-08/fast/driver/netmagic08/nm08.o /home/magiclab/fast-l2switch-08/fast/driver/netmagic08/nm08.mod.o

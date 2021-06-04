@@ -1,0 +1,87 @@
+#define SIZE_OF_ETHHDR 16
+#define SIZE_OF_IPHDR 20
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<sys/socket.h>
+#include<netinet/in.h>
+#include<arpa/inet.h>
+#include<netdb.h>
+#include<libnet.h>
+#include<netinet/if_ether.h>
+#include<netinet/ip.h>
+#include<netinet/udp.h>
+#include<netinet/ether.h>
+#include<pcap.h>
+
+
+int main(int argc, char *argv[])
+{
+    int port_in;
+    int port_out;
+    int sin_len;
+    int Recv_message_len;
+    int Send_message_len;
+    int errnum;
+    u_int8_t message[1316];
+    int socket_input;
+    u_int8_t ip_tos;
+    struct sockaddr_in sin;
+    struct sockaddr_in sout;
+
+    port_in=atoi(argv[1]);
+    port_out=atoi(argv[2]);
+
+    bzero(&sin,sizeof(sin));
+    sin.sin_family=AF_INET;
+    sin.sin_addr.s_addr=htonl(INADDR_ANY);
+    sin.sin_port=htons(port_in);
+
+    bzero(&sout,sizeof(sout));
+    sout.sin_family=AF_INET;
+    sout.sin_addr.s_addr=inet_addr(argv[4]);
+    sout.sin_port=htons(port_out);
+
+    switch (atoi(argv[3])) {
+    case 1:
+        ip_tos=0x01;
+        break;
+    case 2:
+        ip_tos=0x02;
+        break;
+    default:
+        ip_tos=0x00;
+        break;
+    }
+
+
+    printf("Waitting for data from sender\n");
+    socket_input=socket(AF_INET,SOCK_DGRAM,0);
+    errnum=setsockopt(socket_input,IPPROTO_IP,IP_TOS,(void *)&ip_tos,sizeof(ip_tos));
+    bind(socket_input,(struct sockaddr *)&sin,sizeof(sin));
+
+    while (1) {
+        Recv_message_len=recvfrom(socket_input,message,sizeof(message),0,
+                             (struct sockaddr *)&sin,(socklen_t *)&sin_len);
+        if (Recv_message_len==-1)
+        {
+                printf("Recvfrom Error\n");
+                break;
+        }else
+        {
+            printf("Recv Message len is %d\n",Recv_message_len);
+            Send_message_len=sendto(socket_input,message,sizeof(message),0,
+                                    (struct sockaddr *)&sout,(socklen_t)sizeof(sout));
+            if (Send_message_len==-1) {
+                printf("Sendto Error\n");
+                break;
+            } else {
+                printf("Send Message len is %d\n",Send_message_len);
+            }
+    }
+    }
+    close(socket_input);
+
+    return 0;
+}
